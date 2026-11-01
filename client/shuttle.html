@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cyprus Aydin University campus shuttle bus schedules and routes connecting Kyrenia, Gönyeli, Nicosia (Honda Garage), Arapköy, Nusmar, and China Pazar." />
+    <title>Campus Transportation & Shuttle Services | Cyprus Aydin University</title>
+
+    <link href="/assets/vendor/fonts/nb-international.css" rel="stylesheet" />
+    <link href="/assets/vendor/fonts/inter.css" rel="stylesheet" />
+    <link href="/assets/vendor/fonts/space-grotesk.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/styles/shuttle.css" />
+    <link rel="icon" type="image/png" href="/assets/cau-mark_c0289719.png" />
+    <meta property="og:site_name" content="Cyprus Aydin University" />
+    <meta property="og:title" content="Campus Transportation & Shuttle Services | Cyprus Aydin University" />
+    <meta property="og:description" content="Complimentary campus shuttle schedules, routes, stops, and live GPS transit tracker." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/cau-design-system.css" />
+  <link rel="stylesheet" href="/styles/cau-interaction-system.css" />
+  <link rel="stylesheet" href="/styles/cau-navigation-theme.css" />
+  <link rel="stylesheet" href="/styles/cau-responsive.css" />
+  <link rel="stylesheet" href="/styles/cau-awwwards-hero.css" />
+</head>
+  <body class="shuttle-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- 2. Main Site Header (Pill Style with Explore & Search Popovers) -->
+  <header id="cauHeader" class="site-header editorial-masthead" aria-label="Primary site navigation">
+      <div class="cau-header-inner">
+      <div class="cau-header-container">
+        <!-- Site Brand Logo (Official CAU Seal & Wordmark) -->
+        <a href="/" class="cau-header-logo" aria-label="Cyprus Aydin University">
+          <img src="/assets/cau-official-logo.png" class="brand-full-logo" alt="Cyprus Aydin University" decoding="async">
+        </a>
+
+        <nav class="cau-header-nav" aria-label="Main menu">
+          <ul class="cau-header-nav__list">
+            <li class="cau-header-nav__item has-dropdown">
+              <span class="cau-header-nav__link" id="exploreTrigger" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+                Explore <i class="fa-solid fa-chevron-down ms-1" aria-hidden="true"></i>
+              </span>
+
+              <!-- Explore Mega Dropdown Menu -->
+              <div class="cau-mega-dropdown" role="region" aria-label="Explore menu">
+                <div class="cau-mega-grid">
+                  <ul class="cau-mega-menu">
+                    <li class="cau-mega-menu__item is-active" data-tab="tab-degrees">
+                      <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Degree Levels
+                    </li>
+                    <li class="cau-mega-menu__item" data-tab="tab-faculties">
+                      <i class="fa-solid fa-building-columns" aria-hidden="true"></i> Faculties
+                    </li>
+                    <li class="cau-mega-menu__item" data-tab="tab-admissions">
+                      <i class="fa-solid fa-passport" aria-hidden="true"></i> Admissions
+                    </li>
+                    <li class="cau-mega-menu__item" data-tab="tab-campus">
+                      <i class="fa-solid fa-compass" aria-hidden="true"></i> Campus &amp; Life
+                    </li>
+                  </ul>
+
+                  <div class="cau-mega-content">
+                    <!-- Tab: Degree Levels -->
+                    <div class="cau-mega-panel is-active" id="tab-degrees">
+                      <a class="cau-mega-panel__item" href="/programs.html?degree=Bachelor">
+                        <span>Bachelor Degrees</span>
+                        <span class="cau-badge-counter cau-badge--coral">24</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?degree=Master">
+                        <span>Master's Programs</span>
+                        <span class="cau-badge-counter">13</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?degree=Ph.D.">
+                        <span>Ph.D. Doctorates</span>
+                        <span class="cau-badge-counter">5</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?degree=Associate">
+                        <span>Associate Degrees</span>
+                        <span class="cau-badge-counter">5</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?degree=Preparatory">
+                        <span>English Preparatory School</span>
+                        <span class="cau-badge-counter">1</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/placement-test.html">
+                        <span>English Level Diagnostic</span>
+                        <span class="cau-badge-counter cau-badge--coral">Official Test</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/english-quest.html">
+                        <span>CAU English Arena</span>
+                        <span class="cau-badge-counter">Practice Game</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/scholarships.html">
+                        <span>Scholarship Schemes</span>
+                        <span class="cau-badge-counter cau-badge--coral">Up to 50%</span>
+                      </a>
+                    </div>
+
+                    <!-- Tab: Faculties -->
+                    <div class="cau-mega-panel" id="tab-faculties">
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Dentistry">
+                        <span>Faculty of Dentistry</span>
+                        <span class="cau-badge-counter">1</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Engineering+and+Architecture">
+                        <span>Engineering &amp; Architecture</span>
+                        <span class="cau-badge-counter">8</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Applied+Sciences">
+                        <span>Applied Sciences</span>
+                        <span class="cau-badge-counter">2</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Health+Sciences">
+                        <span>Health Sciences</span>
+                        <span class="cau-badge-counter">3</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Humanities+and+Social+Sciences">
+                        <span>Humanities &amp; Social Sciences</span>
+                        <span class="cau-badge-counter">5</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Law">
+                        <span>Faculty of Law</span>
+                        <span class="cau-badge-counter">2</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html?faculty=Faculty+of+Tourism">
+                        <span>Tourism &amp; Hotel Management</span>
+                        <span class="cau-badge-counter">3</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/programs.html">
+                        <span>All 48 Programmes <i class="system-arrow ms-1" aria-hidden="true"></i></span>
+                        <span class="cau-badge-counter cau-badge--coral">Full List</span>
+                      </a>
+                    </div>
+
+                    <!-- Tab: Admissions -->
+                    <div class="cau-mega-panel" id="tab-admissions">
+                      <a class="cau-mega-panel__item" href="/admission.html">
+                        <span>How to Apply</span>
+                        <span class="cau-badge-counter">Guide</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/tuition.html">
+                        <span>Tuition &amp; Fees</span>
+                        <span class="cau-badge-counter">2026/27</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/scholarships.html">
+                        <span>Scholarships &amp; Aid</span>
+                        <span class="cau-badge-counter cau-badge--coral">50%</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/international.html">
+                        <span>International Students</span>
+                        <span class="cau-badge-counter">Global</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/faq.html">
+                        <span>Admissions FAQ</span>
+                        <span class="cau-badge-counter">Answers</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="https://apply.cau.edu.tr/" target="_blank" rel="noopener">
+                        <span>Online Application Portal</span>
+                        <span class="cau-badge-counter cau-badge--coral">Open</span>
+                      </a>
+                    </div>
+
+                    <!-- Tab: Campus & Life -->
+                    <div class="cau-mega-panel" id="tab-campus">
+                      <a class="cau-mega-panel__item" href="/about.html">
+                        <span>About CAU</span>
+                        <span class="cau-badge-counter">Overview</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/about.html#campus">
+                        <span>Kyrenia Campus Life</span>
+                        <span class="cau-badge-counter">TRNC</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/clubs.html">
+                        <span>Student Clubs &amp; Societies</span>
+                        <span class="cau-badge-counter cau-badge--coral">15 Clubs</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/placement-test.html">
+                        <span>English Level Diagnostic</span>
+                        <span class="cau-badge-counter">Official Test</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/english-quest.html">
+                        <span>CAU English Arena</span>
+                        <span class="cau-badge-counter cau-badge--coral">Practice Game</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/news.html">
+                        <span>Campus News &amp; Events</span>
+                        <span class="cau-badge-counter">Live</span>
+                      </a>
+                      <a class="cau-mega-panel__item" href="/contact.html">
+                        <span>Contact &amp; Campus Visit</span>
+                        <span class="cau-badge-counter">Map</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="cau-header-nav__item">
+              <a class="cau-header-nav__link" href="/programs.html">Programs</a>
+            </li>
+            <li class="cau-header-nav__item">
+              <a class="cau-header-nav__link" href="/admission.html">Admissions</a>
+            </li>
+            <li class="cau-header-nav__item">
+              <a class="cau-header-nav__link" href="/scholarships.html">Scholarships</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Central Header Search with Explore-Style Floating Popover -->
+        <div class="header-main__search">
+          <form class="search-form" id="cauHeaderSearchForm" action="/programs.html" method="get" autocomplete="off">
+            <div class="search-form__field">
+              <svg class="ico-svg" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M13 13l4 4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <input type="text" name="search" id="cauHeaderSearchInput" class="search-form__input" placeholder="Search programmes, faculties, admissions..." aria-label="Search programmes, faculties, admissions" autocomplete="off" />
+              <kbd class="cau-search-kbd d-none d-lg-inline-flex" title="Press / to search">/</kbd>
+              <button type="button" class="cau-search-clear" id="cauSearchClearBtn" aria-label="Clear search" hidden>
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Search Suggestions Popover (Explore-Style Floating Card) -->
+          <div class="cau-search-drawer" id="cauSearchDrawer" role="region" aria-label="Search suggestions" aria-hidden="true">
+            <div class="cau-search-drawer__body">
+              <!-- Left Navigation Tabs -->
+              <div class="cau-search-drawer__sidebar" role="tablist" aria-label="Search categories">
+                <button type="button" class="cau-search-tab is-active" role="tab" aria-selected="true" data-search-tab="popular" id="tabBtn-popular">
+                  <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+                  <span>Popular</span>
+                </button>
+                <button type="button" class="cau-search-tab" role="tab" aria-selected="false" data-search-tab="faculties" id="tabBtn-faculties">
+                  <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                  <span>Faculties</span>
+                </button>
+                <button type="button" class="cau-search-tab" role="tab" aria-selected="false" data-search-tab="degrees" id="tabBtn-degrees">
+                  <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                  <span>Degrees</span>
+                </button>
+                <button type="button" class="cau-search-tab" role="tab" aria-selected="false" data-search-tab="admissions" id="tabBtn-admissions">
+                  <i class="fa-solid fa-passport" aria-hidden="true"></i>
+                  <span>Admissions</span>
+                </button>
+                <button type="button" class="cau-search-tab" role="tab" aria-selected="false" data-search-tab="campus" id="tabBtn-campus">
+                  <i class="fa-solid fa-compass" aria-hidden="true"></i>
+                  <span>Campus &amp; Life</span>
+                </button>
+              </div>
+
+              <!-- Right Content Panels -->
+              <div class="cau-search-drawer__content">
+                <!-- Panel 1: Popular Academic Programmes -->
+                <div class="cau-search-panel is-active" id="searchPanel-popular" role="tabpanel" aria-labelledby="tabBtn-popular">
+                  <div class="cau-search-panel__grid">
+                    <a href="/programs.html?search=Computer+Engineering" class="cau-search-item">
+                      <span class="cau-search-item__title">Computer Engineering</span>
+                      <span class="cau-badge-counter">4 Years • B.Sc.</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Dentistry" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Dentistry (D.D.S.)</span>
+                      <span class="cau-badge-counter cau-badge--coral">5 Years</span>
+                    </a>
+                    <a href="/programs.html?search=Architecture" class="cau-search-item">
+                      <span class="cau-search-item__title">Architecture &amp; Interior Design</span>
+                      <span class="cau-badge-counter">Studios</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Health+Sciences" class="cau-search-item">
+                      <span class="cau-search-item__title">Medicine &amp; Health Sciences</span>
+                      <span class="cau-badge-counter">Clinical</span>
+                    </a>
+                    <a href="/programs.html?search=Software+Engineering" class="cau-search-item">
+                      <span class="cau-search-item__title">Software Engineering</span>
+                      <span class="cau-badge-counter">English</span>
+                    </a>
+                    <a href="/scholarships.html" class="cau-search-item">
+                      <span class="cau-search-item__title">50% International Scholarships</span>
+                      <span class="cau-badge-counter cau-badge--coral">Available</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Law" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Law</span>
+                      <span class="cau-badge-counter">LL.B.</span>
+                    </a>
+                    <a href="/programs.html?search=Aviation" class="cau-search-item">
+                      <span class="cau-search-item__title">Aviation Management &amp; Pilotage</span>
+                      <span class="cau-badge-counter">Applied</span>
+                    </a>
+                    <a href="/programs.html?degree=Preparatory" class="cau-search-item">
+                      <span class="cau-search-item__title">English Preparatory School</span>
+                      <span class="cau-badge-counter">1 Year</span>
+                    </a>
+                    <a href="/placement-test.html" class="cau-search-item">
+                      <span class="cau-search-item__title">English Level Diagnostic</span>
+                      <span class="cau-badge-counter cau-badge--coral">Official Test</span>
+                    </a>
+                    <a href="/english-quest.html" class="cau-search-item">
+                      <span class="cau-search-item__title">CAU English Arena</span>
+                      <span class="cau-badge-counter">Practice Game</span>
+                    </a>
+                    <a href="/programs.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Explore All 48 Programmes</span>
+                      <span class="cau-badge-counter cau-badge--coral">Full Catalogue</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Panel 2: Faculties -->
+                <div class="cau-search-panel" id="searchPanel-faculties" role="tabpanel" aria-labelledby="tabBtn-faculties">
+                  <div class="cau-search-panel__grid">
+                    <a href="/programs.html?faculty=Faculty+of+Engineering+and+Architecture" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Engineering &amp; Architecture</span>
+                      <span class="cau-badge-counter">8</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Dentistry" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Dentistry</span>
+                      <span class="cau-badge-counter">1</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Health+Sciences" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Health Sciences</span>
+                      <span class="cau-badge-counter">3</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Applied+Sciences" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Applied Sciences</span>
+                      <span class="cau-badge-counter">2</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Humanities+and+Social+Sciences" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Humanities &amp; Social Sciences</span>
+                      <span class="cau-badge-counter">5</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Law" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Law</span>
+                      <span class="cau-badge-counter">2</span>
+                    </a>
+                    <a href="/programs.html?faculty=Faculty+of+Tourism" class="cau-search-item">
+                      <span class="cau-search-item__title">Faculty of Tourism &amp; Hotel Management</span>
+                      <span class="cau-badge-counter">3</span>
+                    </a>
+                    <a href="/programs.html?degree=Associate" class="cau-search-item">
+                      <span class="cau-search-item__title">Vocational School of Higher Education</span>
+                      <span class="cau-badge-counter">5</span>
+                    </a>
+                    <a href="/programs.html?degree=Master" class="cau-search-item">
+                      <span class="cau-search-item__title">Institute of Graduate Studies &amp; Research</span>
+                      <span class="cau-badge-counter">18</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Panel 3: Degree Levels -->
+                <div class="cau-search-panel" id="searchPanel-degrees" role="tabpanel" aria-labelledby="tabBtn-degrees">
+                  <div class="cau-search-panel__grid">
+                    <a href="/programs.html?degree=Bachelor" class="cau-search-item">
+                      <span class="cau-search-item__title">Undergraduate Bachelor Degrees</span>
+                      <span class="cau-badge-counter cau-badge--coral">24</span>
+                    </a>
+                    <a href="/programs.html?degree=Master" class="cau-search-item">
+                      <span class="cau-search-item__title">Postgraduate Master's Degrees</span>
+                      <span class="cau-badge-counter">13</span>
+                    </a>
+                    <a href="/programs.html?degree=Ph.D." class="cau-search-item">
+                      <span class="cau-search-item__title">Doctorate (Ph.D.) Degrees</span>
+                      <span class="cau-badge-counter">5</span>
+                    </a>
+                    <a href="/programs.html?degree=Associate" class="cau-search-item">
+                      <span class="cau-search-item__title">Associate Degrees (2-Year Vocational)</span>
+                      <span class="cau-badge-counter">5</span>
+                    </a>
+                    <a href="/programs.html?degree=Preparatory" class="cau-search-item">
+                      <span class="cau-search-item__title">English Preparatory School</span>
+                      <span class="cau-badge-counter">1</span>
+                    </a>
+                    <a href="/international.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Dual Diploma &amp; Global Exchange Pathways</span>
+                      <span class="cau-badge-counter">ECTS</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Panel 4: Admissions & Aid -->
+                <div class="cau-search-panel" id="searchPanel-admissions" role="tabpanel" aria-labelledby="tabBtn-admissions">
+                  <div class="cau-search-panel__grid">
+                    <a href="/admission.html" class="cau-search-item">
+                      <span class="cau-search-item__title">How to Apply — Step-by-Step Guide</span>
+                      <span class="cau-badge-counter">Guide</span>
+                    </a>
+                    <a href="/tuition.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Tuition &amp; Fee Schedule 2026/2027</span>
+                      <span class="cau-badge-counter">2026/27</span>
+                    </a>
+                    <a href="/scholarships.html" class="cau-search-item">
+                      <span class="cau-search-item__title">International Merit Scholarships (Up to 50%)</span>
+                      <span class="cau-badge-counter cau-badge--coral">50% Aid</span>
+                    </a>
+                    <a href="https://apply.cau.edu.tr/" target="_blank" rel="noopener" class="cau-search-item">
+                      <span class="cau-search-item__title">Online Application Portal</span>
+                      <span class="cau-badge-counter cau-badge--coral">Apply Now</span>
+                    </a>
+                    <a href="/international.html" class="cau-search-item">
+                      <span class="cau-search-item__title">International Student Visas &amp; Requirements</span>
+                      <span class="cau-badge-counter">Global</span>
+                    </a>
+                    <a href="/faq.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Frequently Asked Questions (Admissions FAQ)</span>
+                      <span class="cau-badge-counter">Answers</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Panel 5: Campus & Life -->
+                <div class="cau-search-panel" id="searchPanel-campus" role="tabpanel" aria-labelledby="tabBtn-campus">
+                  <div class="cau-search-panel__grid">
+                    <a href="/about.html" class="cau-search-item">
+                      <span class="cau-search-item__title">About Cyprus Aydın University</span>
+                      <span class="cau-badge-counter">Overview</span>
+                    </a>
+                    <a href="/about.html#campus" class="cau-search-item">
+                      <span class="cau-search-item__title">Kyrenia Mediterranean Campus Life</span>
+                      <span class="cau-badge-counter">TRNC</span>
+                    </a>
+                    <a href="/about.html#dormitories" class="cau-search-item">
+                      <span class="cau-search-item__title">Student Dormitories &amp; On-Campus Housing</span>
+                      <span class="cau-badge-counter">Dorms</span>
+                    </a>
+                    <a href="/news.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Campus News &amp; Academic Events</span>
+                      <span class="cau-badge-counter">Live</span>
+                    </a>
+                    <a href="/placement-test.html" class="cau-search-item">
+                      <span class="cau-search-item__title">English Level Diagnostic</span>
+                      <span class="cau-badge-counter cau-badge--coral">Official Test</span>
+                    </a>
+                    <a href="/english-quest.html" class="cau-search-item">
+                      <span class="cau-search-item__title">CAU English Arena</span>
+                      <span class="cau-badge-counter">Practice Game</span>
+                    </a>
+                    <a href="/contact.html" class="cau-search-item">
+                      <span class="cau-search-item__title">Contact &amp; Kyrenia Campus Map</span>
+                      <span class="cau-badge-counter">Visit</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Live Dynamic Filter Panel (Shown when typing) -->
+                <div class="cau-search-panel cau-search-panel--dynamic" id="searchPanel-dynamic" style="display: none;">
+                  <div class="cau-search-dynamic__header">
+                    <span class="cau-search-dynamic__label">Matching Programmes &amp; Topics</span>
+                    <span class="cau-search-dynamic__count" id="searchDynamicCount">0 results</span>
+                  </div>
+                  <div class="cau-search-panel__grid" id="searchDynamicList"></div>
+                  <div class="cau-search-dynamic__footer" id="searchDynamicFooter">
+                    <button type="submit" form="cauHeaderSearchForm" class="cau-search-view-all-btn">
+                      <span>View all results for "<strong id="searchQueryEcho"></strong>" in catalogue</span>
+                      <i class="system-arrow ms-1" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Status Bar -->
+            <div class="cau-search-drawer__footer-bar">
+              <span>Cyprus Aydın University • Admissions 2026/2027 Open</span>
+              <span>Press <kbd style="background: var(--sys-surface-2); padding: 2px var(--space-1, 4px); border-radius: 2px; border: 1px solid var(--sys-line); font-size: var(--font-caption, 0.75rem);">ESC</kbd> to close</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header Actions: Language picker & Apply CTA (No hamburger on homepage) -->
+        <div class="header-actions">
+          <label class="language-picker">
+            <span class="visually-hidden">Language</span>
+            <select class="language-select" aria-label="Select language">
+              <option value="en">EN</option>
+              <option value="ar">العربية</option>
+              <option value="ru">RU</option>
+              <option value="fr">FR</option>
+              <option value="fa">فارسی</option>
+            </select>
+          </label>
+          <a class="btn btn-coral apply-btn" href="https://apply.cau.edu.tr/" target="_blank" rel="noopener noreferrer">
+            Apply Now! <i class="system-arrow ms-1" aria-hidden="true"></i>
+          </a>
+          <button type="button" class="cau-menu-toggle" aria-controls="cauNavOverlay" aria-expanded="false" aria-label="Open mobile navigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            <span class="cau-menu-toggle__label d-none d-sm-inline ms-1">Menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    </header>
+  <!-- Search Dimmer Backdrop Overlay -->
+  <div class="cau-search-backdrop" id="cauSearchBackdrop" aria-hidden="true"></div>
+
+    <main id="main" class="container-xxl shuttle-main">
+      <!-- Title Section -->
+      <section class="shuttle-title-section ">
+        <div>
+          <p class="shuttle-page-kicker"><i class="fa-solid fa-bus" aria-hidden="true"></i> Campus Life & Transport</p>
+          <h1>Campus Transportation & Shuttle Schedules</h1>
+          <p class="shuttle-subtitle">
+            Cyprus Aydin University provides complimentary daily shuttle services connecting our Kyrenia campus with key residential zones, student dormitories, and central transit hubs across Northern Cyprus.
+          </p>
+        </div>
+        <div class="shuttle-title-actions">
+          <a class="shuttle-back-link" href="/"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+        </div>
+      </section>
+
+      <!-- Quick Stats Strip -->
+      <div class="shuttle-stats-strip">
+        <div class="shuttle-stat-box">
+          <div class="shuttle-stat-num">6</div>
+          <div class="shuttle-stat-label">Campus Routes</div>
+        </div>
+        <div class="shuttle-stat-divider"></div>
+        <div class="shuttle-stat-box">
+          <div class="shuttle-stat-num">100%</div>
+          <div class="shuttle-stat-label">Free for Students & Staff</div>
+        </div>
+        <div class="shuttle-stat-divider"></div>
+        <div class="shuttle-stat-box">
+          <div class="shuttle-stat-num">45+</div>
+          <div class="shuttle-stat-label">Daily Departures</div>
+        </div>
+        <div class="shuttle-stat-divider"></div>
+        <div class="shuttle-stat-box">
+          <div class="shuttle-stat-num"><i class="fa-solid fa-satellite-dish text-success"></i> Real GPS</div>
+          <div class="shuttle-stat-label">Live Fleet Tracking</div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           STANDALONE LIVE GPS TRACKER LAUNCH BANNER (CALLOUT CARD)
+           ═══════════════════════════════════════════════════════════════ -->
+      <section class="shuttle-live-tracker-banner">
+        <div class="tracker-banner-content">
+          <div class="tracker-banner-badge">
+            <span class="tracker-pulse-dot"></span>
+            <span>Real-Time Fleet Telemetry</span>
+          </div>
+          <h2>Live Real-Time GPS Shuttle Tracker</h2>
+          <p>
+            Standing at a bus stop? Launch our dedicated standalone transit web app to view live GPS coordinates of active campus buses, check countdown ETAs, listen to Dolmuş FM, and inspect Boğaz mountain pass transit conditions.
+          </p>
+          <div class="tracker-banner-tags">
+            <span><i class="fa-solid fa-map-location-dot"></i> Live Map with Satellite & Esri Views</span>
+            <span><i class="fa-solid fa-mobile-screen"></i> Installable PWA for Mobile</span>
+            <span><i class="fa-solid fa-clock"></i> Live Minute Countdown</span>
+          </div>
+        </div>
+        <div class="tracker-banner-actions">
+          <a
+            href="http://localhost:3005"
+            id="btn-launch-tracker"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-launch-gps"
+          >
+            <span>Launch Live GPS Tracker</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <span class="tracker-host-note">Opens dedicated web app at <code>shuttle.cau.edu.tr</code></span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           TIMETABLES & ROUTE SELECTION
+           ═══════════════════════════════════════════════════════════════ -->
+      <section class="shuttle-schedules-section">
+        <div class="section-header-row">
+          <div>
+            <span class="shuttle-section-kicker">Official Timetables</span>
+            <h2 class="shuttle-section-heading">Browse Routes & Timings</h2>
+          </div>
+          <div class="shuttle-filter-pills" role="tablist" aria-label="Route filters">
+            <button class="filter-pill is-active" data-filter="all" type="button">All Routes</button>
+            <button class="filter-pill" data-filter="girne" type="button">Girne Courts</button>
+            <button class="filter-pill" data-filter="gonyeli" type="button">Gönyeli</button>
+            <button class="filter-pill" data-filter="honda" type="button">Lefkoşa Honda</button>
+            <button class="filter-pill" data-filter="arapkoy" type="button">Arapköy</button>
+            <button class="filter-pill" data-filter="nusmar" type="button">Nusmar</button>
+            <button class="filter-pill" data-filter="chinapazar" type="button">China Pazar</button>
+          </div>
+        </div>
+
+        <div class="shuttle-cards-grid" id="shuttle-cards-container">
+
+          <!-- 1. GIRNE COURTS -->
+          <article class="shuttle-route-card" data-route="girne">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-weekday">Monday – Friday</span>
+                <h3 class="route-title">Girne Courts Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> CAU Main Campus ⇄ Girne Courts (Kyrenia Center)</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~30 min</strong>
+                <span>12 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Campus Departures</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip">08:00</span>
+                <span class="time-chip">09:30</span>
+                <span class="time-chip">11:00</span>
+                <span class="time-chip">13:00</span>
+                <span class="time-chip">14:00</span>
+                <span class="time-chip">16:00</span>
+                <span class="time-chip">17:40</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> CAU Campus Gate, Ramadan Cemil Square, Kyrenia Courts.</span>
+            </div>
+          </article>
+
+          <!-- 2. GÖNYELI -->
+          <article class="shuttle-route-card" data-route="gonyeli">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-weekday">Monday – Friday</span>
+                <h3 class="route-title">Gönyeli Express Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> İrmar Gönyeli ⇄ CAU Main Campus via Boğaz Pass</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~35 min</strong>
+                <span>22 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Daily Runs</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip chip-highlight">07:15 (Morning Inbound from Gönyeli)</span>
+                <span class="time-chip">17:40 (Evening Outbound from Campus)</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> İrmar Gönyeli, Gönyeli Roundabout, Dağyolu Junction, Boğaz Pass, CAU Campus.</span>
+            </div>
+          </article>
+
+          <!-- 3. HONDA GARAGE (LEFKOŞA) -->
+          <article class="shuttle-route-card" data-route="honda">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-weekday">Monday – Friday</span>
+                <h3 class="route-title">Lefkoşa · Honda Garage Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> Honda Garage (Nicosia) ⇄ CAU Main Campus</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~25 min</strong>
+                <span>15 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Timings</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip chip-highlight">07:00 (Inbound)</span>
+                <span class="time-chip">10:30 (Outbound)</span>
+                <span class="time-chip">13:30 (Outbound)</span>
+                <span class="time-chip">17:40 (Outbound)</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> Honda Garage Nicosia, North Highway, Boğaz Mountain Pass, CAU Campus.</span>
+            </div>
+          </article>
+
+          <!-- 4. ARAPKÖY & ÇATALKÖY -->
+          <article class="shuttle-route-card" data-route="arapkoy">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-daily">Daily (7 Days a Week)</span>
+                <h3 class="route-title">Arapköy & Çatalköy Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> Arapköy ⇄ Çatalköy / Lemos Market ⇄ CAU Campus</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~15–20 min</strong>
+                <span>8 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Frequent Runs</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip">07:50</span>
+                <span class="time-chip">10:00</span>
+                <span class="time-chip">10:30</span>
+                <span class="time-chip">12:30</span>
+                <span class="time-chip">13:00</span>
+                <span class="time-chip">14:30</span>
+                <span class="time-chip">15:00</span>
+                <span class="time-chip">16:00</span>
+                <span class="time-chip">16:30</span>
+                <span class="time-chip">17:40</span>
+                <span class="time-chip chip-highlight">Weekend & Market Services Available</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> Arapköy Center, Çatalköy Junction, Lemos Market, Coastal Road, CAU Campus.</span>
+            </div>
+          </article>
+
+          <!-- 5. NUSMAR -->
+          <article class="shuttle-route-card" data-route="nusmar">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-weekday">Monday – Friday</span>
+                <h3 class="route-title">Nusmar Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> CAU Main Campus ⇄ Nusmar / Karaoğlanoğlu</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~20 min</strong>
+                <span>8 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Campus Departures</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip">07:30</span>
+                <span class="time-chip">09:30</span>
+                <span class="time-chip">11:00</span>
+                <span class="time-chip">13:00</span>
+                <span class="time-chip">14:00</span>
+                <span class="time-chip">16:00</span>
+                <span class="time-chip">17:40</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> CAU Campus Gate, Karaoğlanoğlu Caddesi, Nusmar Market.</span>
+            </div>
+          </article>
+
+          <!-- 6. CHINA PAZAR -->
+          <article class="shuttle-route-card" data-route="chinapazar">
+            <div class="card-header-rail">
+              <div>
+                <span class="route-badge badge-weekday">Monday – Friday</span>
+                <h3 class="route-title">China Pazar Line</h3>
+                <p class="route-path"><i class="fa-solid fa-location-dot"></i> CAU Main Campus ⇄ China Pazar & Commercial Strip</p>
+              </div>
+              <div class="route-meta-bubble">
+                <strong>~15 min</strong>
+                <span>6 km</span>
+              </div>
+            </div>
+            <div class="card-departures-box">
+              <span class="departures-label"><i class="fa-regular fa-clock"></i> Campus Departures</span>
+              <div class="time-chips-wrap">
+                <span class="time-chip">07:30</span>
+                <span class="time-chip">09:30</span>
+                <span class="time-chip">11:00</span>
+                <span class="time-chip">13:00</span>
+                <span class="time-chip">14:00</span>
+                <span class="time-chip">16:00</span>
+                <span class="time-chip">17:40</span>
+              </div>
+            </div>
+            <div class="card-footer-info">
+              <span><strong>Key Stops:</strong> CAU Campus Gate, Girne Ring Road, China Pazar Center.</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           TRANSIT POLICIES & FAQ GRID
+           ═══════════════════════════════════════════════════════════════ -->
+      <section class="shuttle-policies-section">
+        <span class="shuttle-section-kicker">Student Guidance</span>
+        <h2 class="shuttle-section-heading">Campus Transit Policies & FAQ</h2>
+
+        <div class="policies-grid">
+          <div class="policy-card">
+            <div class="policy-icon"><i class="fa-solid fa-id-card"></i></div>
+            <h4>Complimentary for All Students</h4>
+            <p>
+              CAU shuttle transportation is 100% free of charge for all registered undergraduate, postgraduate, and language preparatory students, as well as faculty and administrative staff. Simply display your CAU Student ID card upon boarding.
+            </p>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon"><i class="fa-solid fa-stopwatch"></i></div>
+            <h4>Punctuality & Boarding Advice</h4>
+            <p>
+              Shuttles depart promptly according to scheduled timings. Please arrive at your designated pick-up station at least 5 minutes prior to scheduled departure. Buses do not stop outside officially recognized bus stations.
+            </p>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon"><i class="fa-solid fa-mountain"></i></div>
+            <h4>Boğaz Mountain Pass & Weather</h4>
+            <p>
+              Routes traversing the Beşparmak mountain pass (Gönyeli and Lefkoşa Honda lines) may experience slight buffer adjustments during severe rain or dense morning fog. Drivers prioritize student road safety at all times.
+            </p>
+          </div>
+
+          <div class="policy-card">
+            <div class="policy-icon"><i class="fa-solid fa-box-archive"></i></div>
+            <h4>Lost & Found Service</h4>
+            <p>
+              Left a bag, phone, or textbook on the shuttle? All items recovered at the end of each shift are handed directly to the <strong>Campus Security Office & Student Affairs</strong> at the main administration building.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Shared Footer -->
+    <div data-shared-footer></div>
+
+    <script src="/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/shared-footer.js?v=1005"></script>
+    <script src="/i18n.js"></script>
+    <script src="/scripts/script.js?v=20"></script>
+    <script src="/scripts/cau-interactions.js"></script>
+
+    <script>
+      // Dynamic standalone tracker URL resolution (localhost:3005 in dev, shuttle.cau.edu.tr in prod)
+      const trackerBtn = document.getElementById('btn-launch-tracker');
+      if (trackerBtn && !['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+        trackerBtn.href = 'https://shuttle.cau.edu.tr';
+      }
+
+      // Route filter pills logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const pills = document.querySelectorAll('.filter-pill');
+        const cards = document.querySelectorAll('.shuttle-route-card');
+
+        pills.forEach(pill => {
+          pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('is-active'));
+            pill.classList.add('is-active');
+
+            const filter = pill.getAttribute('data-filter');
+            cards.forEach(card => {
+              if (filter === 'all' || card.getAttribute('data-route') === filter) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

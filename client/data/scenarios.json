@@ -1,0 +1,48 @@
+[
+  {
+    "id": "sc-ext-01",
+    "situation": "You could not finish your essay because you were ill. The deadline is tomorrow.",
+    "incoming": "To: Dr. Henderson. Write your request for an extension.",
+    "choices": [
+      {
+        "text": "Hey, I can't do it by tomorrow, give me more time.",
+        "register": "informal",
+        "feedback": "Too direct and informal. There is no reason or apology, and 'hey' is not suitable for an instructor."
+      },
+      {
+        "text": "I am sorry, but I was ill. Please extend the deadline.",
+        "register": "neutral",
+        "feedback": "Polite enough, but 'Please extend' is an imperative command. Soften it with modal verbs."
+      },
+      {
+        "text": "I would be grateful if I could submit the essay by Friday, as I was unwell this week.",
+        "register": "academic",
+        "feedback": "Formal, specific and polite. The conditional ('would be grateful if I could') softens the request respectfully.",
+        "phrase": "I would be grateful if I could submit the essay by Friday."
+      }
+    ]
+  },
+  {
+    "id": "sc-deb-02",
+    "situation": "In a seminar debate, a peer claims that renewable subsidies are economically wasteful.",
+    "incoming": "Your turn to speak. Challenge the premise without personal hostility.",
+    "choices": [
+      {
+        "text": "You are totally wrong and clearly don't understand economics.",
+        "register": "informal",
+        "feedback": "Personal attacks derail scholarly discourse. Address the evidentiary premise, not the person."
+      },
+      {
+        "text": "I disagree because other countries use solar power successfully.",
+        "register": "neutral",
+        "feedback": "Clear opinion, but lacks scholarly rigor and counter-evidence depth."
+      },
+      {
+        "text": "While acknowledging the short-term capital outlay, empirical evidence indicates that renewable subsidies yield significant net returns.",
+        "register": "academic",
+        "feedback": "Exemplary academic concession and counter-argument using precise economic vocabulary.",
+        "phrase": "While acknowledging the short-term capital outlay, empirical evidence indicates..."
+      }
+    ]
+  }
+]

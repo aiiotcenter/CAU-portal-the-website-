@@ -1,0 +1,78 @@
+[
+  {
+    "id": "a2-0001",
+    "module": "m1",
+    "type": "mcq",
+    "skill": "grammar",
+    "errorTag": null,
+    "prompt": "Choose the correct sentence to ask about library opening hours:",
+    "passage": null,
+    "options": [
+      "What time does the university library open on weekdays?",
+      "What time do the university library opens on weekdays?",
+      "When the university library is open up on weekdays?",
+      "What time opening the university library weekdays?"
+    ],
+    "answer": 0,
+    "explanation": "Third-person singular with auxiliary 'does' requires base verb form 'open'.",
+    "timeLimit": 30,
+    "difficulty": 1
+  },
+  {
+    "id": "a2-0002",
+    "module": "m1",
+    "type": "cloze",
+    "skill": "grammar",
+    "errorTag": null,
+    "prompt": "Complete the sentence: The orientation begins promptly [ _____ ] 9:00 AM.",
+    "passage": null,
+    "options": [
+      "at",
+      "on",
+      "in",
+      "by"
+    ],
+    "answer": 0,
+    "explanation": "Exact clock times strictly require the preposition 'at'.",
+    "timeLimit": 30,
+    "difficulty": 1
+  },
+  {
+    "id": "a2-0003",
+    "module": "m1",
+    "type": "error",
+    "skill": "grammar",
+    "errorTag": "subject-verb-agreement",
+    "prompt": "Spot the error in the sentence about the campus shuttle:",
+    "passage": null,
+    "options": [
+      "The shuttle bus departs every thirty minutes,",
+      "from the main gate on weekdays,",
+      "but it don't run on Sunday evenings.",
+      "No error"
+    ],
+    "answer": 2,
+    "explanation": "'It' is 3rd-person singular and requires 'doesn't run', not 'don't run'.",
+    "timeLimit": 35,
+    "difficulty": 1
+  },
+  {
+    "id": "a2-0004",
+    "module": "m1",
+    "type": "dialogue",
+    "skill": "pragmatics",
+    "errorTag": null,
+    "prompt": "Librarian: 'You can borrow up to five books for two weeks.' What is the polite student reply?",
+    "passage": null,
+    "options": [
+      "Thank you very much. Can I renew them online if I need more time?",
+      "Give me ten books right now because I am studying hard.",
+      "Two weeks? That is far too short!",
+      "I don't care, I will return them when I graduate."
+    ],
+    "answer": 0,
+    "explanation": "Academic communication requires expressing gratitude and polite follow-up questions.",
+    "timeLimit": 30,
+    "difficulty": 1
+  }
+]

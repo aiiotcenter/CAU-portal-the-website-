@@ -1,0 +1,19 @@
+{
+  "announcementBanner": {
+    "enabled": true,
+    "text": "Admissions for Academic Year 2026/2027 are officially open. 50%–100% Scholarships Available!",
+    "linkText": "Apply Now",
+    "linkUrl": "https://apply.cau.edu.tr/"
+  },
+  "contact": {
+    "officialWhatsApp": "+90 548 835 71 71",
+    "admissionsEmail": "admission@cau.edu.tr",
+    "generalPhone": "+90 392 650 00 00",
+    "campusAddress": "Dr. Fazıl Küçük Caddesi No:80, Kyrenia, Turkish Republic of Northern Cyprus"
+  },
+  "admissions": {
+    "activeTerm": "Fall 2026/27",
+    "applicationDeadline": "30 October 2026",
+    "internationalDiscountNotice": "All international admitted students receive a guaranteed 50% minimum tuition waiver."
+  }
+}

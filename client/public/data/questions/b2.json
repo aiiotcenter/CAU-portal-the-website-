@@ -1,0 +1,59 @@
+[
+  {
+    "id": "b2-0001",
+    "module": "m3",
+    "type": "error",
+    "skill": "grammar",
+    "errorTag": "dangling-modifier",
+    "prompt": "Which sentence has a dangling modifier?",
+    "passage": null,
+    "options": [
+      "Walking to class, the rain started to fall.",
+      "While I was walking to class, the rain started to fall.",
+      "As I walked to class, it began to rain.",
+      "The rain started while I was walking to class."
+    ],
+    "answer": 0,
+    "explanation": "'Walking to class' must modify the person walking, but the grammatical subject is 'the rain'.",
+    "timeLimit": 45,
+    "difficulty": 2
+  },
+  {
+    "id": "b2-0002",
+    "module": "m3",
+    "type": "mcq",
+    "skill": "pragmatics",
+    "errorTag": null,
+    "prompt": "Choose the most suitable opening for an email to a professor you have not met:",
+    "passage": null,
+    "options": [
+      "Hey Prof!",
+      "Dear Professor Smith,",
+      "Hi mate,",
+      "Yo, quick question"
+    ],
+    "answer": 1,
+    "explanation": "'Dear + title + surname' is the international standard formal salutation for academic correspondence.",
+    "timeLimit": 30,
+    "difficulty": 1
+  },
+  {
+    "id": "b2-0003",
+    "module": "m3",
+    "type": "error",
+    "skill": "vocab",
+    "errorTag": "false-cognate",
+    "prompt": "Which sentence uses a false cognate incorrectly? (Turkish: 'konferans' means lecture/talk)",
+    "passage": null,
+    "options": [
+      "The professor gave a lecture on climate change.",
+      "I attended a conference in Istanbul last year.",
+      "My teacher made a conference about verbs yesterday.",
+      "She presented her paper at the conference."
+    ],
+    "answer": 2,
+    "explanation": "A 'conference' is a large congress. A single classroom talk is a 'lecture' or 'presentation'.",
+    "timeLimit": 45,
+    "difficulty": 2
+  }
+]

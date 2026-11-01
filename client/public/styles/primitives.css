@@ -1,0 +1,867 @@
+/**
+ * ==============================================================================
+ * CYPRUS AYDIN UNIVERSITY (CAU) — CANONICAL UI PRIMITIVES
+ * Architecture: Bespoke Swiss Editorial Design System (Agency-Grade Standard)
+ * Zero Hover-Lift Clichés • Inverted Tactile States • Strict 8px Rhythms
+ * ==============================================================================
+ */
+
+/* --------------------------------------------------------------------------
+   1. ARCHITECTURAL BUTTON PRIMITIVES (Zero Translate-Y, Inverted Fills)
+   -------------------------------------------------------------------------- */
+.cau-btn,
+.btn-coral,
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px 18px;
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  line-height: var(--font-caption-lh);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--sys-text-primary);
+  box-shadow: none !important;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-instant);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Crisp Mechanical Click Feedback */
+.cau-btn:active,
+.btn-coral:active,
+.apply-btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary Button: Singular Signature Accent */
+.cau-btn--primary,
+.btn-coral,
+.apply-btn {
+  background-color: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+}
+
+.cau-btn--primary:hover,
+.btn-coral:hover,
+.apply-btn:hover {
+  background-color: var(--sys-accent-hover);
+  border-color: var(--sys-accent-hover);
+  color: #ffffff;
+  /* Strictly Zero Float / translateY */
+  transform: none;
+}
+
+/* Secondary Button: Stark Tactile Inverted Surface */
+.cau-btn--secondary {
+  background-color: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+}
+
+.cau-btn--secondary:hover {
+  background-color: var(--sys-surface-1);
+  border-color: var(--sys-text-primary);
+  color: var(--sys-text-primary);
+  transform: none;
+}
+
+/* Outline Button: Architectural Hairline with High-End Inverted Fill */
+.cau-btn--outline {
+  background-color: transparent;
+  border-color: var(--sys-line);
+  color: var(--sys-text-primary);
+}
+
+.cau-btn--outline:hover {
+  background-color: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+  transform: none;
+}
+
+/* Ghost Button: Restrained Typographic Trigger */
+.cau-btn--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--sys-text-muted);
+}
+
+.cau-btn--ghost:hover {
+  color: var(--sys-text-primary);
+  background-color: var(--sys-surface-2);
+  border-color: var(--sys-line);
+  transform: none;
+}
+
+/* Sizing Modifiers */
+.cau-btn--sm {
+  padding: 6px 12px;
+  font-size: var(--font-kicker);
+  letter-spacing: var(--font-kicker-ls);
+}
+
+.cau-btn--lg {
+  padding: 14px 26px;
+  font-size: 14px;
+}
+
+.cau-btn.is-loading {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   1.5. CANONICAL CAU SYSTEM SWISS ARROW (.system-arrow)
+   Architecture: Agency Standard • SVG Vector Asset • Zero FontAwesome Glyph
+   Single Source of Truth across all website buttons, links, and cards.
+   -------------------------------------------------------------------------- */
+:root {
+  --arrow-black: url('/assets/blackarrow_13e10b28.svg');
+  --arrow-white: url('/assets/whitearrow_8e576cad.svg');
+  --arrow-darkgray: url('/assets/darkgrayarrow_c00092a7.svg');
+}
+
+.system-arrow {
+  font-family: initial !important;
+  font-style: normal !important;
+  font-size: 0 !important;
+  display: inline-block !important;
+  width: 28px !important;
+  height: 9px !important;
+  flex: 0 0 28px !important;
+  background: var(--arrow-black, url('/assets/blackarrow_13e10b28.svg')) center/28px 9px no-repeat !important;
+  vertical-align: middle !important;
+  transition: transform var(--transition-fast, 0.2s ease) !important;
+  line-height: 0 !important;
+  speak: never;
+}
+
+/* Fluid hover advance across all buttons, cards, links */
+a:hover .system-arrow,
+button:hover .system-arrow,
+.btn:hover .system-arrow,
+.apply-btn:hover .system-arrow,
+.cau-btn:hover .system-arrow,
+.advisor-card-btn:hover .system-arrow,
+.consultant-apply-btn:hover .system-arrow,
+.console-btn-next:hover .system-arrow,
+.program-card:hover .system-arrow,
+.cau-card:hover .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.calc-apply-btn:hover .system-arrow,
+.sidebar-cta-btn:hover .system-arrow,
+.sidebar-whatsapp-btn:hover .system-arrow,
+.show-all:hover .system-arrow,
+.show-more:hover .system-arrow,
+.empty-smart-console-btn:hover .system-arrow,
+.empty-reset-btn:hover .system-arrow,
+.dossier-filter-catalogue-btn:hover .system-arrow,
+.footer-apply-now:hover .system-arrow,
+.footer-nl-btn:hover .system-arrow,
+.program-explore-link:hover .system-arrow,
+.roadmap-link:hover .system-arrow,
+.view-faculties-btn:hover .system-arrow,
+.department-explore-btn:hover .system-arrow,
+.btn-story-nav:hover .system-arrow {
+  transform: translateX(4px) !important;
+}
+
+/* White arrow variant for dark, coral, and inverted button/card surfaces */
+.btn-coral .system-arrow,
+.apply-btn .system-arrow,
+.cau-btn--primary .system-arrow,
+.cau-btn--secondary .system-arrow,
+.advisor-card-btn .system-arrow,
+.consultant-apply-btn .system-arrow,
+.btn-dark .system-arrow,
+.btn-primary .system-arrow,
+.console-btn-next .system-arrow,
+.btn-story-nav .system-arrow,
+.show-more .system-arrow,
+.calc-apply-btn .system-arrow,
+.sidebar-cta-btn .system-arrow,
+.sidebar-whatsapp-btn .system-arrow,
+.empty-smart-console-btn .system-arrow,
+.btn-outline-dark:hover .system-arrow,
+.btn-outline:hover .system-arrow,
+.btn-outline-light:hover .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.dossier-filter-catalogue-btn:hover .system-arrow,
+[data-theme="dark"] .system-arrow {
+  background-image: var(--arrow-white, url('/assets/whitearrow_8e576cad.svg')) !important;
+}
+
+/* Margin spacing helpers */
+.system-arrow.ms-1 {
+  margin-left: 0.35rem !important;
+}
+.system-arrow.ms-2 {
+  margin-left: 0.5rem !important;
+}
+.system-arrow.me-1 {
+  margin-right: 0.35rem !important;
+}
+.system-arrow.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+/* RTL Harmonization */
+html[dir="rtl"] .system-arrow,
+body.is-rtl .system-arrow {
+  transform: scaleX(-1) !important;
+}
+
+html[dir="rtl"] a:hover .system-arrow,
+html[dir="rtl"] button:hover .system-arrow,
+html[dir="rtl"] .btn:hover .system-arrow,
+body.is-rtl a:hover .system-arrow,
+body.is-rtl button:hover .system-arrow,
+body.is-rtl .btn:hover .system-arrow {
+  transform: scaleX(-1) translateX(4px) !important;
+}
+
+/* Global Cursor Specification: Suppress outer stroke circle, retain precision dot */
+.cau-page-cursor {
+  display: none !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cau-page-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100000;
+    mix-blend-mode: difference;
+    transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+    will-change: transform, width, height;
+    opacity: 1;
+    box-shadow: none !important;
+    transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.15s ease;
+  }
+
+  .cau-page-cursor-dot.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Grows + keeps blend on hover over interactive elements */
+  .cau-page-cursor-dot.is-hovering {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+
+  .cau-page-cursor-dot.is-active-press {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .cau-page-cursor-dot {
+    display: none !important;
+  }
+}
+
+/* Root level fallback replacement: any fa-arrow-right inside buttons or links automatically becomes system-arrow */
+.btn .fa-arrow-right,
+.apply-btn .fa-arrow-right,
+.advisor-card-btn .fa-arrow-right,
+.consultant-apply-btn .fa-arrow-right,
+.console-btn-next .fa-arrow-right,
+.fa-solid.fa-arrow-right.ms-1,
+.fa-arrow-right.ms-1 {
+  font-family: initial !important;
+  font-style: normal !important;
+  font-size: 0 !important;
+  display: inline-block !important;
+  width: 28px !important;
+  height: 9px !important;
+  flex: 0 0 28px !important;
+  background: var(--arrow-white, url('/assets/whitearrow_8e576cad.svg')) center/28px 9px no-repeat !important;
+  vertical-align: middle !important;
+  transition: transform var(--transition-fast, 0.2s ease) !important;
+  line-height: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. CARD PRIMITIVES (Structured Grid Lines, Solid Tactile Surfaces)
+   -------------------------------------------------------------------------- */
+.cau-card {
+  background-color: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  box-shadow: none !important;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+/* Zero Card Lift Cliché — Sharp Hairline Switch on Hover */
+.cau-card--hover:hover {
+  border-color: var(--sys-text-primary);
+  transform: none !important;
+}
+
+.cau-card__header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-hairline);
+}
+
+.cau-card__body {
+  flex-grow: 1;
+}
+
+.cau-card__footer {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: var(--border-hairline);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTION EYEBROWS & KICKERS (Editorial Small Caps)
+   -------------------------------------------------------------------------- */
+.cau-kicker,
+.section-kicker,
+.section-index {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-display);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  margin-bottom: var(--space-2);
+}
+
+.section-index {
+  color: var(--sys-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. ARCHITECTURAL BADGES & TAGS (Zero Pill Badges)
+   -------------------------------------------------------------------------- */
+.cau-badge,
+.cau-pill,
+.cau-tag,
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-family-display);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--font-kicker-ls);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--sys-surface-1);
+  border: var(--border-hairline);
+  color: var(--sys-text-muted);
+  line-height: var(--font-kicker-lh);
+  box-shadow: none !important;
+}
+
+.cau-badge--coral {
+  color: var(--sys-accent);
+  border-color: var(--sys-accent);
+}
+
+.cau-badge--navy {
+  color: var(--sys-secondary);
+  border-color: var(--sys-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   5. TWO-RAIL EDITORIAL SPLIT GRID (Strict 360px + 48px Gutter)
+   -------------------------------------------------------------------------- */
+.cau-split-rail,
+.split-section {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  column-gap: var(--space-6, 48px);
+  border-top: var(--border-hairline);
+  padding-top: var(--space-8, 96px);
+  padding-bottom: var(--space-8, 96px);
+}
+
+.cau-split-rail__aside,
+.split-rail {
+  padding-right: var(--space-4, 24px);
+  border-right: var(--border-hairline);
+}
+
+.cau-split-rail__content,
+.split-content {
+  padding-left: 0;
+}
+
+@media (max-width: 1023.98px) {
+  .cau-split-rail,
+  .split-section {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-5, 32px);
+    padding-top: var(--space-7, 64px);
+    padding-bottom: var(--space-7, 64px);
+  }
+  .cau-split-rail__aside,
+  .split-rail {
+    border-right: none;
+    border-bottom: var(--border-hairline);
+    padding-right: 0;
+    padding-bottom: var(--space-4, 24px);
+  }
+  .cau-split-rail__content,
+  .split-content {
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cau-split-rail,
+  .split-section {
+    padding-top: var(--space-6, 48px);
+    padding-bottom: var(--space-6, 48px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. ARCHITECTURAL FORM CONTROLS (Zero Soft Glow Focus Halos)
+   -------------------------------------------------------------------------- */
+.cau-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.cau-form-label {
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sys-text-primary);
+}
+
+.cau-input,
+.cau-select,
+.cau-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--sys-text-primary);
+  box-shadow: none !important;
+  transition: border-color var(--transition-fast);
+}
+
+/* High-Visibility Sharp Hairline Focus (Zero Diffusion) */
+.cau-input:focus,
+.form-control:focus,
+.cau-select:focus,
+.cau-textarea:focus {
+  outline: none !important;
+  border-color: var(--sys-text-primary) !important;
+  box-shadow: none !important;
+}
+
+/* Editorial Underline Input Variant */
+.cau-input--underline {
+  border: none !important;
+  border-bottom: 1.5px solid var(--sys-line) !important;
+  border-radius: 0;
+  background-color: transparent !important;
+  padding: 10px 0 !important;
+}
+
+.cau-input--underline:focus {
+  border-bottom-color: var(--sys-text-primary) !important;
+}
+
+.cau-form-feedback {
+  min-height: 20px;
+  font-size: var(--font-caption);
+  font-weight: 600;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.cau-form-feedback.is-success {
+  background-color: var(--sys-surface-1);
+  border: 1px solid var(--sys-secondary);
+  color: var(--sys-secondary);
+  padding: 8px 12px;
+}
+
+.cau-form-feedback.is-error {
+  background-color: var(--sys-surface-1);
+  border: 1px solid var(--sys-accent);
+  color: var(--sys-accent);
+  padding: 8px 12px;
+}
+
+/* --------------------------------------------------------------------------
+   7. ACCORDION PRIMITIVES
+   -------------------------------------------------------------------------- */
+.cau-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cau-accordion-item {
+  border: var(--border-hairline);
+  border-radius: var(--radius);
+  background-color: var(--sys-surface-1);
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: border-color var(--transition-fast);
+}
+
+.cau-accordion-item:hover,
+.cau-accordion-item.is-open,
+.cau-accordion-item.open {
+  border-color: var(--sys-text-primary);
+}
+
+.cau-accordion-trigger {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--sys-surface-1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-h4);
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  text-align: left;
+  transition: color var(--transition-fast);
+}
+
+.cau-accordion-trigger:hover,
+.cau-accordion-item.is-open .cau-accordion-trigger,
+.cau-accordion-item.open .cau-accordion-trigger {
+  color: var(--sys-text-primary);
+}
+
+.cau-accordion-icon {
+  font-size: 13px;
+  color: var(--sys-text-muted);
+  transition: transform var(--transition-base), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.cau-accordion-item.is-open .cau-accordion-icon,
+.cau-accordion-item.open .cau-accordion-icon {
+  transform: rotate(180deg);
+  color: var(--sys-accent);
+}
+
+.cau-accordion-panel {
+  display: none;
+  padding: 0 20px var(--space-5);
+  background-color: var(--sys-surface-1);
+  border-top: 1px solid var(--sys-line);
+  color: var(--sys-text-primary);
+  font-size: var(--font-body);
+  line-height: var(--font-body-lh);
+}
+
+.cau-accordion-item.is-open .cau-accordion-panel,
+.cau-accordion-item.open .cau-accordion-panel {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   8. MODAL & DIALOG PRIMITIVES (Opaque Flat Tactile Surfaces)
+   -------------------------------------------------------------------------- */
+.cau-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.cau-modal.is-open {
+  display: flex;
+}
+
+.cau-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 13, 16, 0.78);
+  backdrop-filter: none !important;
+}
+
+.cau-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 620px;
+  background-color: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius);
+  padding: var(--space-8);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: none !important;
+}
+
+.cau-modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--sys-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.cau-modal-close:hover {
+  color: var(--sys-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   9. TOAST NOTIFICATIONS (Crisp Hairline Strip)
+   -------------------------------------------------------------------------- */
+.cau-toast-container {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: none;
+}
+
+.cau-toast {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 440px;
+  padding: 12px 18px;
+  background-color: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--sys-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  box-shadow: none !important;
+  animation: cauToastSlideIn var(--dur-snappy) var(--ease-snappy);
+}
+
+@keyframes cauToastSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Global Background Override */
+body, html {
+  background-color: #ffffff !important;
+}
+
+
+
+:root {
+  --text-size-primary: 14px;
+}
+
+/* ZERO STROKE, ZERO GLOW, ZERO BORDER CHANGE ON HOVER/FOCUS */
+
+/* 1. Global Inputs (Bootstrap Form Controls) */
+.form-control:focus, .form-select:focus, .cau-input:focus, .cau-select:focus, input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #dcd8cf !important; /* Default system line color */
+}
+
+/* 2. Search Palette (No stroke) */
+.cau-palette-input:focus, .cau-palette-input:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* 3. Hero Search Form */
+.search-form:focus-within, .search-form:hover, .search-form.is-active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* 4. Footer Newsletter Row */
+.shared-footer .footer-nl-row:focus-within, .shared-footer .footer-nl-row:hover,
+.shared-footer .footer-form input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  background-color: #ebebec !important;
+}
+
+/* 5. Language Picker */
+.language-picker:focus-within, .language-picker:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
+/* 6. A/button focus states globally */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. QUICK COPY COMPONENT & ANIMATED MICRO-TOOLTIP (Agency Inspiration: z / data-component="copy")
+   -------------------------------------------------------------------------- */
+.cau-copy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-family-display, inherit);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sys-text-primary);
+  background-color: var(--sys-surface-2, #f6f5f2);
+  border: 1px solid var(--sys-line, #dcd8cf);
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.cau-copy-btn:hover {
+  background-color: var(--sys-surface-inverted, #121316);
+  color: var(--sys-text-inverted, #ffffff);
+  border-color: var(--sys-surface-inverted, #121316);
+  box-shadow: none !important;
+}
+
+.cau-copy-btn.is-copied {
+  background-color: #002469 !important;
+  color: #ffffff !important;
+  border-color: #002469 !important;
+}
+
+.cau-copy-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--sys-surface-inverted, #121316);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: none !important;
+  transition: opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1), transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+.cau-copy-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--sys-surface-inverted, #121316) transparent transparent transparent;
+}
+
+.cau-copy-tooltip.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   8. STICKY LINK CRAWLER / TABLE OF CONTENTS INDICATOR (Agency Inspiration: Pt / link-crawler)
+   -------------------------------------------------------------------------- */
+.cau-link-crawler,
+[data-crawler] {
+  position: relative;
+}
+
+.cau-crawler-link,
+[data-aside-link] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--sys-text-muted);
+  transition: color 0.15s ease;
+  font-weight: 500;
+}
+
+.cau-crawler-link:hover,
+[data-aside-link]:hover {
+  color: var(--sys-text-primary);
+}
+
+.cau-crawler-link.is-active,
+[data-aside-link].is-active {
+  color: var(--sys-text-primary) !important;
+  font-weight: 700 !important;
+}
+
+.cau-crawler-link.is-active::before,
+[data-aside-link].is-active::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--sys-accent, #e63b2e);
+}
+

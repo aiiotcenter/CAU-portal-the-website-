@@ -1,0 +1,59 @@
+[
+  {
+    "id": "b1-0001",
+    "module": "m2",
+    "type": "mcq",
+    "skill": "grammar",
+    "errorTag": null,
+    "prompt": "Choose the sentence that correctly uses the present perfect for an ongoing action:",
+    "passage": null,
+    "options": [
+      "Dr. Vance has conducted research in marine ecosystems since 2018.",
+      "Dr. Vance has conduct research in marine ecosystems from 2018.",
+      "Dr. Vance is conducting research since five years ago.",
+      "Dr. Vance conducts research in marine ecosystems since 2018."
+    ],
+    "answer": 0,
+    "explanation": "'Has conducted ... since 2018' correctly pairs present perfect with a specific starting time point.",
+    "timeLimit": 35,
+    "difficulty": 2
+  },
+  {
+    "id": "b1-0002",
+    "module": "m2",
+    "type": "cloze",
+    "skill": "vocab",
+    "errorTag": null,
+    "prompt": "Complete the transitional link: [ _____ ] the experiment failed initially, the team persisted.",
+    "passage": null,
+    "options": [
+      "Although",
+      "Despite",
+      "In spite of",
+      "However"
+    ],
+    "answer": 0,
+    "explanation": "'Although' is a subordinating conjunction that introduces a full clause ('the experiment failed initially').",
+    "timeLimit": 35,
+    "difficulty": 2
+  },
+  {
+    "id": "b1-0003",
+    "module": "m2",
+    "type": "error",
+    "skill": "grammar",
+    "errorTag": "run-on",
+    "prompt": "Spot the punctuation error:",
+    "passage": null,
+    "options": [
+      "The library closed early yesterday,",
+      "because the storm caused a blackout,",
+      "students had to study in the dormitories instead.",
+      "No error"
+    ],
+    "answer": 2,
+    "explanation": "Comma splice: joining two independent clauses with just a comma. A semicolon or period is required.",
+    "timeLimit": 40,
+    "difficulty": 2
+  }
+]

@@ -1,0 +1,639 @@
+/* ==========================================================================
+   CAU Tuition & Fees — Swiss Editorial Design System
+   ========================================================================== */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+
+/* Base Body & Layout */
+body.tuition-page {
+  background: var(--prog-bg);
+  color: var(--prog-text);
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tuition-main {
+  padding-bottom: 70px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY HIERARCHY SYSTEM (H1, H2, H3, H4)
+   ========================================================================== */
+
+/* H1: Primary Page Title */
+.tuition-page h1,
+.tuition-title-row h1 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+  font-size: var(--font-h1) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.06em !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 12px 0 8px !important;
+}
+
+/* H2: Section Titles */
+.tuition-page h2 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+  font-size: var(--font-h2) !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.05em !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H3: Card Titles & Bank Header */
+.tuition-page h3,
+.tuition-card h3,
+.bank-header h3 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  text-transform: none !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H4: Notice Header */
+.tuition-page h4,
+.fee-notice-card h4 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+  font-size: var(--font-h4) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 6px !important;
+}
+
+/* H5: Policy Card Titles */
+.policy-card h5 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--prog-text);
+  letter-spacing: -0.01em;
+}
+
+/* Sticky Table of Contents Navigation Bar */
+.tuition-crawler-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--prog-border);
+  padding: 8px 0;
+  margin: 16px 0 24px;
+  box-shadow: none !important;
+}
+
+.tuition-crawler-bar .cau-crawler-link {
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+}
+
+.tuition-crawler-bar .cau-crawler-link:hover {
+  background: var(--prog-badge-bg);
+}
+
+/* ===================================================
+   TITLE STAGE & HERO
+   =================================================== */
+.tuition-title-row {
+  padding: 40px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 1px solid var(--prog-border);
+}
+
+.tuition-subtitle {
+  font-size: 15px;
+  color: var(--prog-muted);
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.title-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.back-home {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--prog-text);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  background: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.tuition-hero-stage {
+  padding: 24px 0 32px;
+}
+
+.tuition-hero {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 26vw, 420px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  margin-bottom: 22px;
+}
+
+.tuition-lead {
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--prog-text);
+  max-width: 960px;
+  margin: 0;
+}
+
+.tuition-lead .bullet {
+  color: var(--coral);
+  margin-right: 8px;
+}
+
+/* ===================================================
+   SECTION HEADINGS (COMMON)
+   =================================================== */
+.section-heading-wrap {
+  margin-bottom: 24px;
+}
+
+.section-index {
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: var(--prog-muted);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+/* ===================================================
+   PROGRAMME TUITION OVERVIEW CARDS
+   =================================================== */
+.tuition-overview {
+  padding: 36px 0;
+}
+
+.tuition-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tuition-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.tuition-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(17, 18, 20, 0.06) !important;
+}
+
+.tuition-card-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+
+.tuition-card-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--prog-text);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.tuition-card-price small {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--prog-muted);
+  letter-spacing: normal;
+}
+
+.tuition-card-desc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0 0 18px;
+}
+
+.tuition-card-meta {
+  margin-top: auto;
+  border-top: 1px solid var(--prog-border);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tuition-card-meta span {
+  font-size: 12px;
+  color: var(--prog-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tuition-card-meta span i {
+  color: var(--coral);
+  font-size: 12px;
+}
+
+/* ===================================================
+   SCHOLARSHIP TABLES & MATRICES
+   =================================================== */
+.tuition-table-section {
+  padding: 36px 0;
+}
+
+.tuition-table-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  overflow: hidden !important;
+  margin-bottom: 24px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 820px;
+}
+
+.fee-table thead th {
+  background: var(--prog-badge-bg);
+  padding: 14px 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--prog-text);
+  border-bottom: 1px solid var(--prog-border);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fee-table thead th.th-dept {
+  text-align: left;
+  min-width: 220px;
+}
+
+.fee-table thead th.th-highlight {
+  background: transparent;
+  color: var(--coral);
+  font-weight: 700;
+}
+
+.fee-table tbody tr {
+  border-bottom: 1px solid var(--prog-border);
+  transition: background-color 0.15s ease;
+}
+
+.fee-table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.fee-table tbody tr:hover {
+  background: transparent;
+}
+
+[data-theme="dark"] .fee-table tbody tr:hover {
+  background: transparent;
+}
+
+.fee-table tbody th.td-row-name {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--prog-text);
+  text-align: left;
+}
+
+.fee-table tbody td {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--prog-muted);
+  text-align: center;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.fee-table tbody td.td-standard {
+  font-weight: 700;
+  color: var(--prog-text);
+}
+
+.fee-table tbody td.td-highlight {
+  color: var(--coral);
+  font-weight: 700;
+  background: transparent;
+}
+
+.fee-table tbody td.td-zero {
+  font-weight: 700;
+  color: var(--prog-text);
+}
+
+/* Notice Card */
+.fee-notice-card {
+  background: var(--prog-badge-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.fee-notice-icon {
+  font-size: 20px;
+  color: var(--coral);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.fee-notice-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+.fee-notice-card strong {
+  color: var(--prog-text);
+}
+
+/* ===================================================
+   PAYMENT GUIDELINES & BANK WIRE CARD (SPLIT-RAIL)
+   =================================================== */
+.payment-info {
+  padding: 44px 0 20px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 40px;
+  align-items: start;
+}
+
+.payment-copy p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--prog-muted);
+  margin: 0 0 20px;
+}
+
+.payment-policy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.policy-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: border-color 0.15s ease;
+}
+
+.policy-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+}
+
+.policy-card i {
+  color: var(--coral);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.policy-card p {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+.policy-card a {
+  color: var(--coral);
+  text-decoration: underline;
+}
+
+/* Right Rail: Official Bank Wire Card */
+.bank-details-wrapper {
+  position: sticky;
+  top: 90px;
+}
+
+.bank-details-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease;
+}
+
+.bank-details-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+}
+
+.bank-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--prog-border);
+}
+
+.bank-currency-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  color: var(--prog-text);
+  background: var(--prog-badge-bg);
+}
+
+.bank-field {
+  margin-bottom: 16px;
+}
+
+.bank-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--prog-muted);
+  margin-bottom: 4px;
+}
+
+.bank-field strong {
+  font-size: 14.5px;
+  color: var(--prog-text);
+  font-weight: 700;
+}
+
+.bank-field span {
+  font-size: 13.5px;
+  color: var(--prog-text);
+}
+
+.iban-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.iban-copy-row code {
+  flex-grow: 1;
+  display: block;
+  font-family: "NB International Mono", "Inter", monospace;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--coral);
+  background: var(--prog-badge-bg);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  letter-spacing: 0.04em;
+  word-break: break-all;
+}
+
+.bank-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bank-footer-note {
+  font-size: 11.5px;
+  color: var(--prog-muted);
+  border-top: 1px solid var(--prog-border);
+  padding-top: 14px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bank-footer-note i {
+  color: var(--coral);
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   =================================================== */
+@media (max-width: 991.98px) {
+  .tuition-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .payment-info {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .bank-details-wrapper {
+    position: static;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tuition-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .tuition-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .fee-notice-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bank-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .tuition-hero {
+    height: 220px;
+  }
+  .tuition-lead {
+    font-size: 15px;
+  }
+}

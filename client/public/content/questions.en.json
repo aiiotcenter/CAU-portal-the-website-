@@ -1,0 +1,251 @@
+[
+  {
+    "id": "cau-a2-001",
+    "version": 1,
+    "level": "A2",
+    "skill": "grammar",
+    "difficulty": 1,
+    "errorTag": "subject-verb-agreement",
+    "prompt": "Choose the correct sentence to ask about library opening times:",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "What time does the university library open on weekdays?"
+      },
+      {
+        "id": "opt-2",
+        "text": "What time do the university library opens on weekdays?"
+      },
+      {
+        "id": "opt-3",
+        "text": "When the university library is open up on weekdays?"
+      },
+      {
+        "id": "opt-4",
+        "text": "What time opening the university library weekdays?"
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "Third-person singular with auxiliary 'does' strictly requires base verb form 'open'.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-a2-002",
+    "version": 1,
+    "level": "A2",
+    "skill": "vocabulary",
+    "difficulty": 1,
+    "errorTag": "preposition",
+    "prompt": "The orientation session begins promptly [ _____ ] 9:00 AM in the Grand Amphitheatre.",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "at"
+      },
+      {
+        "id": "opt-2",
+        "text": "on"
+      },
+      {
+        "id": "opt-3",
+        "text": "in"
+      },
+      {
+        "id": "opt-4",
+        "text": "by"
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "Exact clock times strictly require the preposition 'at'.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-b1-001",
+    "version": 1,
+    "level": "B1",
+    "skill": "grammar",
+    "difficulty": 2,
+    "errorTag": "run-on",
+    "prompt": "Identify the sentence that correctly connects two independent academic ideas:",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "The laboratory closed early; consequently, students completed the lab report at home."
+      },
+      {
+        "id": "opt-2",
+        "text": "The laboratory closed early, students had to complete the report at home."
+      },
+      {
+        "id": "opt-3",
+        "text": "The laboratory closed early because the blackout happened so we left."
+      },
+      {
+        "id": "opt-4",
+        "text": "The laboratory closed early, but yet we stayed inside."
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "A semicolon followed by a conjunctive adverb ('consequently') properly joins two independent clauses without a comma splice.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-b1-002",
+    "version": 1,
+    "level": "B1",
+    "skill": "pragmatics",
+    "difficulty": 2,
+    "errorTag": "register",
+    "prompt": "Which email subject line is most appropriate when submitting an essay to Dr. Henderson?",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "CAU Prep Module 3 — Essay Submission — Tariq Al-Mansoor (ID: 81920)"
+      },
+      {
+        "id": "opt-2",
+        "text": "Here is my essay please check it asap"
+      },
+      {
+        "id": "opt-3",
+        "text": "URGENT PAPER"
+      },
+      {
+        "id": "opt-4",
+        "text": "Homework attached from Tariq"
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "Academic emails require standard metadata (Course, Purpose, Student Name, and ID) in the subject line.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-b2-001",
+    "version": 1,
+    "level": "B2",
+    "skill": "grammar",
+    "difficulty": 2.5,
+    "errorTag": "dangling-modifier",
+    "prompt": "Which sentence correctly avoids a dangling modifier?",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "While analyzing the survey data, the researchers discovered a notable statistical correlation."
+      },
+      {
+        "id": "opt-2",
+        "text": "Analyzing the survey data, a notable statistical correlation was discovered."
+      },
+      {
+        "id": "opt-3",
+        "text": "Having analyzed the survey data, the conclusion was obvious to everyone."
+      },
+      {
+        "id": "opt-4",
+        "text": "Upon analyzing the survey data, the computer crashed immediately."
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "The introductory participial phrase must modify the logical agent performing the action ('the researchers').",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-b2-002",
+    "version": 1,
+    "level": "B2",
+    "skill": "vocabulary",
+    "difficulty": 2.5,
+    "errorTag": "false-cognate",
+    "prompt": "Choose the sentence that correctly uses academic terminology without a false cognate:",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "The professor delivered a comprehensive lecture on economic sustainability in Cyprus."
+      },
+      {
+        "id": "opt-2",
+        "text": "The professor gave a short conference in room 204 yesterday."
+      },
+      {
+        "id": "opt-3",
+        "text": "Our class attended a 15-minute symposium before lunch."
+      },
+      {
+        "id": "opt-4",
+        "text": "She made a conference about grammar rules in prep school."
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "A classroom presentation is a 'lecture'. 'Conference' refers to an organized large-scale convention.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-c1-001",
+    "version": 1,
+    "level": "C1",
+    "skill": "reading",
+    "difficulty": 3,
+    "errorTag": "hedging",
+    "prompt": "According to the passage, what is the pedagogical function of academic hedging?",
+    "passage": "Academic hedging is not rhetorical equivocation; rather, it is epistemic calibration. By qualifying claims with probabilistic markers ('suggests', 'tends to'), researchers accurately reflect the empirical boundaries of their datasets while preserving intellectual honesty.",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "It aligns claim strength with the empirical limits of the research dataset."
+      },
+      {
+        "id": "opt-2",
+        "text": "It hides inconclusive findings from peer review committees."
+      },
+      {
+        "id": "opt-3",
+        "text": "It eliminates the need for statistical methodology in papers."
+      },
+      {
+        "id": "opt-4",
+        "text": "It guarantees that a scientific hypothesis cannot be challenged."
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "The text defines hedging as 'epistemic calibration' that matches assertion strength to empirical data boundaries.",
+    "sourceType": "original",
+    "status": "approved"
+  },
+  {
+    "id": "cau-c1-002",
+    "version": 1,
+    "level": "C1",
+    "skill": "pragmatics",
+    "difficulty": 3,
+    "errorTag": "calque",
+    "prompt": "Which sentence uses standard academic phrasing free from L1 calque direct translation?",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "The candidate defended her research thesis persuasively during the viva voce examination."
+      },
+      {
+        "id": "opt-2",
+        "text": "During the oral exam, the candidate was defending himself against the professors."
+      },
+      {
+        "id": "opt-3",
+        "text": "The student gave right to the professor during the seminar debate."
+      },
+      {
+        "id": "opt-4",
+        "text": "She took into hand the statistical anomalies during chapter 4."
+      }
+    ],
+    "correctOptionId": "opt-1",
+    "explanation": "In academic English, students 'defend their thesis/dissertation', not 'defend themselves against professors' (calque of 'kendini savunmak').",
+    "sourceType": "original",
+    "status": "approved"
+  }
+]

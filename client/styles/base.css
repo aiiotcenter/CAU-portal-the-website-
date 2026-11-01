@@ -1,0 +1,264 @@
+:root {
+  --font-family--display: "Inter", sans-serif;
+  --font-family-display: "Inter", sans-serif;
+}
+
+/**
+ * ==============================================================================
+ * CYPRUS AYDIN UNIVERSITY (CAU) — BASE STYLES & TYPOGRAPHY RESETS
+ * Architecture: Bespoke Swiss Editorial Design System (Agency-Grade Standard)
+ * Anti-AI Negative Constraints • Tactile Resets • Strict Focus Geometry
+ * ==============================================================================
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--font-family-root, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+body {
+  margin: 0;
+  background-color: var(--sys-bg-base);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-body, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: var(--font-body);
+  line-height: var(--font-body-lh);
+  letter-spacing: var(--font-body-ls);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   ANTI-AI ZERO BLUR & ZERO SHADOW ENFORCEMENT
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  /* Strictly eradicate all floaty glassmorphism and diffuse glows */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  text-shadow: none !important;
+}
+
+::selection {
+  background-color: var(--sys-text-primary);
+  color: var(--sys-bg-base);
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY HIERARCHY (Title Case & Bespoke Editorial Character)
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  text-transform: var(--text-transform-headings, none);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-h1);
+  line-height: var(--font-h1-lh);
+  letter-spacing: var(--font-h1-ls);
+  text-transform: var(--text-transform-headings, none);
+}
+
+h2 {
+  font-size: var(--font-h2);
+  line-height: var(--font-h2-lh);
+  letter-spacing: var(--font-h2-ls);
+  text-transform: var(--text-transform-headings, none);
+}
+
+h3 {
+  font-size: var(--font-h3);
+  line-height: var(--font-h3-lh);
+  letter-spacing: var(--font-h3-ls);
+  text-transform: var(--text-transform-headings, none);
+}
+
+h4 {
+  font-size: var(--font-h4);
+  line-height: var(--font-h4-lh);
+  letter-spacing: var(--font-h4-ls);
+  text-transform: var(--text-transform-headings, none);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+  color: var(--sys-text-primary);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL LAYOUT SHELL & CONTAINERS (Strict 8pt Gutter & Max-Width Tokens)
+   -------------------------------------------------------------------------- */
+.cau-container,
+.container-xxl,
+.homepage-canvas {
+  width: 100%;
+  max-width: var(--container-max, 1440px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter-desktop, 48px);
+  padding-right: var(--gutter-desktop, 48px);
+}
+
+@media (max-width: 1023.98px) {
+  .cau-container,
+  .container-xxl,
+  .homepage-canvas {
+    padding-left: var(--gutter-tablet, 24px);
+    padding-right: var(--gutter-tablet, 24px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cau-container,
+  .container-xxl,
+  .homepage-canvas {
+    padding-left: var(--gutter-mobile, 16px);
+    padding-right: var(--gutter-mobile, 16px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION PROFILES (Spacious Showcase vs Dense Catalog)
+   -------------------------------------------------------------------------- */
+.section-showcase {
+  padding-top: var(--section-pad-showcase-desktop, 96px);
+  padding-bottom: var(--section-pad-showcase-desktop, 96px);
+}
+
+.section-dense:not(.news-section) {
+  padding-top: var(--section-pad-dense-desktop, 64px);
+  padding-bottom: var(--section-pad-dense-desktop, 64px);
+}
+
+.news-section,
+.split-section.section-rule-top.news-section.section-dense {
+  padding-top: var(--section-pad-dense-desktop, 64px);
+  padding-bottom: 0 !important;
+}
+
+.news-section .split-rail,
+.news-section .split-content {
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 1023.98px) {
+  .section-showcase {
+    padding-top: var(--section-pad-showcase-tablet, 64px);
+    padding-bottom: var(--section-pad-showcase-tablet, 64px);
+  }
+  .section-dense:not(.news-section) {
+    padding-top: var(--section-pad-dense-tablet, 48px);
+    padding-bottom: var(--section-pad-dense-tablet, 48px);
+  }
+  .news-section,
+  .split-section.section-rule-top.news-section.section-dense {
+    padding-top: var(--section-pad-dense-tablet, 48px);
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-showcase {
+    padding-top: var(--section-pad-showcase-mobile, 48px);
+    padding-bottom: var(--section-pad-showcase-mobile, 48px);
+  }
+  .section-dense:not(.news-section) {
+    padding-top: var(--section-pad-dense-mobile, 32px);
+    padding-bottom: var(--section-pad-dense-mobile, 32px);
+  }
+  .news-section,
+  .split-section.section-rule-top.news-section.section-dense {
+    padding-top: var(--section-pad-dense-mobile, 32px);
+    padding-bottom: 0 !important;
+  }
+}
+
+.cau-section-rule,
+.section-rule-top {
+  border-top: var(--border-hairline);
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: var(--space-4);
+  background: var(--sys-accent);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: var(--font-caption);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+}
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* Focus-visible: High-Visibility Sharp Hairline (Zero Glows) */
+:focus-visible {
+  outline: 2px solid var(--sys-text-primary);
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   STANDARD SYSTEM GRIDS (8px Grounded Rhythms)
+   -------------------------------------------------------------------------- */
+.cau-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.cau-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.cau-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+@media (max-width: 991.98px) {
+  .cau-grid-3, .cau-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cau-grid-2, .cau-grid-3, .cau-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

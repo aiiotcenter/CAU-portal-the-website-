@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lead-1",
+    "fullName": "Amina Al-Mansoor",
+    "email": "amina.m@example.com",
+    "phone": "+971 50 123 4567",
+    "country": "United Arab Emirates",
+    "programOfInterest": "Software Engineering",
+    "degreeLevel": "Bachelor",
+    "notes": "High school GPA 3.8. Inquired about SAT 85% scholarship criteria.",
+    "status": "Offer Sent",
+    "source": "Website Form",
+    "createdAt": "2026-09-04T10:15:00Z",
+    "updatedAt": "2026-09-05T14:30:00Z"
+  },
+  {
+    "id": "lead-2",
+    "fullName": "Tariq Mahmud",
+    "email": "tariq.mahmud@example.com",
+    "phone": "+90 533 821 4433",
+    "country": "Turkey",
+    "programOfInterest": "Dentistry",
+    "degreeLevel": "Bachelor",
+    "notes": "Interested in 5-year English Dentistry programme. WhatsApp followed up.",
+    "status": "Contacted",
+    "source": "WhatsApp",
+    "createdAt": "2026-09-05T08:45:00Z",
+    "updatedAt": "2026-09-05T09:10:00Z"
+  },
+  {
+    "id": "lead-3",
+    "fullName": "Ksenia Petrova",
+    "email": "ksenia.p@example.com",
+    "phone": "+7 916 555 0192",
+    "country": "Kazakhstan",
+    "programOfInterest": "Business Administration (MBA)",
+    "degreeLevel": "Master",
+    "notes": "Bachelor degree in Economics. Sent prospectus and fee evaluation sheet.",
+    "status": "New",
+    "source": "AI Assistant",
+    "createdAt": "2026-09-06T11:20:00Z",
+    "updatedAt": "2026-09-06T11:20:00Z"
+  }
+]

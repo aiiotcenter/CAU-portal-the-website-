@@ -1,0 +1,1148 @@
+{
+  "QUESTION_BANK": [
+    {
+      "name": "🏛️ Level 1: Campus Fundamentals",
+      "level": "A2/B1",
+      "questions": [
+        {
+          "id": "lvl1_dlg1",
+          "type": "dialogue",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Excuse me, could you tell me how many books undergraduate students can borrow from the university library at one time?"
+            },
+            {
+              "speaker": "Librarian",
+              "text": "Undergraduate students may borrow up to five books for a standard loan period of two weeks."
+            }
+          ],
+          "q": "Choose the most appropriate and polite response for the student to continue:",
+          "a": [
+            "Thank you very much. Can I renew them online if I need more time for my term paper?",
+            "Give me ten books right now because I am a serious student.",
+            "I don't care about the rules, I will keep them until graduation.",
+            "Two weeks? My goldfish has a longer attention span than that!"
+          ],
+          "c": 0,
+          "rationale": "In standard academic communication, students express gratitude and make polite follow-up inquiries ('Thank you very much. Can I renew them online...?')."
+        },
+        {
+          "id": "lvl1_clz1",
+          "type": "cloze",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "clozeStem": "The international student orientation session begins promptly [ _____ ] 9:00 AM in the Grand Auditorium.",
+          "q": "Choose the preposition that correctly completes the campus announcement:",
+          "a": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
+          "c": 0,
+          "rationale": "Exact clock times strictly require the preposition “at” (at 9:00 AM)."
+        },
+        {
+          "id": "lvl1_err1",
+          "type": "spot_error",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "errorStem": "The campus shuttle bus [A] departs every thirty minutes [B] from the North Gate on weekdays [C], but it don't run [D] on Sunday evenings.",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] departs",
+            "[B] every thirty minutes",
+            "[C] on weekdays",
+            "[D] it don't run"
+          ],
+          "c": 3,
+          "rationale": "Segment [D] is ungrammatical. With the singular third-person pronoun “it”, the negative present tense auxiliary must be “doesn’t run”, not “don’t run”."
+        },
+        {
+          "id": "lvl1_dlg2",
+          "type": "dialogue",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Good morning Professor Evans, do you have office hours available this afternoon?"
+            },
+            {
+              "speaker": "Professor",
+              "text": "Yes, I will be in my faculty office between 2:00 PM and 4:00 PM to assist students with course queries."
+            }
+          ],
+          "q": "Select the most polite rejoinder for the student to confirm their visit:",
+          "a": [
+            "Excellent, I will stop by around 2:30 PM to discuss the essay outline. Thank you, Professor.",
+            "You must wait for me until I arrive because I might be late.",
+            "Fine, but you better give me an A on my midterm exam.",
+            "I am coming over now whether you are ready or not."
+          ],
+          "c": 0,
+          "rationale": "Academic politeness requires confirming a specific anticipated arrival time and thanking faculty members."
+        },
+        {
+          "id": "lvl1_clz2",
+          "type": "cloze",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "clozeStem": "All students must present their university smart card in order to [ _____ ] access to the engineering computer laboratories.",
+          "q": "Choose the verb that collocates properly with 'access':",
+          "a": [
+            "gain",
+            "make",
+            "take",
+            "do"
+          ],
+          "c": 0,
+          "rationale": "The standard English collocation is to “gain access” or “obtain access” to secured facilities."
+        },
+        {
+          "id": "lvl1_err2",
+          "type": "spot_error",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "errorStem": "All incoming freshmen [A] is required to attend [B] the campus safety briefing [C] during orientation week [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] incoming freshmen",
+            "[B] is required to attend",
+            "[C] safety briefing",
+            "[D] during orientation week"
+          ],
+          "c": 1,
+          "rationale": "Segment [B] violates subject-verb agreement. The plural subject “freshmen” requires the plural verb “are required to attend”."
+        },
+        {
+          "id": "lvl1_dlg3",
+          "type": "dialogue",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Hello, I need an official transcript for my scholarship application. How long does administrative processing take?"
+            },
+            {
+              "speaker": "Registrar",
+              "text": "Official academic transcripts are typically prepared within two business days following your online portal request."
+            }
+          ],
+          "q": "Which response maintains standard professional student etiquette?",
+          "a": [
+            "Understood, I will submit the digital form through the student portal today. Thank you for your assistance.",
+            "Two days is too slow; print it out for me right now.",
+            "Forget it, I don't need your university paperwork anyway.",
+            "Can you write whatever grades I want on it?"
+          ],
+          "c": 0,
+          "rationale": "Clear acknowledgment of university timelines and thanking the registrar reflects proper campus decorum."
+        },
+        {
+          "id": "lvl1_clz3",
+          "type": "cloze",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "clozeStem": "Please remember to turn [ _____ ] all electronic devices and smartwatches before entering the examination hall.",
+          "q": "Choose the correct phrasal verb particle:",
+          "a": [
+            "off",
+            "down",
+            "away",
+            "out"
+          ],
+          "c": 0,
+          "rationale": "To power down electrical appliances and devices, English uses the phrasal verb “turn off”."
+        },
+        {
+          "id": "lvl1_err3",
+          "type": "spot_error",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "errorStem": "There are [A] three modern dining halls [B] on campus that provides [C] nutritious meals for students every day [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] There are",
+            "[B] dining halls",
+            "[C] that provides",
+            "[D] every day"
+          ],
+          "c": 2,
+          "rationale": "Segment [C] is incorrect. The relative clause refers back to the plural noun phrase “dining halls”, which requires plural agreement: “that provide”."
+        },
+        {
+          "id": "lvl1_lex1",
+          "type": "lexicon",
+          "level": "A2/B1",
+          "timeLimit": 30,
+          "q": "On a course syllabus, if seminar attendance is listed as 'mandatory', it signifies that attending lectures is:",
+          "a": [
+            "Obligatory and strictly required by university policy",
+            "Optional whenever students prefer to study independently",
+            "Forbidden without written parental authorization",
+            "Postponed until the subsequent academic semester"
+          ],
+          "c": 0,
+          "rationale": "“Mandatory” is the formal academic term meaning compulsory or binding under official institutional regulations."
+        }
+      ]
+    },
+    {
+      "name": "📐 Level 2: Sentence Architecture",
+      "level": "B1+",
+      "questions": [
+        {
+          "id": "lvl2_clz1",
+          "type": "cloze",
+          "level": "B1+",
+          "timeLimit": 30,
+          "clozeStem": "The engineering symposium was rescheduled [ _____ ] the keynote speaker's flight was delayed by inclement weather.",
+          "q": "Select the conjunction that introduces a causal clause:",
+          "a": [
+            "because",
+            "due to",
+            "despite",
+            "although"
+          ],
+          "c": 0,
+          "rationale": "“Because” introduces a subordinate clause containing a subject and verb ('flight was delayed'), whereas 'due to' requires a noun phrase."
+        },
+        {
+          "id": "lvl2_err1",
+          "type": "spot_error",
+          "level": "B1+",
+          "timeLimit": 30,
+          "errorStem": "Each of the new laboratory workstations are [A] equipped with advanced CAD software [B] to facilitate [C] architectural design projects [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] are",
+            "[B] equipped with",
+            "[C] to facilitate",
+            "[D] architectural design projects"
+          ],
+          "c": 0,
+          "rationale": "Segment [A] has a subject-verb agreement error. The indefinite pronoun “Each” is grammatically singular, so it requires “is equipped”, not “are equipped”."
+        },
+        {
+          "id": "lvl2_dlg1",
+          "type": "dialogue",
+          "level": "B1+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "I'm considering adding an elective in Machine Learning, but my current semester load is already 18 credits."
+            },
+            {
+              "speaker": "Advisor",
+              "text": "Given the rigorous programming assignments in that course, an additional load might compromise your overall semester GPA."
+            }
+          ],
+          "q": "Which response demonstrates mature academic planning by the student?",
+          "a": [
+            "I see your point. I will postpone Machine Learning until next spring so I can devote sufficient time to my core engineering subjects.",
+            "I don't care about my GPA; grades don't matter in the real world anyway.",
+            "Just sign the override form for me and let me deal with the consequences.",
+            "Can you tell the professor to make the exams easier for me?"
+          ],
+          "c": 0,
+          "rationale": "Pragmatic academic advising conversations involve weighing workload considerations and strategically balancing course rigor across terms."
+        },
+        {
+          "id": "lvl2_clz2",
+          "type": "cloze",
+          "level": "B1+",
+          "timeLimit": 30,
+          "clozeStem": "The department recognized the student research team [ _____ ] paper was accepted for presentation at the IEEE conference.",
+          "q": "Choose the relative possessive pronoun:",
+          "a": [
+            "whose",
+            "which",
+            "who",
+            "whom"
+          ],
+          "c": 0,
+          "rationale": "“Whose” indicates possession modifying the noun 'paper' belonging to the research team."
+        },
+        {
+          "id": "lvl2_err2",
+          "type": "spot_error",
+          "level": "B1+",
+          "timeLimit": 30,
+          "errorStem": "Although the researchers worked [A] diligently throughout the night, neither the telemetry sensors nor the transmitter were [B] functional [C] by sunrise [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] worked",
+            "[B] were",
+            "[C] functional",
+            "[D] by sunrise"
+          ],
+          "c": 1,
+          "rationale": "Segment [B] is incorrect. With the correlative conjunction “neither ... nor”, the verb must agree with the subject closest to it. Here, “the transmitter” is singular, so it requires “was functional”."
+        },
+        {
+          "id": "lvl2_clz3",
+          "type": "cloze",
+          "level": "B1+",
+          "timeLimit": 30,
+          "clozeStem": "Prospective scholarship recipients must submit all verified credentials [ _____ ] the published administrative deadline.",
+          "q": "Select the correct prepositional phrase meaning 'before':",
+          "a": [
+            "prior to",
+            "before of",
+            "ahead from",
+            "in advance of to"
+          ],
+          "c": 0,
+          "rationale": "“Prior to” is the formal academic preposition meaning before a specified time or event."
+        },
+        {
+          "id": "lvl2_err3",
+          "type": "spot_error",
+          "level": "B1+",
+          "timeLimit": 30,
+          "errorStem": "The university central library houses [A] over fifty thousand physical volumes [B], as well as numerous digital databases that is [C] accessible remotely [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] houses",
+            "[B] physical volumes",
+            "[C] that is",
+            "[D] accessible remotely"
+          ],
+          "c": 2,
+          "rationale": "Segment [C] fails relative agreement. The antecedent of 'that' is the plural noun phrase 'digital databases', requiring 'that are accessible'."
+        },
+        {
+          "id": "lvl2_dlg2",
+          "type": "dialogue",
+          "level": "B1+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Professor, the calibration curve on our spectrophotometer seems slightly skewed compared to yesterday's baseline."
+            },
+            {
+              "speaker": "Lab Supervisor",
+              "text": "Good catch. Let's inspect the optical cuvette for contamination before we run the experimental samples."
+            }
+          ],
+          "q": "Which continuation demonstrates appropriate scientific protocol?",
+          "a": [
+            "Understood; I will clean the optical cuvette with ethanol and re-run the blank calibration standard now.",
+            "Let's just change the numbers manually so the graph looks normal in our lab report.",
+            "The equipment is obviously cursed, so I am leaving before it curses me too.",
+            "Can we just guess the final values without testing?"
+          ],
+          "c": 0,
+          "rationale": "Standard laboratory procedure mandates cleaning optical surfaces and re-verifying calibration against blank standards."
+        },
+        {
+          "id": "lvl2_clz4",
+          "type": "cloze",
+          "level": "B1+",
+          "timeLimit": 30,
+          "clozeStem": "The faculty committee agreed to fund the marine biology project [ _____ ] its substantial budgetary requirements.",
+          "q": "Choose the preposition expressing concession before a noun phrase:",
+          "a": [
+            "despite",
+            "although",
+            "even though",
+            "whereas"
+          ],
+          "c": 0,
+          "rationale": "“Despite” is a preposition that precedes a noun phrase ('its substantial budgetary requirements'), while 'although' introduces a full clause."
+        },
+        {
+          "id": "lvl2_lex1",
+          "type": "lexicon",
+          "level": "B1+",
+          "timeLimit": 30,
+          "q": "When a professor advises a student to 'synthesize' diverse literature in their term paper, they mean:",
+          "a": [
+            "Combine different research findings into an integrated analytical discussion",
+            "Copy and paste paragraphs directly from online encyclopedias",
+            "Translate the entire text into another language",
+            "Delete half of the cited sources to shorten the word count"
+          ],
+          "c": 0,
+          "rationale": "In academic scholarship, to “synthesize” means to connect and integrate insights from multiple scholarly sources into a unified argument."
+        }
+      ]
+    },
+    {
+      "name": "🧭 Level 3: Spot the Error & Syntax",
+      "level": "B2",
+      "questions": [
+        {
+          "id": "lvl3_err1",
+          "type": "spot_error",
+          "level": "B2",
+          "timeLimit": 30,
+          "errorStem": "The director of the robotics facilities, accompanied by three senior doctoral fellows, have designed [A] an automated testing platform [B] that reduces [C] inspection latency by forty percent [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] have designed",
+            "[B] automated testing platform",
+            "[C] that reduces",
+            "[D] by forty percent"
+          ],
+          "c": 0,
+          "rationale": "Segment [A] has a subject-verb agreement error. Phrases beginning with 'accompanied by' are parenthetical; the true grammatical subject is the singular noun 'director', which requires 'has designed'."
+        },
+        {
+          "id": "lvl3_clz1",
+          "type": "cloze",
+          "level": "B2",
+          "timeLimit": 30,
+          "clozeStem": "Had the telemetry engineers calibrated the optical sensors earlier, the anomaly [ _____ ] prior to deployment.",
+          "q": "Choose the correct past hypothetical conditional completion:",
+          "a": [
+            "would have been detected",
+            "was detected",
+            "will be detected",
+            "would be detect"
+          ],
+          "c": 0,
+          "rationale": "Third conditional inversion ('Had + subject + past participle') strictly requires 'would have + past participle' in the result clause."
+        },
+        {
+          "id": "lvl3_err2",
+          "type": "spot_error",
+          "level": "B2",
+          "timeLimit": 30,
+          "errorStem": "Having spent three weeks analyzing [A] the seismic recordings, the server failure [B] destroyed the unbacked data [C] before the research team could archive it [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] Having spent three weeks analyzing",
+            "[B] the server failure",
+            "[C] destroyed the unbacked data",
+            "[D] before the research team could archive it"
+          ],
+          "c": 1,
+          "rationale": "Segment [B] creates a dangling modifier. The introductory participial phrase 'Having spent three weeks analyzing' must logically modify the researchers, not 'the server failure'. It should read: '...the researchers lost their unbacked data when the server failed'."
+        },
+        {
+          "id": "lvl3_dlg1",
+          "type": "dialogue",
+          "level": "B2",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Graduate Student A",
+              "text": "The peer reviewer noted that our regression model suffers from multicollinearity among the socio-economic variables."
+            },
+            {
+              "speaker": "Graduate Student B",
+              "text": "That is a valid critique. We should examine the Variance Inflation Factor (VIF) scores and remove redundant predictors."
+            }
+          ],
+          "q": "Select the most methodologically rigorous response for Student A:",
+          "a": [
+            "Agreed. I will compute the VIF values in R and re-run the penalized Ridge regression to verify coefficient stability.",
+            "Let's just write 'trust us' in bold and hope Reviewer 2 has amnesia by round two.",
+            "We can delete the data points that don't fit our preferred curve.",
+            "Let's withdraw the paper completely because any critique means our research is invalid."
+          ],
+          "c": 0,
+          "rationale": "Addressing statistical reviewer critiques requires diagnostic metric calculation (VIF) and robust modeling alternatives (penalized regression)."
+        },
+        {
+          "id": "lvl3_clz2",
+          "type": "cloze",
+          "level": "B2",
+          "timeLimit": 30,
+          "clozeStem": "All biomedical research protocols involving clinical participants must strictly comply [ _____ ] the Declaration of Helsinki.",
+          "q": "Select the preposition that collocates with 'comply':",
+          "a": [
+            "with",
+            "to",
+            "on",
+            "for"
+          ],
+          "c": 0,
+          "rationale": "The verb “comply” collocates strictly with the preposition “with” (comply with regulations)."
+        },
+        {
+          "id": "lvl3_err3",
+          "type": "spot_error",
+          "level": "B2",
+          "timeLimit": 30,
+          "errorStem": "Between the four architectural proposals [A] submitted for the new student union pavilion [B], the biophilic design received [C] the highest sustainability score [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] Between the four architectural proposals",
+            "[B] submitted for the new student union pavilion",
+            "[C] received",
+            "[D] highest sustainability score"
+          ],
+          "c": 0,
+          "rationale": "Segment [A] is ungrammatical. In standard English, 'between' is used when distinguishing two items; when comparing four distinct entities, use 'Among the four architectural proposals'."
+        },
+        {
+          "id": "lvl3_clz3",
+          "type": "cloze",
+          "level": "B2",
+          "timeLimit": 30,
+          "clozeStem": "Rarely [ _____ ] such an unprecedented correlation between circadian sleep consistency and academic exam performance.",
+          "q": "Select the inverted syntax construction triggered by the negative adverb 'Rarely':",
+          "a": [
+            "have researchers observed",
+            "researchers have observed",
+            "did researchers observing",
+            "have observed researchers"
+          ],
+          "c": 0,
+          "rationale": "Negative adverbs like “Rarely” or “Seldom” placed in sentence-initial position trigger subject-auxiliary inversion ('have researchers observed')."
+        },
+        {
+          "id": "lvl3_dlg2",
+          "type": "dialogue",
+          "level": "B2",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Dr. Thorne, we are contemplating expanding our civil engineering capstone to evaluate traffic flow across the entire metropolitan corridor."
+            },
+            {
+              "speaker": "Department Chair",
+              "text": "While the ambition is admirable, you risk diluting the depth of your structural analysis within the single-semester timeframe."
+            }
+          ],
+          "q": "Which response demonstrates professional academic realism?",
+          "a": [
+            "Thank you for the guidance, Dr. Thorne. We will narrow our scope to the three critical bottleneck intersections to ensure rigorous empirical modeling.",
+            "We will ignore your advice and do whatever we want regardless of the deadline.",
+            "If you won't let us study the whole city, we refuse to complete our capstone project.",
+            "Can we just download a finished project from another university?"
+          ],
+          "c": 0,
+          "rationale": "Sound academic research planning requires bounding scope to ensure analytical depth within project constraints."
+        },
+        {
+          "id": "lvl3_err4",
+          "type": "spot_error",
+          "level": "B2",
+          "timeLimit": 30,
+          "errorStem": "The institutional ethics committee recommended that the principal investigator modifies [A] the informed consent documentation [B] prior to commencing [C] subject recruitment [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] modifies",
+            "[B] informed consent documentation",
+            "[C] prior to commencing",
+            "[D] subject recruitment"
+          ],
+          "c": 0,
+          "rationale": "Segment [A] violates the mandative subjunctive mood. Verbs of recommendation ('recommended that...') require the bare base form of the verb: 'modify', not 'modifies'."
+        },
+        {
+          "id": "lvl3_clz4",
+          "type": "cloze",
+          "level": "B2",
+          "timeLimit": 30,
+          "clozeStem": "The experimental semiconductor demonstrated exceptional thermal conductivity; [ _____ ], its prohibitive manufacturing expense currently prevents mass industrial adoption.",
+          "q": "Select the transitional conjunctive adverb indicating contrast:",
+          "a": [
+            "nevertheless",
+            "consequently",
+            "furthermore",
+            "likewise"
+          ],
+          "c": 0,
+          "rationale": "“Nevertheless” introduces a contrasting concession ('despite high conductivity, high cost prevents adoption')."
+        }
+      ]
+    },
+    {
+      "name": "🔬 Level 4: Campus Pragmatics",
+      "level": "B2+",
+      "questions": [
+        {
+          "id": "lvl4_dlg1",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Professor Clark, I've compiled the primary sources for my comparative literature thesis, but I'm struggling to synthesize the conflicting critical viewpoints."
+            },
+            {
+              "speaker": "Professor",
+              "text": "Rather than attempting to harmonize them prematurely, focus on mapping the theoretical tensions and evaluating the historical evidence supporting each perspective."
+            }
+          ],
+          "q": "Select the most sophisticated scholarly rejoinder for the student:",
+          "a": [
+            "That clarifies the framework significantly. I will structure the chapter as an intellectual dialectic, tracing how each theoretical school interprets the primary texts.",
+            "I'll just pick one critic and claim all the others are completely wrong so I have less writing to do.",
+            "Why do professors love turning a one-word answer into a semester-long riddle?",
+            "Can you write the comparative chapter for me while I work on my other classes?"
+          ],
+          "c": 0,
+          "rationale": "Scholarly inquiry embraces theoretical tensions and structures critical discussions through dialectical synthesis rather than simplistic dismissal."
+        },
+        {
+          "id": "lvl4_dlg2",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "Dr. Thorne, our team has been selected to present our robotics research at the Mediterranean Engineering Forum, which coincides with the final exam period."
+            },
+            {
+              "speaker": "Course Instructor",
+              "text": "Congratulations on the prestigious conference acceptance. Submit your official documentation to the department office, and we can arrange an alternate proctored examination window."
+            }
+          ],
+          "q": "Which response demonstrates proper administrative etiquette?",
+          "a": [
+            "Thank you very much, Dr. Thorne. I will file the conference acceptance letter and itinerary with the department secretary by tomorrow afternoon.",
+            "That's more like it; I knew you wouldn't dare make me take the exam with everyone else.",
+            "Just exempt me from the exam altogether since conference attendance is much more important.",
+            "I will tell the department secretary that you already gave me an automatic grade of 100."
+          ],
+          "c": 0,
+          "rationale": "Filing official university documentation promptly and confirming institutional timelines exemplifies proper student professional etiquette."
+        },
+        {
+          "id": "lvl4_dlg3",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "I adapted a conceptual diagram from a 2024 literature review for my thesis, but I redrew all the vectors in Illustrator myself. Do I still need to cite it?"
+            },
+            {
+              "speaker": "Academic Advisor",
+              "text": "Even if you recreate the visual assets from scratch, the conceptual architecture originates from the published authors."
+            }
+          ],
+          "q": "What is the ethically and academically sound practice for the student?",
+          "a": [
+            "I will include the caption 'Figure 3: Conceptual Framework (Adapted from Alvarez et al., 2024)' and list the full citation in the bibliography.",
+            "Since I drew the pixels myself, I will claim full intellectual copyright and not mention the original study.",
+            "I will put a tiny white font footnote that no one can read at the bottom of the page.",
+            "I will delete the diagram and write an unillustrated wall of text instead."
+          ],
+          "c": 0,
+          "rationale": "Academic integrity mandates explicit attribution ('Adapted from...') whenever reproducing or synthesizing external conceptual models."
+        },
+        {
+          "id": "lvl4_dlg4",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Student",
+              "text": "My Erasmus exchange application to Munich requires verification of CEFR B2+ English proficiency prior to course matriculation."
+            },
+            {
+              "speaker": "Exchange Coordinator",
+              "text": "Cyprus Aydın University's English Preparatory School proficiency certificate and Quest assessment transcript fulfill the European language passport criteria."
+            }
+          ],
+          "q": "How should the student appropriately follow up?",
+          "a": [
+            "Excellent. Could you please certify my official transcript so I can submit the complete packet to the international office before the March deadline?",
+            "Good, then you can do the rest of the application paperwork for me.",
+            "Why does Munich even care about English proficiency when they speak German?",
+            "I will just forge the seal on my documents to speed things up."
+          ],
+          "c": 0,
+          "rationale": "Requesting certified transcripts with clear deadline awareness is the expected academic practice for international exchange."
+        },
+        {
+          "id": "lvl4_dlg5",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Safety Officer",
+              "text": "During our laboratory walkthrough yesterday, we noted unlabelled secondary chemical containers stored inside the chemical fume hood."
+            },
+            {
+              "speaker": "Research Assistant",
+              "text": "I apologize for the procedural lapse. We were conducting rapid serial dilutions and neglected to label the transfer beakers."
+            }
+          ],
+          "q": "Select the most responsible professional corrective action:",
+          "a": [
+            "I will immediately label all secondary vessels with GHS hazard symbols, contents, and preparation dates, and review the safety protocol with our team.",
+            "It's basically lemonade with attitude, so there's no need to panic.",
+            "Someone else must have put those beakers there because I never make mistakes.",
+            "We will just hide the unlabelled beakers in our backpacks next time you inspect the lab."
+          ],
+          "c": 0,
+          "rationale": "Responsible laboratory research requires taking immediate corrective safety measures conforming to Globally Harmonized System (GHS) chemical labeling."
+        },
+        {
+          "id": "lvl4_clz1",
+          "type": "cloze",
+          "level": "B2+",
+          "timeLimit": 30,
+          "clozeStem": "The thesis committee urged the doctoral candidate to [ _____ ] the conflicting empirical datasets rather than prematurely dismissing anomalous readings.",
+          "q": "Select the scholarly verb meaning to bring into harmony or analytical balance:",
+          "a": [
+            "reconcile",
+            "exacerbate",
+            "fabricate",
+            "alienate"
+          ],
+          "c": 0,
+          "rationale": "To “reconcile” in scholarly analysis means to find a coherent explanation that accounts for seemingly contradictory data."
+        },
+        {
+          "id": "lvl4_err1",
+          "type": "spot_error",
+          "level": "B2+",
+          "timeLimit": 30,
+          "errorStem": "Had the university senate listened [A] to the student council's recommendations, the revised registration policy would not create [B] so much widespread confusion [C] during add-drop week [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] Had the university senate listened",
+            "[B] would not create",
+            "[C] widespread confusion",
+            "[D] during add-drop week"
+          ],
+          "c": 1,
+          "rationale": "Segment [B] fails third-conditional sequence of tenses. The inverted past perfect condition ('Had the senate listened') requires past modal completion: 'would not have created', not 'would not create'."
+        },
+        {
+          "id": "lvl4_dlg6",
+          "type": "dialogue",
+          "level": "B2+",
+          "timeLimit": 30,
+          "dialogue": [
+            {
+              "speaker": "Doctoral Fellow A",
+              "text": "Our phenomenological interview findings cannot be statistically generalized across the broader national demographic."
+            },
+            {
+              "speaker": "Doctoral Fellow B",
+              "text": "Indeed, but qualitative inquiry prioritizes interpretive transferability and contextual depth over parametric statistical inference."
+            }
+          ],
+          "q": "Which continuation reflects advanced methodological literacy?",
+          "a": [
+            "Precisely. We should clearly articulate our thick description methodology and provide an audit trail so future researchers can evaluate transferability.",
+            "Then let's just make up 500 fake survey responses so we have statistical significance.",
+            "Qualitative research doesn't count unless it comes with a p-value and a cape.",
+            "Let's not mention our sample size anywhere in the methodology section."
+          ],
+          "c": 0,
+          "rationale": "Qualitative research rigor relies on 'thick description' and transparent audit trails to demonstrate theoretical transferability."
+        },
+        {
+          "id": "lvl4_clz2",
+          "type": "cloze",
+          "level": "B2+",
+          "timeLimit": 30,
+          "clozeStem": "To preserve experimental objectivity, peer reviewers must remain completely [ _____ ] and disclose any competing financial or academic interests.",
+          "q": "Select the adjective meaning unbiased and neutral:",
+          "a": [
+            "impartial",
+            "impassioned",
+            "partisan",
+            "dogmatic"
+          ],
+          "c": 0,
+          "rationale": "“Impartial” denotes fairness and freedom from prejudice or conflict of interest in scholarly peer review."
+        },
+        {
+          "id": "lvl4_err2",
+          "type": "spot_error",
+          "level": "B2+",
+          "timeLimit": 30,
+          "errorStem": "Not only the dean of health sciences [A] but also five senior clinical professors was present [B] when the simulation hospital [C] was officially inaugurated [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] Not only the dean of health sciences",
+            "[B] was present",
+            "[C] simulation hospital",
+            "[D] was officially inaugurated"
+          ],
+          "c": 1,
+          "rationale": "Segment [B] has an error with correlative agreement. In 'not only ... but also', the verb agrees with the nearer subject ('five senior clinical professors'), which is plural, requiring 'were present'."
+        }
+      ]
+    },
+    {
+      "name": "📜 Level 5: Scholarly Discourse",
+      "level": "C1",
+      "questions": [
+        {
+          "id": "lvl5_col1",
+          "type": "collocation",
+          "level": "C1",
+          "timeLimit": 30,
+          "q": "Which statement exemplifies appropriate academic 'hedging' (cautious, scientifically defensible assertion)?",
+          "a": [
+            "The observed telemetry correlations suggest that elevated ambient temperature may modulate enzymatic reaction kinetics.",
+            "This experiment proves definitively that hot weather destroys all chemical reactions without exception.",
+            "Everyone knows that high temperatures ruin laboratory experiments immediately.",
+            "Our data undeniably exposes the complete fallacy of all previous biochemical models."
+          ],
+          "c": 0,
+          "rationale": "Scholarly prose employs epistemic modality ('suggest that... may modulate') to frame assertions with appropriate scientific caution."
+        },
+        {
+          "id": "lvl5_clz1",
+          "type": "cloze",
+          "level": "C1",
+          "timeLimit": 30,
+          "clozeStem": "The empirical findings of the marine ecological survey are consistent [ _____ ] the longitudinal baseline recorded in previous Kyrenia excavations.",
+          "q": "Select the preposition that collocates with 'consistent':",
+          "a": [
+            "with",
+            "to",
+            "against",
+            "upon"
+          ],
+          "c": 0,
+          "rationale": "In academic literature, the adjective “consistent” collocates with the preposition “with” (consistent with prior findings)."
+        },
+        {
+          "id": "lvl5_err1",
+          "type": "spot_error",
+          "level": "C1",
+          "timeLimit": 30,
+          "errorStem": "The tenure evaluation committee insisted that the candidate submits [A] three external peer review letters [B] before the final departmental deliberation [C] takes place [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] submits",
+            "[B] external peer review letters",
+            "[C] final departmental deliberation",
+            "[D] takes place"
+          ],
+          "c": 0,
+          "rationale": "Segment [A] violates the mandative subjunctive. The verb 'insisted that' requires the uninflected base form of the verb: 'submit', not 'submits'."
+        },
+        {
+          "id": "lvl5_dis1",
+          "type": "discourse",
+          "level": "C1",
+          "timeLimit": 30,
+          "q": "Select the sentence demonstrating effective academic nominalization to create an objective scholarly register:",
+          "a": [
+            "Rigorous econometric analysis facilitated a comprehensive understanding of regional market volatility.",
+            "Because the researchers analyzed the numbers really well, they understood why the economy went crazy.",
+            "Doing lots of number crunching made the team understand market stuff much better.",
+            "The economists looked at data and that's why they got lots of understanding about financial things."
+          ],
+          "c": 0,
+          "rationale": "Nominalization ('analysis facilitated a comprehensive understanding') replaces conversational verbal constructions with concise, authoritative academic syntax."
+        },
+        {
+          "id": "lvl5_clz2",
+          "type": "cloze",
+          "level": "C1",
+          "timeLimit": 30,
+          "clozeStem": "The authors candidly acknowledge several methodological [ _____ ], most notably the reliance on self-reported survey responses.",
+          "q": "Select the standard academic term for research constraints:",
+          "a": [
+            "limitations",
+            "blunders",
+            "catastrophes",
+            "disasters"
+          ],
+          "c": 0,
+          "rationale": "“Methodological limitations” is the established scholarly collocation for discussing the boundaries and constraints of a research design."
+        },
+        {
+          "id": "lvl5_col2",
+          "type": "collocation",
+          "level": "C1",
+          "timeLimit": 30,
+          "q": "Which reporting verb conveys objective empirical documentation without emotional editorializing?",
+          "a": [
+            "The longitudinal study documents that sustained aerobic activity correlates with reduced cardiovascular mortality.",
+            "The researchers wildly allege that running makes people live longer.",
+            "The authors angrily complain that modern citizens are sedentary.",
+            "The clinical paper passionately screams about cardiovascular health."
+          ],
+          "c": 0,
+          "rationale": "“Documents” is an objective academic reporting verb conveying evidentiary demonstration."
+        },
+        {
+          "id": "lvl5_err2",
+          "type": "spot_error",
+          "level": "C1",
+          "timeLimit": 30,
+          "errorStem": "Neither the statistical discrepancies in the appendix [A] nor the ambiguous phrasing in the methodology were addressed [B] by the author, whom [C] withdrew the manuscript from review [D].",
+          "q": "Identify the underlined segment that contains a grammatical error:",
+          "a": [
+            "[A] statistical discrepancies",
+            "[B] were addressed",
+            "[C] whom",
+            "[D] withdrew the manuscript"
+          ],
+          "c": 2,
+          "rationale": "Segment [C] incorrectly uses the objective pronoun 'whom'. It functions as the grammatical subject of the finite verb 'withdrew', requiring the subjective case: 'who withdrew'."
+        },
+        {
+          "id": "lvl5_clz3",
+          "type": "cloze",
+          "level": "C1",
+          "timeLimit": 30,
+          "clozeStem": "The preliminary clinical trial demonstrated remarkable therapeutic promise; [ _____ ], extensive multicenter phase-III trials are imperative before regulatory approval.",
+          "q": "Choose the formal transitional adverb signalling essential qualification:",
+          "a": [
+            "nevertheless",
+            "consequently",
+            "furthermore",
+            "similarly"
+          ],
+          "c": 0,
+          "rationale": "“Nevertheless” introduces an essential qualifier/contrast after an acknowledged positive finding."
+        },
+        {
+          "id": "lvl5_dis2",
+          "type": "discourse",
+          "level": "C1",
+          "timeLimit": 30,
+          "q": "Choose the discourse marker that introduces a scholarly concession followed by a reaffirmation of the primary thesis:",
+          "a": [
+            "Granted that the pilot cohort was modest in scope, the statistical significance of the outcome remains compelling.",
+            "Furthermore, the researchers identified three additional variables in the laboratory.",
+            "In summary, all the participants left the laboratory without experiencing side effects.",
+            "Likewise, the control group exhibited identical physiological indicators."
+          ],
+          "c": 0,
+          "rationale": "“Granted that...” introduces a concessive clause, acknowledging a legitimate constraint before asserting the enduring strength of the findings."
+        },
+        {
+          "id": "lvl5_col3",
+          "type": "collocation",
+          "level": "C1",
+          "timeLimit": 30,
+          "q": "Select the preposition that collocates with 'prerequisite':",
+          "a": [
+            "for",
+            "to",
+            "with",
+            "at"
+          ],
+          "c": 0,
+          "rationale": "In academic regulations, a requirement serves as a “prerequisite for” a subsequent status or degree."
+        }
+      ]
+    },
+    {
+      "name": "🔥 Level 6: TOEFL Reading Master",
+      "level": "C2",
+      "questions": [
+        {
+          "id": "lvl6_rd1",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Ecosystem resilience is increasingly conceptualized not as an immutable equilibrium, but as a dynamic system’s capacity to absorb disturbance while reorganizing to retain essentially the same structural feedbacks. Under this paradigm, attempts to artificially suppress natural perturbations—such as cyclical brushfires or seasonal flood pulses—frequently compromise systemic stability by permitting combustible fuel loads or alluvial silt to accumulate to catastrophic thresholds. Paradoxically, periodic disturbances purge system excesses, creating structural heterogeneity indispensable for biodiversity.",
+          "q": "What is the author's primary argument regarding natural disturbances in ecosystems?",
+          "a": [
+            "Periodic perturbations are functional components of ecosystem stability, and suppressing them can inadvertently precipitate catastrophic collapse.",
+            "All natural disturbances must be engineered out of ecosystems to maintain permanent biological equilibrium.",
+            "Brushfires and flood pulses always degrade biodiversity permanently regardless of biome type.",
+            "Dynamic feedbacks prevent ecosystems from reorganizing after environmental disruptions."
+          ],
+          "c": 0,
+          "rationale": "The passage asserts that natural perturbations are vital for resilience and that suppressing them paradoxically allows fuel loads to build up to catastrophic thresholds."
+        },
+        {
+          "id": "lvl6_rd2",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Ecosystem resilience is increasingly conceptualized not as an immutable equilibrium, but as a dynamic system’s capacity to absorb disturbance while reorganizing to retain essentially the same structural feedbacks. Under this paradigm, attempts to artificially suppress natural perturbations—such as cyclical brushfires or seasonal flood pulses—frequently compromise systemic stability by permitting combustible fuel loads or alluvial silt to accumulate to catastrophic thresholds.",
+          "q": "In the context of the excerpt, the author's stance toward traditional equilibrium suppression models is best characterized as:",
+          "a": [
+            "Analytically critical and cautioning against unintended systemic fragility",
+            "Enthusiastically uncritical of historical forest management policies",
+            "Indifferent to empirical ecological data and conservation science",
+            "Dogmatically hostile toward any form of wildlife monitoring"
+          ],
+          "c": 0,
+          "rationale": "The author uses reasoned ecological evidence to criticize suppression models, highlighting how they inadvertently compromise long-term systemic stability."
+        },
+        {
+          "id": "lvl6_rd3",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Excavations at Göbekli Tepe fundamentally disrupted anthropological orthodoxies regarding prehistoric societal evolution. For over a century, the dominant theoretical consensus posited that the emergence of agrarian surplus was the indispensable prerequisite that funded organized ritual and monumental architecture. Göbekli Tepe, however, features massive megalithic T-shaped limestone enclosures erected by nomadic hunter-gatherers centuries prior to any paleobotanical evidence of domesticated grains in the regional archaeological record.",
+          "q": "What longstanding anthropological orthodoxy was primarily overturned by discoveries at Göbekli Tepe?",
+          "a": [
+            "The hypothesis that agricultural food surpluses necessarily preceded monumental architectural construction.",
+            "The belief that prehistoric foragers worshipped animal deities.",
+            "The consensus that stone tools were utilized during the Pre-Pottery Neolithic.",
+            "The assumption that nomadic tribes possessed oral languages."
+          ],
+          "c": 0,
+          "rationale": "The passage directly highlights that monumental enclosures were built prior to domesticated agriculture, reversing the classic evolutionary sequence."
+        },
+        {
+          "id": "lvl6_rd4",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Excavations at Göbekli Tepe fundamentally disrupted anthropological orthodoxies regarding prehistoric societal evolution. For over a century, the dominant theoretical consensus posited that the emergence of agrarian surplus was the indispensable prerequisite that funded organized ritual and monumental architecture.",
+          "q": "In the passage, the word 'orthodoxies' most nearly denotes:",
+          "a": [
+            "Entrenched, widely accepted theoretical dogmas or academic consensuses",
+            "Ancient religious ceremonial prayers performed by priests",
+            "Archaeological digging instruments made of polished obsidian",
+            "Unverified folk tales preserved by local nomadic populations"
+          ],
+          "c": 0,
+          "rationale": "In scholarly historiography, an “orthodoxy” refers to an established, deeply entrenched consensus or traditional doctrinal theory."
+        },
+        {
+          "id": "lvl6_rd5",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Quantum computing exploits superposition and entanglement to execute computational algorithms exponentially faster than classical Turing architectures on specialized mathematical subclasses. However, the commercial scalability of quantum processors remains impeded by quantum decoherence: the propensity of fragile quantum states to collapse into classical noise due to environmental thermal fluctuation. Mitigating decoherence necessitates fault-tolerant quantum error correction, an architectural overhead that presently requires thousands of physical qubits to sustain a single reliable logical qubit.",
+          "q": "According to the passage, what constitutes the principal technical obstacle to scalable quantum computing?",
+          "a": [
+            "Quantum decoherence induced by thermal noise and the massive hardware overhead required for fault-tolerant error correction.",
+            "The theoretical impossibility of surpassing classical Turing processor calculations.",
+            "The total absence of physical superconducting qubits in experimental laboratories.",
+            "A failure in the foundational mathematical principles of superposition and entanglement."
+          ],
+          "c": 0,
+          "rationale": "The author explicitly identifies decoherence caused by thermal noise and the thousands of physical qubits needed per logical qubit as the core bottleneck."
+        },
+        {
+          "id": "lvl6_rd6",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Mitigating decoherence necessitates fault-tolerant quantum error correction, an architectural overhead that presently requires thousands of physical qubits to sustain a single reliable logical qubit.",
+          "q": "Based on the text, what can be logically deduced regarding a 'logical qubit'?",
+          "a": [
+            "It is an error-protected computational unit preserved through the coordinated redundancy of multiple physical qubits.",
+            "It is a microscopic physical particle that exists naturally in silicon transistors.",
+            "It operates completely independently of cryogenic temperatures or electromagnetic shielding.",
+            "It is mathematically slower than a conventional binary semiconductor bit."
+          ],
+          "c": 0,
+          "rationale": "The passage notes that a single logical qubit is sustained by thousands of physical qubits to achieve error tolerance against environmental collapse."
+        },
+        {
+          "id": "lvl6_rd7",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Economic historians analyzing the British Industrial Revolution have pivoted away from monocausal explanations centered solely on mechanical inventions like the Newcomen steam engine. Contemporary scholarship emphasizes an institutional nexus: secure patent jurisprudence, exceptionally high real wages that incentivized capital-intensive mechanization, accessible commercial credit, and abundant surface coal deposits located proximate to navigable waterways. In isolation, individual inventions would have languished as mechanical curiosities.",
+          "q": "The author mentions 'high real wages' primarily to demonstrate that:",
+          "a": [
+            "Labor was costly enough to provide entrepreneurs with a compelling financial incentive to invest in labor-saving machinery.",
+            "Every British agricultural worker enjoyed universal prosperity during the 18th century.",
+            "Industrial factories were prohibited from hiring apprentices below minimum wage standards.",
+            "Coal mining wages were identical across all European maritime kingdoms."
+          ],
+          "c": 0,
+          "rationale": "The text explains that high wages created the economic incentive to substitute expensive labor with capital-intensive mechanical automation."
+        },
+        {
+          "id": "lvl6_rd8",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Biosecurity analysts emphasize that synthetic genomics poses an inherent dual-use dilemma: the identical benchtop gene-synthesis platforms developed to engineer personalized mRNA vaccines can concurrently be repurposed to synthesize virulent pathogens capable of evading host humoral immunity. Because decentralized digital blueprints and benchtop synthesizers dramatically lower technical barriers to entry, conventional nonproliferation regimes—which relied on tracking scarce, fissile nuclear isotopes—are rendered obsolete in the biological domain.",
+          "q": "Why are traditional nonproliferation frameworks ineffective when applied to synthetic biology?",
+          "a": [
+            "Synthetic genomics utilizes accessible, decentralized dual-use platforms rather than scarce, easily tracked physical precursors.",
+            "International biosecurity accords grant full legal immunity to benchtop laboratories.",
+            "Biological pathogens can only be synthesized inside military nuclear reactors.",
+            "All gene-editing algorithms are permanently encrypted by international cybersecurity treaties."
+          ],
+          "c": 0,
+          "rationale": "Unlike nuclear weapons which depend on scarce, traceable fissile isotopes, synthetic biology relies on widely distributed digital workflows and dual-use equipment."
+        },
+        {
+          "id": "lvl6_rd9",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Biosecurity analysts emphasize that synthetic genomics poses an inherent dual-use dilemma: the identical benchtop gene-synthesis platforms developed to engineer personalized mRNA vaccines can concurrently be repurposed to synthesize virulent pathogens capable of evading host humoral immunity.",
+          "q": "In the passage, the term 'dual-use' characterizes technologies that:",
+          "a": [
+            "Possess legitimate therapeutic utility but can concurrently be adapted for hazardous or weaponized ends",
+            "Require simultaneous approval from both medical and commercial patent agencies",
+            "Can function on both aerospace satellites and deep-sea submarines",
+            "Are developed simultaneously by two independent pharmaceutical corporations"
+          ],
+          "c": 0,
+          "rationale": "“Dual-use” denotes scientific innovations developed for peaceful beneficial applications (vaccines) that can also be misapplied for destructive purposes."
+        },
+        {
+          "id": "lvl6_rd10",
+          "type": "reading",
+          "level": "C2",
+          "timeLimit": 45,
+          "passage": "Linguistic relativity, colloquially known as the Sapir-Whorf hypothesis, posits that the lexical and grammatical architecture of a speaker’s language shapes their habitual cognitive processing and perception of reality. While early deterministic formulations—which claimed that language rigidly confines the limits of thought—have been discredited, modern psycholinguistic experiments demonstrate that grammatical markers (such as whether a language marks motion events through verb roots or spatial satellites) subtly modulate where individuals allocate visual attention during scene analysis.",
+          "q": "What is the prevailing scientific consensus regarding the Sapir-Whorf hypothesis?",
+          "a": [
+            "While rigid cognitive determinism has been refuted, subtle linguistic influences on habitual attention allocation are empirically supported.",
+            "Its original extreme claim that language strictly imprisons human thought has been universally confirmed.",
+            "Modern neuroimaging has proved that language has absolutely zero relationship to visual perception.",
+            "The hypothesis applies exclusively to non-alphabetic pictographic writing systems."
+          ],
+          "c": 0,
+          "rationale": "The passage notes that while rigid determinism was discredited, nuanced experiments confirm that grammatical features subtly guide visual attention."
+        }
+      ]
+    }
+  ],
+  "MEME_ROUND": {
+    "name": "Campus Meme Round",
+    "level": "Idioms",
+    "questions": [
+      {
+        "id": "meme_1",
+        "type": "meme",
+        "level": "Idioms",
+        "timeLimit": 30,
+        "scenario": "Text from roommate: Can't talk, pulling an all-nighter.",
+        "q": "What does pulling an all-nighter mean?",
+        "a": [
+          "Staying awake all night to study",
+          "Literally pulling a blanket over your head",
+          "Skipping the exam",
+          "Sleeping through the night"
+        ],
+        "c": 0,
+        "rationale": "Informal English for staying up the whole night."
+      },
+      {
+        "id": "meme_2",
+        "type": "meme",
+        "level": "Idioms",
+        "timeLimit": 30,
+        "scenario": "Professor: The midterm will be a piece of cake.",
+        "q": "What does piece of cake mean?",
+        "a": [
+          "Very easy",
+          "Very delicious",
+          "Served in the cafeteria",
+          "Very hard"
+        ],
+        "c": 0,
+        "rationale": "Piece of cake means something is very easy."
+      }
+    ]
+  }
+}

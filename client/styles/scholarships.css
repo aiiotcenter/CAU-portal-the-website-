@@ -1,0 +1,966 @@
+/* ==========================================================================
+   CAU SCHOLARSHIPS PAGE — SWISS EDITORIAL DESIGN SYSTEM
+   ========================================================================== */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+.scholarships-main {
+  padding-bottom: 60px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Title Stage
+   -------------------------------------------------------------------------- */
+.scholarships-title {
+  padding: 48px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.scholarships-title .section-index {
+  display: inline-block;
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.scholarships-title h1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h1);
+  line-height: var(--font-h1-lh);
+  letter-spacing: var(--font-h1-ls);
+  text-transform: none;
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.scholarships-title .scholarships-subtitle {
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0;
+}
+
+.scholarships-title .title-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.back-home:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   2. Hero Stage
+   -------------------------------------------------------------------------- */
+.scholarships-hero-stage {
+  padding: 36px 0 44px;
+}
+
+.scholarships-hero-img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 34vw, 460px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.scholarships-lead {
+  max-width: 1080px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 28px 0 0;
+}
+
+.scholarships-lead .bullet {
+  color: var(--cau-coral);
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Key Figures / Metrics Grid
+   -------------------------------------------------------------------------- */
+.scholarships-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.metric-card {
+  padding: 28px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ink);
+}
+
+.metric-card .metric-val {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.04em;
+  color: var(--cau-coral);
+  margin-bottom: 8px;
+}
+
+.metric-card .metric-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.metric-card .metric-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Category Filters
+   -------------------------------------------------------------------------- */
+.scholarships-filter-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 0;
+  margin-bottom: 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.filter-pills-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-pill.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
+.filter-status-text {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   5. Scholarship Cards Grid (2-Column System Standard)
+   -------------------------------------------------------------------------- */
+.scholarships-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.scholarship-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  min-height: 380px;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ink);
+}
+
+.scholarship-card.is-hidden {
+  display: none !important;
+}
+
+.scholarship-card__top {
+  margin-bottom: 24px;
+}
+
+.scholarship-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.scholarship-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--cau-coral);
+  color: var(--cau-coral);
+  background: #ffffff;
+}
+
+.scholarship-badge--featured {
+  background: var(--cau-coral);
+  color: #ffffff;
+  border-color: var(--cau-coral);
+}
+
+.scholarship-category-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.scholarship-card h3 {
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.scholarship-card p.card-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.scholarship-card .criteria-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scholarship-card .criteria-list li {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.scholarship-card .criteria-list li i {
+  color: var(--cau-coral);
+  font-size: 12px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.scholarship-card__bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.scholarship-award-amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.scholarship-award-amount .amount-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.scholarship-award-amount .amount-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.scholarship-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  transition: all 180ms ease;
+}
+
+.scholarship-apply-btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   6. Interactive Scholarship & Tuition Estimator (Calculator)
+   -------------------------------------------------------------------------- */
+.calculator-section {
+  padding: 48px 0;
+  margin-bottom: 64px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.calculator-heading-row {
+  margin-bottom: 32px;
+}
+
+.calculator-heading-row h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+  text-transform: none;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.calculator-heading-row p {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 680px;
+}
+
+.calculator-box {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.calculator-controls {
+  padding: 40px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.calc-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-field-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.calc-field-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cau-coral);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  background: var(--paper);
+  line-height: 1;
+}
+
+.calc-field-group label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+
+.calc-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.calc-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0 46px 0 16px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.calc-select:hover {
+  border-color: var(--ink);
+}
+
+.calc-select:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
+.calc-select-chevron {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: var(--muted);
+  pointer-events: none;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.calc-select-wrap:hover .calc-select-chevron,
+.calc-select:focus + .calc-select-chevron {
+  color: var(--ink);
+}
+
+.calculator-results {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--paper);
+}
+
+.calc-result-header {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.calc-metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.calc-metric-row .metric-title {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.calc-metric-row .metric-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.calc-metric-row.total-row {
+  border-bottom: none;
+  padding-top: 18px;
+}
+
+.calc-metric-row.total-row .metric-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.calc-metric-row.total-row .metric-value {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--cau-coral);
+  line-height: 1;
+}
+
+.calc-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 16px 0 24px;
+  line-height: 1.45;
+}
+
+.calc-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--cau-coral);
+  border-radius: var(--radius-sm);
+  background: var(--cau-coral);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.calc-apply-btn:hover {
+  background: #c5291e;
+  border-color: #c5291e;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   7. Application Roadmap (Editorial 4-Step Process)
+   -------------------------------------------------------------------------- */
+.roadmap-section {
+  margin-bottom: 64px;
+}
+
+.roadmap-heading-row {
+  margin-bottom: 36px;
+}
+
+.roadmap-heading-row h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+  text-transform: none;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.roadmap-heading-row p {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.roadmap-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.roadmap-step-card {
+  padding: 32px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 240px;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.roadmap-step-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-3px);
+}
+
+.roadmap-step-num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--cau-coral);
+  margin-bottom: 16px;
+}
+
+.roadmap-step-card h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.roadmap-step-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Scholarship Terms & FAQ Accordion
+   -------------------------------------------------------------------------- */
+.scholarship-faq-section {
+  margin-bottom: 64px;
+  border-top: 1px solid var(--line);
+  padding-top: 48px;
+}
+
+.faq-heading-row {
+  margin-bottom: 32px;
+}
+
+.faq-heading-row h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  letter-spacing: -.05em;
+  text-transform: none;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.faq-heading-row p {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.scholarship-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  overflow: hidden;
+  transition: border-color 180ms ease;
+}
+
+.accordion-item-card:hover,
+.accordion-item-card.is-open,
+.accordion-item-card.open {
+  border-color: var(--ink);
+}
+
+.accordion-header-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  gap: 16px;
+  transition: color 180ms ease;
+}
+
+.accordion-header-btn:hover,
+.accordion-item-card.is-open .accordion-header-btn,
+.accordion-item-card.open .accordion-header-btn {
+  color: var(--ink);
+}
+
+.accordion-header-btn .chevron-icon {
+  font-size: 14px;
+  color: var(--muted);
+  transition: transform 220ms ease, color 180ms ease;
+  flex-shrink: 0;
+}
+
+.accordion-item-card.is-open .chevron-icon,
+.accordion-item-card.open .chevron-icon,
+.accordion-header-btn.is-open .chevron-icon {
+  transform: rotate(180deg);
+  color: var(--cau-coral);
+}
+
+.accordion-panel-body {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  border-top: none;
+  transition: max-height 280ms ease, opacity 200ms ease, padding 280ms ease;
+}
+
+.accordion-item-card.is-open .accordion-panel-body,
+.accordion-item-card.open .accordion-panel-body,
+.cau-accordion-item.is-open .accordion-panel-body,
+.accordion-panel-body.is-open {
+  display: block !important;
+  max-height: 1200px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  padding: 18px 24px 24px !important;
+  border-top: 1px solid var(--line) !important;
+  color: var(--ink) !important;
+}
+
+.accordion-panel-body p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+.accordion-panel-body p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-panel-body strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.accordion-panel-body ul {
+  margin: 8px 0 12px 18px;
+  padding: 0;
+  color: var(--muted);
+}
+
+.accordion-panel-body li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   9. Direct Advisory Contact Banner
+   -------------------------------------------------------------------------- */
+.scholarship-contact-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 36px 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  margin-bottom: 24px;
+}
+
+.scholarship-contact-banner h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.scholarship-contact-banner p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.banner-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   10. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .scholarships-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scholarships-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scholarships-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .calculator-box {
+    grid-template-columns: 1fr;
+  }
+  .calculator-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 28px;
+  }
+  .calculator-results {
+    padding: 28px;
+  }
+  .roadmap-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .scholarships-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .roadmap-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .scholarship-card {
+    padding: 28px 20px;
+  }
+  .scholarship-contact-banner {
+    padding: 28px 20px;
+  }
+  .filter-pills-list {
+    width: 100%;
+  }
+  .filter-pill {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Standardized Button Arrow Icon Architecture (User Custom SVG Tokens)
+   -------------------------------------------------------------------------- */
+.btn .system-arrow,
+.apply-btn .system-arrow,
+.calc-apply-btn .system-arrow,
+.scholarship-apply-btn .system-arrow,
+.btn-coral .system-arrow,
+.btn-outline-dark .system-arrow,
+.btn .fa-arrow-right,
+.apply-btn .fa-arrow-right,
+.calc-apply-btn .fa-arrow-right,
+.scholarship-apply-btn .fa-arrow-right,
+.btn-coral .fa-arrow-right,
+.btn-outline-dark .fa-arrow-right,
+.back-home .fa-arrow-left {
+  font-family: initial !important;
+  font-size: 0 !important;
+  display: inline-block !important;
+  width: 28px !important;
+  height: 9px !important;
+  flex: 0 0 28px !important;
+  background-size: 28px 9px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
+  transition: transform 180ms ease, background 180ms ease !important;
+}
+
+/* Coral / Dark Buttons -> White 28px Arrow */
+.btn-coral .system-arrow,
+.apply-btn .system-arrow,
+.calc-apply-btn .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.btn-outline-dark:hover .system-arrow,
+.btn-coral .fa-arrow-right,
+.apply-btn .fa-arrow-right,
+.calc-apply-btn .fa-arrow-right,
+.scholarship-apply-btn:hover .fa-arrow-right,
+.btn-outline-dark:hover .fa-arrow-right {
+  background-image: var(--arrow-white) !important;
+  margin-left: 8px !important;
+}
+
+/* Light / Outlined Buttons -> Black 28px Arrow */
+.scholarship-apply-btn .system-arrow,
+.btn-outline-dark .system-arrow,
+.scholarship-apply-btn .fa-arrow-right,
+.btn-outline-dark .fa-arrow-right {
+  background-image: var(--arrow-black) !important;
+  margin-left: 8px !important;
+}
+
+/* Back Home (Left Arrow) -> Darkgray 28px Arrow, Flipped horizontally */
+.back-home .fa-arrow-left {
+  background-image: var(--arrow-darkgray) !important;
+  transform: scaleX(-1) !important;
+  transform-origin: center center !important;
+  margin-right: 8px !important;
+}
+
+.back-home:hover .fa-arrow-left {
+  background-image: var(--arrow-black) !important;
+  transform: scaleX(-1) translateX(3px) !important;
+}
+
+/* Hover Forward Animation for Right Arrows */
+.btn-coral:hover .system-arrow,
+.apply-btn:hover .system-arrow,
+.calc-apply-btn:hover .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.btn-outline-dark:hover .system-arrow,
+.btn-coral:hover .fa-arrow-right,
+.apply-btn:hover .fa-arrow-right,
+.calc-apply-btn:hover .fa-arrow-right,
+.scholarship-apply-btn:hover .fa-arrow-right,
+.btn-outline-dark:hover .fa-arrow-right {
+  transform: translateX(4px) !important;
+}
+

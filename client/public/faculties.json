@@ -1,0 +1,139 @@
+[
+  {
+    "order": 1,
+    "name": "Faculty of Dentistry",
+    "url": "https://cau.edu.tr/en/faculty-of-dentistry/",
+    "title": "Faculty of Dentistry – Cyprus Aydin University",
+    "sections": 36,
+    "tables": 3,
+    "staff_records": 0,
+    "dean": "Prof. Dr. Cem Kurtoğlu",
+    "students": "30 (Fall 2025-26, 8 countries)",
+    "programs": [
+      "Dentistry (Undergraduate, English)"
+    ],
+    "accreditation": "YÖDAK (YÖK pending)",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  },
+  {
+    "order": 2,
+    "name": "Faculty of Humanities and Social Sciences",
+    "url": "https://cau.edu.tr/en/faculty-of-humanities-and-social-sciences/",
+    "title": "Faculty of Humanities and Social Sciences – Cyprus Aydin University",
+    "sections": 36,
+    "tables": 5,
+    "staff_records": 0,
+    "dean": "Prof. Dr. Arzu Alvan Bozdereli",
+    "students": "317 (Fall 2025-26), 15 full-time +1 part-time",
+    "programs": [
+      "Business Administration (Bachelor’s, English, YÖK/YÖDAK)",
+      "International Relations (Bachelor’s, English, YÖDAK)",
+      "Psychology (Bachelor’s, Turkish, YÖK/YÖDAK)",
+      "Civil Aviation Management (Bachelor’s, English, YÖDAK)",
+      "Banking and Finance (Bachelor’s, English, YÖDAK)"
+    ],
+    "accreditation": "YÖK, YÖDAK / YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  },
+  {
+    "order": 3,
+    "name": "Faculty of Health Sciences",
+    "url": "https://cau.edu.tr/en/faculty-of-health-sciences/",
+    "title": "Faculty of Health Sciences – Cyprus Aydin University",
+    "sections": 35,
+    "tables": 4,
+    "staff_records": 22,
+    "dean": "Prof. Dr. Mehmet Zeki Avcı",
+    "students": "579 (Undergraduate), 18 full-time +3 part-time, 211 assets",
+    "programs": [
+      "Nursing (Undergraduate, Turkish, YÖK/YÖDAK)",
+      "Nursing (English) (Undergraduate, English, YÖDAK)",
+      "Physiotherapy and Rehabilitation (Undergraduate, Turkish, YÖK/YÖDAK)"
+    ],
+    "accreditation": "YÖK, YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  },
+  {
+    "order": 4,
+    "name": "Faculty of Engineering and Architecture",
+    "url": "https://cau.edu.tr/en/faculty-of-engineering-and-architecture/",
+    "title": "Faculty of Engineering and Architecture – Cyprus Aydin University",
+    "sections": 37,
+    "tables": 4,
+    "staff_records": 7,
+    "dean": "Prof. Dr. Hikmet Ş. Aybar",
+    "students": "338 (Undergraduate), 13 full-time +5 part-time, 200 assets",
+    "programs": [
+      "Electrical and Electronics Engineering (Bachelor, English)",
+      "Mechatronics Engineering (Bachelor, English)",
+      "Computer Engineering (Bachelor, English)",
+      "Software Engineering (Bachelor, English)",
+      "Information Security Engineering (Bachelor, English)",
+      "Civil Engineering (Bachelor, English)",
+      "Architecture (Bachelor, English)",
+      "Interior Architecture and Environmental Design (Bachelor, Turkish)"
+    ],
+    "accreditation": "YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00",
+    "updatedAt": "2026-09-06T18:55:39.898Z"
+  },
+  {
+    "order": 5,
+    "name": "Faculty of Law",
+    "url": "https://cau.edu.tr/en/faculty-of-law/",
+    "title": "Faculty of Law – Cyprus Aydin University",
+    "sections": 37,
+    "tables": 6,
+    "staff_records": 9,
+    "dean": "Prof. Dr. Z. Gönül Balkır (per Faculty Tables; also Dean of Law)",
+    "students": "36225 characters of sections, 6 tables, 177 links",
+    "programs": [
+      "Law (Bachelor’s, Turkish, YÖK/YÖDAK)",
+      "International Law (Bachelor’s, English, YÖDAK)"
+    ],
+    "accreditation": "YÖK, YÖDAK / YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  },
+  {
+    "order": 6,
+    "name": "Faculty of Educational Sciences",
+    "url": "https://cau.edu.tr/en/faculty-of-educational-sciences/",
+    "title": "Faculty of Educational Sciences – Cyprus Aydin University",
+    "sections": 36,
+    "tables": 5,
+    "staff_records": 0,
+    "dean": "Prof. Dr. (per Faculty Tables, 5 tables, 32904 chars)",
+    "students": "36 sections, 5 tables, 177 links, 193 assets",
+    "programs": [
+      "Guidance and Psychological Counselling (Bachelor’s, Turkish, YÖK/YÖDAK)",
+      "Turkish Language Teaching (Bachelor’s, Turkish, YÖK/YÖDAK)",
+      "English Language Teaching (Bachelor’s, English, YÖDAK)"
+    ],
+    "accreditation": "YÖK, YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  },
+  {
+    "order": 7,
+    "name": "Faculty of Applied Sciences",
+    "url": "https://cau.edu.tr/en/faculty-of-applied-sciences/",
+    "title": "Faculty of Applied Sciences – Cyprus Aydin University",
+    "sections": 37,
+    "tables": 3,
+    "staff_records": 1,
+    "dean": "Per Faculty Tables, 37 sections, 3 tables",
+    "students": "37 sections, 206 assets, 1 staff record filtered",
+    "programs": [
+      "Tourism and Hospitality (Bachelor’s, English, YÖDAK)",
+      "Gastronomy and Culinary Arts (Bachelor’s, Turkish, YÖK/YÖDAK)"
+    ],
+    "accreditation": "YÖDAK / YÖK, YÖDAK",
+    "source": "CAU-All-Faculties-Information.xlsx 2026-08-28",
+    "crawl_timestamp": "2026-08-28T06:57:55.519793+00:00"
+  }
+]

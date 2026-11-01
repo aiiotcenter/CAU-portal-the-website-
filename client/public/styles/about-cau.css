@@ -1,0 +1,765 @@
+/* ==========================================================================
+   CAU About Us — Swiss Editorial Design System
+   ========================================================================== */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+
+/* Base Body & Layout */
+body.about-cau-page {
+  background: var(--prog-bg);
+  color: var(--prog-text);
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.about-cau-main {
+  padding-bottom: 70px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY HIERARCHY SYSTEM (H1, H2, H3, H4)
+   ========================================================================== */
+
+/* H1: Primary Page Title */
+.about-cau-page h1,
+.about-title h1 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h1) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.06em !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 12px 0 8px !important;
+}
+
+/* H2: Section Titles & Split Rail Headers */
+.about-cau-page h2 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h2) !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.05em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H3: Card & Section Subsection Titles */
+.about-cau-page h3,
+.infra-card h3,
+.value-card h3,
+.goal-card h3 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H4: Component Level Subheads */
+.about-cau-page h4 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h4) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 6px !important;
+}
+
+/* ===================================================
+   TITLE STAGE & ACTIONS
+   =================================================== */
+.about-title {
+  padding: 40px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 1px solid var(--prog-border);
+}
+
+.about-subtitle {
+  font-size: 15px;
+  color: var(--prog-muted);
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.title-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.back-home {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--prog-text);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  background: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.view-faculties-btn {
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  color: var(--prog-text);
+  background: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.view-faculties-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+/* ===================================================
+   INSTITUTIONAL METRICS STRIP
+   =================================================== */
+.about-metrics-stage {
+  padding: 28px 0;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--prog-border);
+  border-radius: var(--radius);
+  background: var(--prog-card-bg);
+  overflow: hidden !important;
+}
+
+.metric-box {
+  padding: 24px 20px;
+  border-right: 1px solid var(--prog-border);
+  border-bottom: 1px solid var(--prog-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.metric-box:nth-child(4n) {
+  border-right: 0;
+}
+
+.metric-box:nth-last-child(-n+4) {
+  border-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .metric-box:nth-child(4n) {
+    border-right: 1px solid var(--prog-border);
+  }
+  .metric-box:nth-child(2n) {
+    border-right: 0;
+  }
+  .metric-box:nth-last-child(-n+4) {
+    border-bottom: 1px solid var(--prog-border);
+  }
+  .metric-box:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+}
+
+.metric-box:hover {
+  background: var(--prog-badge-bg);
+}
+
+.metric-box strong {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+  color: var(--coral);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.metric-box span {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--prog-muted);
+}
+
+/* ===================================================
+   CAMPUS HERO MEDIA
+   =================================================== */
+.about-hero-media {
+  padding: 0 0 36px;
+}
+
+.campus-hero {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 32vw, 500px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+}
+
+/* ===================================================
+   SECTION HEADINGS (COMMON)
+   =================================================== */
+.section-heading-wrap {
+  margin-bottom: 24px;
+}
+
+.section-index {
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: var(--prog-muted);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+/* ===================================================
+   UNIVERSITY STORY (SPLIT-RAIL ARCHITECTURE)
+   =================================================== */
+.about-split {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 40px;
+  padding: 44px 0;
+  align-items: start;
+}
+
+.split-rail {
+  border-right: 1px solid var(--prog-border);
+  padding-right: 36px;
+  position: sticky;
+  top: 90px;
+}
+
+.split-rail-copy {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0 0 24px;
+}
+
+.rail-location-card {
+  background: var(--prog-badge-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.rail-location-card i {
+  color: var(--coral);
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.rail-location-card strong {
+  display: block;
+  font-size: 13px;
+  color: var(--prog-text);
+  margin-bottom: 2px;
+}
+
+.rail-location-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+.split-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.narrative-lead p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--prog-text);
+  margin: 0 0 16px;
+}
+
+.narrative-lead .bullet {
+  color: var(--coral);
+  margin-right: 6px;
+}
+
+/* Infrastructure Cards */
+.infrastructure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.infra-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.infra-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(17, 18, 20, 0.06) !important;
+}
+
+.infra-icon {
+  color: var(--coral);
+  font-size: 24px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.infra-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   BOARD OF TRUSTEES LEADERSHIP SECTION
+   =================================================== */
+.trustees-section {
+  padding: 36px 0;
+}
+
+.trustees-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trustees-card:hover {
+  border-color: var(--ink) !important;
+  box-shadow: 0 12px 32px rgba(17, 18, 20, 0.05) !important;
+}
+
+.trustees-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trustees-photo-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(circle at 50% 30%, #1e293b 0%, #080d14 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.trustees-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.trustees-card:hover .trustees-photo {
+  transform: scale(1.02);
+}
+
+.trustees-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trustees-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--coral);
+  background: rgba(240, 68, 50, 0.08);
+  border: 1px solid rgba(240, 68, 50, 0.2);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.trustees-name {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--prog-text) !important;
+  margin: 0 !important;
+}
+
+.trustees-role {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--prog-text);
+  line-height: 1.3;
+}
+
+.trustees-institution {
+  font-size: 12px;
+  color: var(--prog-muted);
+}
+
+.trustees-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.trustees-quote-icon {
+  font-size: 28px;
+  color: rgba(240, 68, 50, 0.25);
+  line-height: 1;
+}
+
+.trustees-quote {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--prog-text);
+  margin: 0;
+  padding-left: 0;
+  border: none;
+}
+
+.trustees-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--prog-border);
+  padding-top: 24px;
+}
+
+.trustees-pillar {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.pillar-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  background: var(--prog-badge-bg);
+  border: 1px solid var(--prog-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--coral);
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.trustees-pillar h4 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 4px !important;
+  text-transform: none !important;
+}
+
+.trustees-pillar p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   VISION STATEMENT CARD
+   =================================================== */
+.vision-section {
+  padding: 36px 0;
+}
+
+.vision-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.vision-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+}
+
+.vision-quote-icon {
+  font-size: 28px;
+  color: rgba(240, 68, 50, 0.2);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.vision-card blockquote {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--prog-text);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.vision-cite {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: block;
+}
+
+/* ===================================================
+   CORE INSTITUTIONAL VALUES (6-CARD GRID)
+   =================================================== */
+.values-section {
+  padding: 36px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.value-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(17, 18, 20, 0.06) !important;
+}
+
+.value-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  background: var(--prog-badge-bg);
+  color: var(--coral);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.value-card:hover .value-icon-wrap {
+  border-color: var(--ink);
+}
+
+.value-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   STRATEGIC GOALS ROADMAP (6-CARD GRID)
+   =================================================== */
+.goals-section {
+  padding: 36px 0;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 24px rgba(17, 18, 20, 0.06) !important;
+}
+
+.goal-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.goal-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   =================================================== */
+@media (max-width: 991.98px) {
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .split-rail {
+    border-right: 0;
+    border-bottom: 1px solid var(--prog-border);
+    padding-right: 0;
+    padding-bottom: 28px;
+    position: static;
+  }
+  .trustees-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+  .trustees-photo-wrap {
+    max-width: 260px;
+  }
+  .trustees-pillars {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .metric-box:nth-child(2) {
+    border-right: 0;
+  }
+  .metric-box:nth-child(1),
+  .metric-box:nth-child(2) {
+    border-bottom: 1px solid var(--prog-border);
+  }
+  .values-grid,
+  .goals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .infrastructure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .values-grid,
+  .goals-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .vision-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .metric-box {
+    border-right: 0;
+    border-bottom: 1px solid var(--prog-border);
+  }
+  .metric-box:last-child {
+    border-bottom: 0;
+  }
+  .campus-hero {
+    height: 220px;
+  }
+  .narrative-lead p {
+    font-size: 15px;
+  }
+}

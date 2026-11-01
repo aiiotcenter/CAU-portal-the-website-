@@ -1,0 +1,574 @@
+/* ==============================================================================
+   CAU HOMEPAGE PREMIUM SECTIONS PATCH
+   Upgrades .why-section, .program-directory, and dropdowns to the Awwwards aesthetic
+   ============================================================================== */
+
+/* 1. Program Directory Controls & Dropdown Redesign (Compact Space-Saving Search Bar) */
+.homepage .program-directory-controls {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid var(--sys-line, #dcd8cf) !important;
+    padding: 4px 5px 4px 14px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 20px !important;
+    gap: 0 !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+.homepage .program-directory-controls:focus-within {
+    border-color: var(--cau-coral, #e63b2e) !important;
+    box-shadow: 0 0 0 3px rgba(230, 59, 46, 0.1) !important;
+}
+.homepage .program-directory-controls label {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: 100% !important;
+    min-width: 0 !important;
+}
+.homepage .program-directory-controls label:first-of-type {
+    flex: 1 1 0 !important;
+    border-right: 1px solid var(--sys-line, #e2ded7) !important;
+    padding-right: 10px !important;
+    margin-right: 0 !important;
+}
+.homepage .program-directory-controls label:nth-of-type(2) {
+    flex: 1.35 1 0 !important;
+    border-right: 1px solid var(--sys-line, #e2ded7) !important;
+    padding-left: 12px !important;
+    padding-right: 10px !important;
+    margin-right: 0 !important;
+}
+.homepage .program-directory-controls .cau-dd {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+}
+.homepage .program-directory-controls .cau-dd-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 38px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0 6px !important;
+    font-family: inherit !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    color: var(--sys-text-primary, #1e1e1e) !important;
+    letter-spacing: -0.01em !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+.homepage .program-directory-controls .cau-dd-toggle:hover {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border-color: transparent !important;
+    color: var(--cau-coral, #e63b2e) !important;
+}
+.homepage .program-directory-controls .cau-dd-value {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    color: var(--sys-text-primary, #1e1e1e) !important;
+}
+.homepage .program-directory-controls .cau-dd-chevron {
+    font-size: 10px !important;
+    color: #8c8c8c !important;
+    margin-left: 8px !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
+}
+.homepage .program-directory-controls .cau-dd.open .cau-dd-chevron {
+    transform: rotate(180deg) !important;
+    color: var(--cau-coral, #e63b2e) !important;
+}
+.homepage .program-directory-controls .cau-dd-panel {
+    position: absolute !important;
+    top: calc(100% + 6px) !important;
+    left: 0 !important;
+    min-width: 240px !important;
+    max-width: 340px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--sys-line, #dcd8cf) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1) !important;
+    max-height: 280px !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
+    padding: 4px 0 !important;
+    margin-top: 0 !important;
+}
+.homepage .program-directory-controls .cau-dd-option {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    color: #222222 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    transition: background 0.15s ease, color 0.15s ease !important;
+}
+.homepage .program-directory-controls .cau-dd-option:hover {
+    background: rgba(230, 59, 46, 0.06) !important;
+    color: var(--cau-coral, #e63b2e) !important;
+}
+.homepage .program-directory-controls .cau-dd-option[aria-selected="true"] {
+    font-weight: 600 !important;
+    color: var(--cau-coral, #e63b2e) !important;
+}
+
+/* 2. Program Directory Cards (Strictly Zero Shadow / Glow) */
+.program-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-4, 24px);
+}
+.program-directory-card {
+    margin: 0;
+    padding: var(--card-pad-desktop, 32px);
+    transition: transform 0.25s ease, border-color 0.25s ease !important;
+    border-radius: var(--radius-md, 12px) !important;
+    border: 1px solid var(--sys-line, #dcd8cf) !important;
+    background: #ffffff !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    filter: none !important;
+}
+.program-directory-card:hover,
+.program-directory-card:focus,
+.program-directory-card:active {
+    transform: translateY(-4px) !important;
+    box-shadow: none !important;
+    filter: none !important;
+    border-color: var(--sys-accent, #e63b2e) !important;
+}
+
+/* Global Zero-Shadow & Zero-Glow Rule across all cards and elements */
+.program-directory-card,
+.program-directory-card *,
+.degree-card,
+.degree-card *,
+.testimonial-story-card,
+.testimonial-story-card *,
+.news-card,
+.news-card * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* 3. Split Rail Typography & Alignment */
+.split-rail {
+    padding-right: var(--space-4, 24px) !important;
+}
+.split-rail h2 {
+    font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+    font-size: clamp(2.25rem, 4vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.1 !important;
+    text-transform: none !important;
+    margin-bottom: var(--space-4, 24px) !important;
+    color: var(--navy-institutional, #002469) !important;
+}
+.split-rail .rail-copy {
+    font-size: 1.0rem !important;
+    color: var(--cau-muted, #6c6d70) !important;
+    line-height: 1.5 !important;
+}
+
+/* 4. Why CAU Metrics Grid */
+.why-metrics-grid strong {
+    font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+    color: var(--cau-coral, #e63b2e) !important;
+    font-size: clamp(2.4rem, 3.8vw, 3.6rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+}
+.why-metrics-grid span {
+    font-family: var(--font-family-display, "NB International", "Inter", sans-serif) !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 700 !important;
+}
+
+/* 5. Section Spacing Refinements (Showcase vs Dense Profiles) */
+.split-section {
+    column-gap: var(--space-6, 48px) !important;
+}
+
+.split-section.section-showcase,
+.why-section,
+.testimonial-stage {
+    padding-top: var(--section-pad-showcase-desktop, 96px) !important;
+    padding-bottom: var(--section-pad-showcase-desktop, 96px) !important;
+}
+
+.split-section.section-dense:not(.news-section),
+.program-directory {
+    padding-top: var(--section-pad-dense-desktop, 64px) !important;
+    padding-bottom: var(--section-pad-dense-desktop, 64px) !important;
+}
+
+.news-section {
+    padding-top: var(--section-pad-dense-desktop, 64px) !important;
+    padding-bottom: 0 !important;
+}
+
+.news-section .split-rail,
+.news-section .split-content {
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 1023.98px) {
+    .split-rail {
+        padding-right: 0 !important;
+        margin-bottom: var(--space-5, 32px) !important;
+    }
+    .program-directory-card {
+        padding: var(--card-pad-tablet, 24px);
+    }
+    .split-section.section-showcase,
+    .why-section,
+    .testimonial-stage {
+        padding-top: var(--section-pad-showcase-tablet, 64px) !important;
+        padding-bottom: var(--section-pad-showcase-tablet, 64px) !important;
+    }
+    .split-section.section-dense:not(.news-section),
+    .program-directory {
+        padding-top: var(--section-pad-dense-tablet, 48px) !important;
+        padding-bottom: var(--section-pad-dense-tablet, 48px) !important;
+    }
+    .news-section {
+        padding-top: var(--section-pad-dense-tablet, 48px) !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .program-directory-card {
+        padding: var(--card-pad-mobile, 16px);
+    }
+    .split-section.section-showcase,
+    .why-section,
+    .testimonial-stage {
+        padding-top: var(--section-pad-showcase-mobile, 48px) !important;
+        padding-bottom: var(--section-pad-showcase-mobile, 48px) !important;
+    }
+    .split-section.section-dense:not(.news-section),
+    .program-directory {
+        padding-top: var(--section-pad-dense-mobile, 32px) !important;
+        padding-bottom: var(--section-pad-dense-mobile, 32px) !important;
+    }
+    .news-section {
+        padding-top: var(--section-pad-dense-mobile, 32px) !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+/* 6. Awwwards Premium Additions: Glassmorphism Header */
+#cauHeaderDisabled {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1100 !important;
+}
+
+/* 7. Hero Animation Entrance */
+.cau-hero-heading__title {
+    animation: heroEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+@keyframes heroEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 8. Program Directory Sleek Inline Search Controls */
+.program-directory-controls select:not(.cau-dd-native) {
+    appearance: none;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 10px !important;
+    font-family: inherit !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    color: var(--sys-text-primary, #1e1e1e) !important;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.homepage .program-directory-submit,
+.program-directory-submit {
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    padding: 0 18px !important;
+    border-radius: 6px !important;
+    background: var(--cau-coral, #e63b2e) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-family: inherit !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    margin: 0 0 0 8px !important;
+    box-shadow: none !important;
+    transition: background-color 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease !important;
+}
+.homepage .program-directory-submit:hover,
+.program-directory-submit:hover {
+    background: #d32f22 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(230, 59, 46, 0.25) !important;
+}
+.homepage .program-directory-submit:active,
+.program-directory-submit:active {
+    transform: translateY(0) scale(0.98) !important;
+}
+@media (max-width: 767.98px) {
+    .homepage .program-directory-controls {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 8px 10px !important;
+        gap: 6px !important;
+    }
+    .homepage .program-directory-controls label {
+        width: 100% !important;
+        height: 38px !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--sys-line, #e2ded7) !important;
+        padding: 0 0 4px 0 !important;
+        margin: 0 !important;
+    }
+    .homepage .program-directory-controls label:nth-of-type(2) {
+        border-bottom: none !important;
+        padding-left: 0 !important;
+    }
+    .homepage .program-directory-submit,
+    .program-directory-submit {
+        width: 100% !important;
+        height: 40px !important;
+        margin: 4px 0 0 0 !important;
+    }
+}
+
+/* 9. Student Voices - Canonical Design System Standard (Zero Shadow, Hairline Transition) */
+.testimonial-story-card {
+    box-shadow: none !important;
+    transition: border-color var(--dur-fast, 160ms) ease, transform var(--dur-fast, 160ms) ease !important;
+}
+.testimonial-story-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: none !important;
+    border-color: var(--sys-secondary, #002469) !important;
+}
+.testimonial-story-card.is-active-spotlight {
+    border-color: var(--sys-accent, #e63b2e) !important;
+    box-shadow: none !important;
+}
+.testimonial-story-card:active {
+    transform: none !important;
+}
+
+
+/* 10. Student Life & Campus Readiness Showcase (Full-Width Grid Architecture) */
+#student-life-arena.split-section {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+}
+
+#student-life-arena > .container-xxl,
+#student-life-arena .student-life-cards-container,
+.split-section > .container-xxl {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.student-life-card {
+    background-color: var(--sys-surface-1, #ffffff);
+    border: 1px solid var(--sys-line, #dcd8cf);
+    border-radius: var(--radius-md, 12px);
+    padding: clamp(20px, 2.5vw, 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: none !important;
+    transition: transform var(--dur-fast, 0.25s) cubic-bezier(0.16, 1, 0.3, 1),
+                border-color var(--dur-fast, 0.25s) ease;
+}
+
+.student-life-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cau-coral, #e63b2e);
+}
+
+.student-life-card--featured {
+    border-color: rgba(230, 59, 46, 0.35);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(230, 59, 46, 0.02) 100%);
+}
+
+.student-life-card--featured:hover {
+    border-color: var(--cau-coral, #e63b2e);
+}
+
+.student-life-card__badge-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.student-life-card__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.student-life-card__badge--navy {
+    background: rgba(0, 36, 105, 0.07);
+    color: var(--cau-navy, #002469);
+}
+
+.student-life-card__badge--coral {
+    background: rgba(230, 59, 46, 0.1);
+    color: var(--cau-coral, #e63b2e);
+}
+
+.student-life-card__badge--gold {
+    background: rgba(212, 175, 55, 0.15);
+    color: #997316;
+}
+
+.student-life-card__badge--emerald {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+}
+
+.student-life-card__title {
+    font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+    font-size: clamp(19px, 1.6vw, 22px);
+    font-weight: 700;
+    color: var(--cau-navy, #002469);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+.student-life-card__description {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--cau-muted, #555555);
+    margin-bottom: 0;
+}
+
+.student-life-card__footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--sys-line, rgba(0, 0, 0, 0.08));
+}
+
+.student-life-card__btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+/* Dark mode adjustments */
+html[data-theme="dark"] .student-life-card {
+    background-color: var(--sys-surface-1, #121620);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme="dark"] .student-life-card--featured {
+    background: linear-gradient(180deg, #121620 0%, rgba(230, 59, 46, 0.08) 100%);
+    border-color: rgba(230, 59, 46, 0.5);
+}
+
+html[data-theme="dark"] .student-life-card__title {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .student-life-card__description {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html[data-theme="dark"] .student-life-card__badge--navy {
+    background: rgba(255, 255, 255, 0.1);
+    color: #93c5fd;
+}
+
+html[data-theme="dark"] .student-life-card__badge--coral {
+    background: rgba(230, 59, 46, 0.2);
+    color: #fca5a5;
+}
+
+html[data-theme="dark"] .student-life-card__badge--gold {
+    background: rgba(212, 175, 55, 0.25);
+    color: #fde047;
+}
+
+html[data-theme="dark"] .student-life-card__badge--emerald {
+    background: rgba(16, 185, 129, 0.2);
+    color: #6ee7b7;
+}
+
+html[data-theme="dark"] .student-life-card__footer {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,601 @@
+/* ==========================================================================
+   CAU Admission — Swiss Editorial Design System
+   ========================================================================== */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+
+/* Base Body & Layout */
+body.admission-page {
+  background: var(--prog-bg);
+  color: var(--prog-text);
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.admission-main {
+  padding-bottom: 70px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY HIERARCHY SYSTEM (H1, H2, H3, H4)
+   ========================================================================== */
+
+/* H1: Primary Page Title */
+.admission-page h1,
+.admission-title h1 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h1) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.06em !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 12px 0 8px !important;
+}
+
+/* H2: Section Titles & Split Rail Headers */
+.admission-page h2 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h2) !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.05em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H3: Card & Step Titles */
+.admission-page h3,
+.roadmap-card h3,
+.intake-card h3,
+.content-block h3 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 8px !important;
+}
+
+/* H4: Checklist Titles & Subsection Subheads */
+.admission-page h4,
+.doc-card h4,
+.rail-counselor-box h4 {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: var(--font-h4) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  color: var(--prog-text) !important;
+  margin: 0 0 6px !important;
+}
+
+/* ===================================================
+   TITLE STAGE & HERO
+   =================================================== */
+.admission-title {
+  padding: 40px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 1px solid var(--prog-border);
+}
+
+.admission-subtitle {
+  font-size: 15px;
+  color: var(--prog-muted);
+  max-width: 720px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.title-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.back-home {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--prog-text);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  background: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.admission-hero-stage {
+  padding: 24px 0 32px;
+}
+
+.admission-hero {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 26vw, 420px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--prog-border);
+  margin-bottom: 22px;
+}
+
+.admission-lead {
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--prog-text);
+  max-width: 960px;
+  margin: 0;
+}
+
+.admission-lead .bullet {
+  color: var(--coral);
+  margin-right: 8px;
+}
+
+/* ===================================================
+   SECTION HEADINGS (COMMON)
+   =================================================== */
+.section-heading-wrap {
+  margin-bottom: 24px;
+}
+
+.section-index {
+  color: var(--coral);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: var(--prog-muted);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 720px;
+}
+
+/* ===================================================
+   APPLICATION ROADMAP (4 STEPS)
+   =================================================== */
+.application-roadmap {
+  padding: 36px 0;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .roadmap-grid[data-animation="stack-panels"] {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+
+  .roadmap-grid[data-animation="stack-panels"] .roadmap-card {
+    position: sticky;
+    top: calc(85px + var(--stack-idx, 0) * 16px);
+    background: #ffffff;
+    z-index: calc(10 + var(--stack-idx, 0));
+    box-shadow: none !important;
+  }
+}
+
+.roadmap-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  position: relative;
+  box-shadow: none !important;
+}
+
+.roadmap-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: none !important;
+}
+
+.step-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--coral);
+  margin-bottom: 12px;
+  display: block;
+  letter-spacing: 0.06em;
+}
+
+.roadmap-card p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0 0 16px;
+}
+
+.roadmap-link {
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--coral);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.roadmap-link:hover {
+  text-decoration: underline;
+}
+
+.roadmap-meta {
+  margin-top: auto;
+  font-size: 11.5px;
+  color: var(--prog-muted);
+  display: inline-flex;
+  align-items: center;
+}
+
+.roadmap-meta i {
+  color: var(--coral);
+}
+
+/* ===================================================
+   INTAKES SECTION (3 SEMESTERS)
+   =================================================== */
+.intakes-section {
+  padding: 36px 0;
+}
+
+.intakes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.intake-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  box-shadow: none !important;
+}
+
+.intake-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: none !important;
+}
+
+.intake-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.intake-term {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.intake-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  color: var(--prog-text);
+  background: var(--prog-badge-bg);
+}
+
+.intake-badge.badge-primary {
+  background: var(--prog-card-bg);
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.intake-card p {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0 0 20px;
+}
+
+.intake-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--prog-border);
+  padding-top: 12px;
+  font-size: 12px;
+  color: var(--prog-text);
+}
+
+.intake-footer i {
+  color: var(--coral);
+}
+
+/* ===================================================
+   SPLIT RAIL SECTIONS (UNDERGRADUATE & TRANSFER)
+   =================================================== */
+.admission-split {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 40px;
+  padding: 44px 0;
+  align-items: start;
+}
+
+.split-rail {
+  border-right: 1px solid var(--prog-border);
+  padding-right: 36px;
+  position: sticky;
+  top: 90px;
+}
+
+.split-rail-copy {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0 0 24px;
+}
+
+.rail-counselor-box {
+  background: var(--prog-badge-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.rail-counselor-box p {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--prog-muted);
+  margin: 0 0 14px;
+}
+
+.split-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.content-block h3 {
+  margin-bottom: 12px !important;
+}
+
+.block-intro {
+  font-size: 13.5px;
+  color: var(--prog-muted);
+  margin: 0 0 14px;
+}
+
+/* Certificates Tag Cloud */
+.cert-tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  background: var(--prog-card-bg);
+  color: var(--prog-text);
+  font-size: 12px;
+  font-weight: 600;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.cert-tag:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+}
+
+/* Document Checklist Grid */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.doc-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: border-color 0.15s ease;
+}
+
+.doc-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+}
+
+.doc-icon {
+  color: var(--coral);
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.doc-card p {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--prog-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   LANGUAGE PROFICIENCY GRID
+   =================================================== */
+.language-section {
+  padding: 36px 0;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lang-card {
+  background: var(--prog-card-bg);
+  border: 1px solid var(--prog-border) !important;
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  box-shadow: none !important;
+}
+
+.lang-card:hover {
+  border-color: var(--ink) !important;
+  border-radius: var(--radius);
+  transform: translateY(-3px) !important;
+  box-shadow: none !important;
+}
+
+.lang-card-highlight {
+  border-color: var(--ink) !important;
+}
+
+.lang-test-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--prog-muted);
+  margin-bottom: 8px;
+}
+
+.lang-score {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--coral);
+  line-height: 1.15;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.lang-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--prog-muted);
+  margin: 0 0 16px;
+}
+
+.lang-badge {
+  margin-top: auto;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--prog-border);
+  color: var(--prog-text);
+  background: var(--prog-badge-bg);
+  width: fit-content;
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   =================================================== */
+@media (max-width: 1199.98px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .language-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .admission-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .split-rail {
+    border-right: 0;
+    border-bottom: 1px solid var(--prog-border);
+    padding-right: 0;
+    padding-bottom: 28px;
+    position: static;
+  }
+  .intakes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+  .language-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .admission-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .admission-hero {
+    height: 220px;
+  }
+  .admission-lead {
+    font-size: 15px;
+  }
+}

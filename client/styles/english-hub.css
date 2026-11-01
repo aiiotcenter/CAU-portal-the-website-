@@ -1,0 +1,471 @@
+/* ==============================================================================
+   CYPRUS AYDIN UNIVERSITY (CAU) — ENGLISH PREP SCHOOL HUB STYLES
+   Minimalist, Decluttered, Editorial Swiss Architecture
+   Visual DNA: --cau-navy (#002469), --cau-coral (#e63b2e), --cau-accent (#d4af37)
+   ============================================================================== */
+
+:root {
+  --hub-navy: #002469;
+  --hub-coral: #e63b2e;
+  --hub-accent: #d4af37;
+  --hub-surface: #ffffff;
+  --hub-bg: #f8fafc;
+  --hub-line: #e2e8f0;
+  --hub-text-main: #0f172a;
+  --hub-text-muted: #64748b;
+  --hub-success: #10b981;
+}
+
+/* Base Hub Wrapper */
+.hub-page {
+  background-color: var(--hub-bg);
+  min-height: 100vh;
+}
+
+/* ── Top Status Strip ── */
+.hub-status-strip {
+  background: var(--hub-surface);
+  border-bottom: 1px solid var(--hub-line);
+  padding: 10px 0;
+  font-size: 13.5px;
+}
+.hub-status-strip .container-xxl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hub-student-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 36, 105, 0.06);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: var(--hub-navy);
+}
+.hub-level-tag {
+  background: var(--hub-navy);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ── Focused Hero Section ── */
+.hub-hero {
+  background: linear-gradient(135deg, #001a4d 0%, #002469 65%, #05338c 100%);
+  color: #ffffff;
+  padding: 56px 0 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hub-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hub-hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--hub-accent);
+  background: rgba(212, 175, 55, 0.14);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+.hub-hero__title {
+  font-family: var(--font-family-display, 'Space Grotesk', sans-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hub-hero__subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+  margin-bottom: 24px;
+}
+.hub-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.hub-hero__stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hub-hero__stats strong {
+  color: #ffffff;
+}
+
+/* Hero Featured Placement Test Glass Card */
+.hub-placement-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1.5px solid rgba(212, 175, 55, 0.6);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 16px 40px rgba(0, 20, 60, 0.25);
+  color: var(--hub-text-main);
+  position: relative;
+}
+.hub-placement-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.hub-placement-card__badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(230, 59, 46, 0.12);
+  color: var(--hub-coral);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(230, 59, 46, 0.25);
+}
+.hub-placement-card__title {
+  font-family: var(--font-family-display, 'Space Grotesk', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--hub-navy);
+  margin-bottom: 8px;
+}
+.hub-placement-card__desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--hub-text-muted);
+  margin-bottom: 20px;
+}
+
+/* ── 4-Tab Segmented Sticky Switcher ── */
+.hub-tabs-bar {
+  background: var(--hub-surface);
+  border-bottom: 1px solid var(--hub-line);
+  position: sticky;
+  top: 72px; /* below header */
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 36, 105, 0.03);
+}
+.hub-nav-pills {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hub-nav-pills::-webkit-scrollbar {
+  display: none;
+}
+.hub-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  background: var(--hub-bg);
+  color: var(--hub-text-muted);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.hub-tab-btn:hover {
+  background: #edf2f7;
+  color: var(--hub-navy);
+}
+.hub-tab-btn.is-active {
+  background: var(--hub-navy);
+  color: #ffffff;
+  border-color: var(--hub-navy);
+  box-shadow: 0 4px 12px rgba(0, 36, 105, 0.2);
+}
+
+/* ── Tab Views Container ── */
+.hub-tab-view {
+  display: none;
+  animation: hubFadeIn 0.25s ease forwards;
+}
+.hub-tab-view.is-active {
+  display: block;
+}
+@keyframes hubFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Tab 1: Teachers Grid ── */
+.hub-teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.hub-teacher-card {
+  background: var(--hub-surface);
+  border: 1px solid var(--hub-line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.hub-teacher-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--hub-navy);
+  box-shadow: 0 8px 24px rgba(0, 36, 105, 0.08);
+}
+.hub-teacher-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.hub-teacher-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--hub-accent);
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+.hub-teacher-name {
+  font-family: var(--font-family-display, 'Space Grotesk', sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--hub-navy);
+  margin-bottom: 4px;
+}
+.hub-teacher-role {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--hub-coral);
+}
+.hub-teacher-meta {
+  font-size: 13px;
+  color: var(--hub-text-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+.hub-teacher-meta span {
+  display: block;
+  margin-bottom: 4px;
+}
+.hub-teacher-quiz-strip {
+  background: var(--hub-bg);
+  border: 1px dashed var(--hub-line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+.hub-teacher-quiz-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--hub-navy);
+  margin-bottom: 2px;
+}
+
+/* ── Tab 2: Sports & Club Teams Grid ── */
+.hub-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.hub-team-card {
+  background: var(--hub-surface);
+  border: 1px solid var(--hub-line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hub-team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 36, 105, 0.08);
+}
+.hub-team-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+.hub-team-title {
+  font-family: var(--font-family-display, 'Space Grotesk', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hub-navy);
+  margin-bottom: 8px;
+}
+.hub-team-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--hub-text-muted);
+  margin-bottom: 16px;
+}
+.hub-team-meta {
+  font-size: 13px;
+  color: var(--hub-text-main);
+  background: var(--hub-bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* ── Tab 3: Weekly Quizzes Grid ── */
+.hub-quizzes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.hub-quiz-card {
+  background: var(--hub-surface);
+  border: 1px solid var(--hub-line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+.hub-quiz-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 36, 105, 0.08);
+}
+
+/* ── Tab 4: Gradebook & Records ── */
+.hub-gradebook-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--hub-line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--hub-surface);
+}
+.hub-gradebook-table th {
+  background: var(--hub-bg);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--hub-text-muted);
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--hub-line);
+}
+.hub-gradebook-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--hub-line);
+  font-size: 14px;
+}
+.hub-gradebook-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.badge-distinction {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+}
+.badge-passed {
+  background: rgba(0, 36, 105, 0.1);
+  color: var(--hub-navy);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+}
+.badge-review {
+  background: rgba(230, 59, 46, 0.12);
+  color: var(--hub-coral);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+}
+
+/* ── Interactive Quiz Stage Modal ── */
+.hub-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hub-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 24, 65, 0.75);
+  backdrop-filter: blur(4px);
+}
+.hub-modal-dialog {
+  position: relative;
+  background: var(--hub-surface);
+  border-radius: 16px;
+  max-width: 640px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 20, 60, 0.35);
+  z-index: 1;
+}
+
+/* Responsive Rules */
+@media (max-width: 767.98px) {
+  .hub-hero {
+    padding: 36px 0 32px;
+  }
+  .hub-teachers-grid,
+  .hub-teams-grid,
+  .hub-quizzes-grid {
+    grid-template-columns: 1fr;
+  }
+  .hub-tabs-bar {
+    top: 60px;
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "news-ranking",
+    "title": "New Ranking CAU obtains",
+    "slug": "ranking",
+    "summary": "Cyprus Aydın University achieves a notable milestone in global higher education rankings, recognizing academic excellence, research output, and international student diversity.",
+    "content": "Cyprus Aydın University has officially achieved a distinguished position in the latest international higher education rankings. The evaluation highlights CAU's expanding research citations, clinical laboratory excellence in Dentistry and Engineering, and robust international exchange partnerships with over 60 partner institutions globally.",
+    "category": "Announcement",
+    "image": "/assets/untitled2-12-b26e7632db_5e13efc2.jpg",
+    "author": "CAU Rectorate Communications",
+    "isFeatured": true,
+    "status": "published",
+    "publishedAt": "2025-07-20"
+  },
+  {
+    "id": "news-culture-day",
+    "title": "CAU Sudan's culture day",
+    "slug": "culture-day",
+    "summary": "Students and faculty celebrate Sudanese heritage, music, culinary traditions, and folklore on the Kyrenia Mediterranean campus in a vibrant cross-cultural gathering.",
+    "content": "The Cyprus Aydın University student council and international office hosted Sudan Culture Day on the central campus quad. Featuring traditional folklore dances, authentic culinary tastings, calligraphy exhibitions, and student musical performances, the event celebrated the university's vibrant multi-national student body.",
+    "category": "Students",
+    "image": "/assets/untitled2-14-def7ddf464_580c9d6d.jpg",
+    "author": "Student Societies Union",
+    "isFeatured": false,
+    "status": "published",
+    "publishedAt": "2025-03-10"
+  },
+  {
+    "id": "news-teknofest",
+    "title": "CAU at TEKNOFEST2025",
+    "slug": "teknofest",
+    "summary": "CAU engineering and robotics scholars showcase aerospace prototypes, autonomous drones, and AI vision systems at Turkey’s flagship technology festival.",
+    "content": "Student engineering teams from Cyprus Aydın University presented their autonomous drone navigation systems and biomedical AI prototypes at TEKNOFEST 2025. Guided by faculty mentors from the Department of Computer and Electrical & Electronic Engineering, the team competed alongside leading aerospace innovators.",
+    "category": "Collaborating",
+    "image": "/assets/untitled2-13-24f9b4bd8b_652e8d35.jpg",
+    "author": "Faculty of Engineering",
+    "isFeatured": false,
+    "status": "published",
+    "publishedAt": "2025-03-05"
+  },
+  {
+    "id": "news-scholarships",
+    "title": "Opportunities at CAU",
+    "slug": "scholarships",
+    "summary": "Merit-based scholarships up to 50% announced for international applicants across undergraduate degree programmes for the 2026/2027 academic year.",
+    "content": "Cyprus Aydın University has announced its 2026/2027 International Merit Scholarship packages. Eligible candidates applying to Bachelor's and Master's programs across Engineering, Architecture, Health Sciences, Business, and Law receive automatic 50% tuition remission upon academic credential review.",
+    "category": "Scholarship",
+    "image": "/assets/untitled2-15-857094fecf_79e0b7ec.jpg",
+    "author": "International Admissions Directorate",
+    "isFeatured": false,
+    "status": "published",
+    "publishedAt": "2025-08-07"
+  },
+  {
+    "id": "news-1",
+    "title": "Cyprus Aydın University Expands High-Tech Engineering & AI Research Labs",
+    "slug": "engineering-ai-research-labs-expansion",
+    "summary": "New state-of-the-art mechatronics and artificial intelligence computing facilities inaugurated at the Kyrenia campus.",
+    "content": "Cyprus Aydın University today officially opened its newly expanded Engineering and Computing Research Complex. Featuring high-performance GPU clusters, robotics testbeds, and biomedical simulation suites, the new facility directly serves undergraduate and postgraduate scholars.",
+    "category": "Academic",
+    "image": "/assets/untitled2-13-24f9b4bd8b_652e8d35.jpg",
+    "publishedAt": "2026-09-01",
+    "author": "Rectorate Communications",
+    "isFeatured": false,
+    "status": "published"
+  },
+  {
+    "id": "news-2",
+    "title": "Faculty of Dentistry Receives Enhanced Clinical Simulation Phantom Heads",
+    "slug": "dentistry-clinical-simulation-upgrade",
+    "summary": "Premier 5-year clinical dentistry programme introduces next-generation simulation suites for international cohorts.",
+    "content": "The CAU Faculty of Dentistry has installed next-generation simulation units to expand pre-clinical training for incoming students across Europe, Central Asia, and the Middle East.",
+    "category": "Academic",
+    "image": "/assets/untitled2-14-def7ddf464_580c9d6d.jpg",
+    "publishedAt": "2026-08-25",
+    "author": "Faculty of Dentistry",
+    "isFeatured": false,
+    "status": "published"
+  },
+  {
+    "id": "news-3",
+    "title": "Orientation Week for International Students Fall 2026 Announced",
+    "slug": "international-orientation-week-fall-2026",
+    "summary": "Comprehensive airport transfers, campus induction tours, Mediterranean cultural excursions, and student visa registration desks.",
+    "content": "The International Office has published the detailed schedule for Fall 2026 arrival and orientation. Free airport shuttle services from Ercan Airport (ECN) will run continuously throughout the arrivals period.",
+    "category": "Campus Life",
+    "image": "/assets/cau-campus-gate_e8b028bc.jpg",
+    "publishedAt": "2026-08-18",
+    "author": "International Office",
+    "isFeatured": false,
+    "status": "published"
+  }
+]

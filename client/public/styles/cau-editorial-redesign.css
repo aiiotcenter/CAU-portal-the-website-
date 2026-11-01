@@ -1,0 +1,605 @@
+/* ================================================================================
+   CAU EDITORIAL REDESIGN — Awwwards-Inspired Homepage
+   Based on Léo Parpeix Portfolio 2026 Awwwards Site of the Day
+
+   SECTION 1: cau-editorial-hero   → Screenshot 1 (pillarboxed video canvas)
+   SECTION 2: cau-editorial-section → Screenshot 2 (massive bold headline)
+   ================================================================================ */
+
+/* ── SHARED RESET ── */
+.cau-editorial-hero,
+.cau-editorial-section {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* ================================================================================
+   1. EDITORIAL HERO — Pillarboxed Cinematic Canvas
+   Dark side rails left and right, inset video fills the middle like an art piece
+   ================================================================================ */
+.cau-editorial-hero {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  min-height: 100vh;
+  background: #111214; /* dark rail color */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+/* ── Dark Side Rails (the vertical letterbox rails from screenshot 1) ── */
+.cau-hero-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 3.5vw, 52px);
+  background: #111214;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+.cau-hero-rail--left  { left: 0; }
+.cau-hero-rail--right { right: 0; }
+
+/* ── The inset video canvas (leaves space for the rails) ── */
+.cau-hero-canvas {
+  position: absolute;
+  inset: 0;
+  left: clamp(24px, 3.5vw, 52px);
+  right: clamp(24px, 3.5vw, 52px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cau-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Subtle bottom gradient for legibility of dock */
+.cau-hero-canvas-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(10, 12, 16, 0.72) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(10, 12, 16, 0.38) 0%, transparent 35%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── Top-Left: Creator meta strip (Awwwards top-left "Léo Parpeix · by · ...") ── */
+.cau-hero-meta-bar {
+  position: absolute;
+  top: 0;
+  left: clamp(24px, 3.5vw, 52px); /* starts just after rail */
+  right: clamp(24px, 3.5vw, 52px);
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  background: linear-gradient(to bottom, rgba(10,12,16,0.55) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.cau-hero-meta-bar > * { pointer-events: auto; }
+
+.cau-hero-meta-title {
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.cau-hero-meta-sep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.cau-hero-meta-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s;
+}
+
+.cau-hero-meta-author:hover { color: #ffffff; }
+
+.cau-hero-meta-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cau-navy, #082d70);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.cau-hero-meta-avatar--alt {
+  background: var(--cau-coral, #f04432);
+}
+
+/* ── Top-Right: Icon utility buttons (Awwwards bookmark / share / fullscreen) ── */
+.cau-hero-icon-actions {
+  position: absolute;
+  top: 16px;
+  right: calc(clamp(24px, 3.5vw, 52px) + 16px);
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cau-hero-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-normal, 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.cau-hero-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+/* ── Bottom-Left: Scroll-down hint arrow (Awwwards ↑ corner) ── */
+.cau-hero-scroll-hint {
+  position: absolute;
+  bottom: clamp(90px, 12vh, 110px);
+  left: calc(clamp(24px, 3.5vw, 52px) + 16px);
+  z-index: 8;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  animation: cau-scroll-bounce 2.2s ease-in-out infinite;
+}
+
+.cau-hero-scroll-hint:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  animation: none;
+}
+
+@keyframes cau-scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(5px); opacity: 1; }
+}
+
+/* ── Bottom Floating Dock — Awwwards "W. | Creator | Font & Color | Visit Site" ── */
+.cau-hero-dock {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.cau-hero-dock-inner {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(22, 22, 24, 0.82);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  padding: 6px 8px 6px 8px;
+  box-shadow:
+    0 12px 32px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.cau-hero-dock-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  margin-right: 4px;
+  text-decoration: none;
+}
+
+.cau-hero-dock-mark {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(10);  /* make it white on dark bg */
+}
+
+.cau-hero-dock-item {
+  display: inline-flex;
+  align-items: center;
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cau-hero-dock-item:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.cau-hero-dock-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #111214;
+  background: linear-gradient(135deg, #fed049 0%, #fadb14 100%);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  margin-left: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(250, 219, 20, 0.3);
+}
+
+.cau-hero-dock-cta:hover {
+  background: #ffffff;
+  color: #111214;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ── Responsive Hero ── */
+@media (max-width: 767.98px) {
+  .cau-hero-rail { width: 10px; }
+  .cau-hero-canvas {
+    left: 10px;
+    right: 10px;
+  }
+  .cau-hero-icon-actions { right: 24px; }
+  .cau-hero-meta-bar {
+    left: 10px;
+    right: 10px;
+    font-size: 11.5px;
+    gap: 6px;
+  }
+  .cau-hero-meta-author span:last-child { display: none; }
+  .cau-hero-dock-inner {
+    padding: 6px 6px;
+    gap: 0;
+  }
+  .cau-hero-dock-item { padding: 7px 10px; font-size: 11.5px; }
+  .cau-hero-dock-item:nth-child(n+5) { display: none; }
+}
+
+/* ================================================================================
+   2. EDITORIAL SECTION — Below Hero, Awwwards "Screenshot 2" Style
+   Off-white/paper bg, SOTD badge TL, MASSIVE bold headline, credential circles
+   ================================================================================ */
+.cau-editorial-section {
+  background: var(--cau-soft, #f7f7f5);
+  padding: clamp(32px, 5vh, 64px) clamp(20px, 5vw, 80px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* ── Top Bar: SOTD badge + action icons ── */
+.cau-editorial-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* The SOTD Badge (Awwwards top-left "SOTD 7.69/10" box) */
+.cau-sotd-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid var(--cau-ink, #131313);
+  border-radius: var(--radius-normal, 8px);
+  padding: 9px 14px 10px;
+  gap: 3px;
+  min-width: 72px;
+  user-select: none;
+}
+
+.cau-sotd-label {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cau-muted, #6c6d70);
+  line-height: 1;
+}
+
+.cau-sotd-main {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.cau-sotd-score {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--cau-ink, #131313);
+  line-height: 1;
+}
+
+.cau-sotd-slash,
+.cau-sotd-denom {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cau-muted, #6c6d70);
+  letter-spacing: 0.02em;
+}
+
+/* Top-right editorial icon buttons */
+.cau-editorial-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cau-editorial-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-normal, 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--cau-line, #d5d5d5);
+  color: var(--cau-muted, #6c6d70);
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.cau-editorial-icon-btn:hover {
+  border-color: var(--cau-ink, #131313);
+  color: var(--cau-ink, #131313);
+}
+
+/* ── Kicker line ("Site of the Day · Sep 14, 2026" equivalent) ── */
+.cau-editorial-kicker {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cau-navy, #082d70);
+  text-align: center;
+  margin: 0 0 12px;
+  letter-spacing: 0.01em;
+}
+
+.cau-editorial-kicker-dot {
+  margin: 0 8px;
+  color: var(--cau-muted, #6c6d70);
+}
+
+/* ── THE MASSIVE EDITORIAL HEADLINE ── */
+/* This is the centrepiece: "LÉO PARPEIX - PORTFOLIO 2026" → "CYPRUS AYDIN UNIVERSITY" */
+.cau-editorial-headline {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(4rem, 13.5vw, 13rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--cau-ink, #131313);
+  text-align: center;
+  margin: 0 0 clamp(28px, 4vh, 48px);
+  text-wrap: balance;
+  word-break: break-word;
+}
+
+/* ── Credential circles (Awwwards "Léo Parpeix PRO + Thoma Lecornu" avatars) ── */
+.cau-editorial-credentials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: clamp(36px, 6vh, 72px);
+  flex-wrap: wrap;
+}
+
+.cau-editorial-credential-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--cau-ink, #131313);
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.cau-editorial-credential-item:hover { opacity: 0.7; }
+
+.cau-editorial-credential-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--cau-line, #d5d5d5);
+  background: var(--cau-soft, #f7f7f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cau-editorial-credential-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 4px;
+}
+
+.cau-editorial-credential-avatar--dark {
+  background: var(--cau-ink, #131313);
+}
+
+.cau-editorial-credential-avatar--navy {
+  background: var(--cau-navy, #082d70);
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.cau-editorial-credential-name {
+  line-height: 1.15;
+}
+
+/* ── Stats Bar at the bottom (the dark bar peeking in screenshot 2) ── */
+.cau-editorial-stats-bar {
+  background: var(--cau-ink, #131313);
+  margin-left: clamp(-20px, -5vw, -80px);
+  margin-right: clamp(-20px, -5vw, -80px);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.cau-editorial-stats-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: clamp(20px, 3vh, 32px) clamp(20px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+
+.cau-editorial-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 28px;
+}
+
+.cau-editorial-stat strong {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.cau-editorial-stat span {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1;
+}
+
+.cau-editorial-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.cau-editorial-stat-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #111214;
+  background: linear-gradient(135deg, #fed049 0%, #fadb14 100%);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(250, 219, 20, 0.3);
+  text-decoration: none;
+}
+
+.cau-editorial-stat-cta:hover {
+  background: #ffffff;
+  color: #111214;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive Editorial Section ── */
+@media (max-width: 767.98px) {
+  .cau-editorial-section {
+    padding: 24px 16px 0;
+  }
+  .cau-editorial-stat-divider { display: none; }
+  .cau-editorial-stat { padding: 8px 16px; }
+  .cau-editorial-stats-bar-inner { gap: 0; }
+  .cau-editorial-stats-bar {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .cau-editorial-credentials { gap: 16px; }
+  .cau-editorial-stat-cta { margin-left: 0; width: 100%; justify-content: center; }
+}
+
+/* ── Override: Ensure homepage canvas has no extra padding ── */
+.homepage .homepage-canvas {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}

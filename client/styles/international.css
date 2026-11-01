@@ -1,0 +1,729 @@
+/* International Office: CAU Swiss Editorial Design System */
+@import "./tokens.css";
+@import "./primitives.css";
+
+.international-main {
+  padding-bottom: 40px;
+}
+
+/* Page Header */
+.international-title {
+  padding: 48px 0 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--line);
+}
+
+.international-title h1 {
+  font-size: var(--font-h1, clamp(3rem, 5.5vw, 4.6rem));
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  text-transform: none;
+  margin: 16px 0 0;
+  font-weight: 600;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.back-home {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted, #64748b);
+  border-bottom: 1px solid var(--line, #d5d5d5);
+  padding-bottom: 6px;
+  text-decoration: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.back-home:hover {
+  color: var(--coral, #f43f24);
+  border-color: var(--coral, #f43f24);
+}
+
+/* Hero Section */
+.international-hero {
+  padding-bottom: 44px;
+}
+
+.international-hero img {
+  width: 100%;
+  height: min(38vw, 520px);
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius, 6px);
+  border: 1px solid var(--prog-border, #d5d5d5);
+  display: block;
+}
+
+/* 4 Pillars Section */
+.intl-pillars-section {
+  padding: 48px 0;
+  border-top: 1px solid var(--line, #d5d5d5);
+}
+
+.intl-pillars-header {
+  margin-bottom: 32px;
+}
+
+.intl-pillars-header h2 {
+  font-size: var(--font-h2, clamp(2rem, 3.2vw, 3.2rem));
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  margin: 12px 0 8px;
+  font-weight: 600;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.intl-pillars-header p {
+  font-size: 16px;
+  color: var(--muted, #64748b);
+  max-width: 680px;
+  margin: 0;
+}
+
+.intl-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.intl-pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.intl-pillar-card:hover {
+  border-color: var(--coral, #f43f24);
+  transform: translateY(-2px);
+}
+
+.pillar-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm, 4px);
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--coral, #f43f24);
+  margin-bottom: 20px;
+}
+
+.intl-pillar-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--ink, #0f172a);
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.intl-pillar-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted, #64748b);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.pillar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pillar-tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  background: #ffffff;
+  border-radius: var(--radius-sm, 4px);
+  color: var(--muted, #64748b);
+  border: 1px solid var(--prog-border, #d5d5d5);
+}
+
+/* Welcome Section */
+.welcome-section {
+  padding: 56px 0;
+  border-top: 1px solid var(--line, #d5d5d5);
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 36% 64%;
+  gap: 48px;
+}
+
+.welcome-sidebar h2 {
+  font-size: var(--font-h2, clamp(2rem, 3.2vw, 3.2rem));
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  margin: 14px 0 32px;
+  font-weight: 600;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.dean-card {
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.dean-card:hover {
+  border-color: var(--coral, #f43f24);
+}
+
+.dean-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-sm, 6px);
+  background: radial-gradient(circle at 50% 35%, #1e293b 0%, #090e17 100%);
+  border: 1px solid var(--prog-border, #d5d5d5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--coral, #f43f24);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dean-avatar img,
+.dean-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.dean-details strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink, #0f172a);
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.dean-details span {
+  display: block;
+  font-size: 13px;
+  color: var(--coral, #f43f24);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+}
+
+.dean-details p {
+  font-size: 13px;
+  color: var(--muted, #64748b);
+  margin: 4px 0 0;
+}
+
+.welcome-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink, #0f172a);
+}
+
+.welcome-lead {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.welcome-lead span {
+  color: var(--coral, #f43f24);
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+
+.welcome-body p {
+  margin-bottom: 18px;
+  color: #334155;
+}
+
+.quote-callout {
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-left: 3px solid var(--coral, #f43f24);
+  padding: 16px 24px;
+  background: #ffffff;
+  border-radius: 0 var(--radius, 6px) var(--radius, 6px) 0;
+  margin: 24px 0;
+}
+
+.quote-callout blockquote {
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink, #0f172a);
+  margin: 0;
+}
+
+/* Regional Coordinators Section */
+.team-section {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  padding: 56px 0;
+  border-top: 1px solid var(--line, #d5d5d5);
+}
+
+.team-rail {
+  padding-right: 48px;
+  border-right: 1px solid var(--line, #d5d5d5);
+}
+
+.team-rail h2 {
+  font-size: var(--font-h2, clamp(2rem, 3.2vw, 3.2rem));
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  margin: 12px 0 16px;
+  font-weight: 600;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.team-rail p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted, #64748b);
+  margin-bottom: 32px;
+}
+
+.rail-contact-box {
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 24px;
+}
+
+.rail-contact-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.rail-contact-box p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: var(--ink, #0f172a);
+}
+
+.rail-contact-box a {
+  color: var(--ink, #0f172a);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s ease;
+}
+
+.rail-contact-box a:hover {
+  color: var(--coral, #f43f24);
+}
+
+.rail-contact-box .office-hours {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line, #d5d5d5);
+  font-size: 13px;
+  color: var(--muted, #64748b);
+  margin-bottom: 0;
+}
+
+.team-list {
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.team-card {
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 24px;
+  display: flex;
+  gap: 28px;
+  background: #ffffff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.team-card:hover {
+  border-color: var(--coral, #f43f24);
+  transform: translateY(-2px);
+}
+
+.team-photo-wrapper {
+  flex-shrink: 0;
+  width: 140px;
+  height: 180px;
+  border-radius: var(--radius, 6px);
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, #1e293b 0%, #080d14 100%);
+  border: 1px solid var(--prog-border, #d5d5d5);
+}
+
+.team-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo-wrapper img {
+  transform: scale(1.04);
+}
+
+.team-quote {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink, #0f172a);
+  background: #f8fafc;
+  border-left: 3px solid var(--coral, #f43f24);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius-sm, 4px) var(--radius-sm, 4px) 0;
+  margin: 10px 0 14px;
+}
+
+.team-quote p {
+  margin: 0;
+}
+
+.regional-directory-card {
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 24px;
+  margin-top: 12px;
+}
+
+.regional-directory-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.regional-directory-header p {
+  font-size: 14px;
+  color: var(--muted, #64748b);
+  margin-bottom: 18px;
+}
+
+.regional-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.regional-box {
+  background: #f8fafc;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius-sm, 4px);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.regional-box .reg-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--coral, #f43f24);
+  margin-bottom: 4px;
+}
+
+.regional-box strong {
+  font-size: 15px;
+  color: var(--ink, #0f172a);
+  margin-bottom: 2px;
+}
+
+.regional-box p {
+  font-size: 12px;
+  color: var(--muted, #64748b);
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.regional-box .reg-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  border-top: 1px dashed var(--line, #e2e8f0);
+  padding-top: 8px;
+}
+
+.regional-box .reg-contacts a {
+  color: var(--ink, #0f172a);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.regional-box .reg-contacts a:hover {
+  color: var(--coral, #f43f24);
+}
+
+@media (max-width: 991.98px) {
+  .regional-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.region-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius-sm, 4px);
+  color: var(--coral, #f43f24);
+  margin-bottom: 6px;
+}
+
+.team-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 4px;
+  color: var(--ink, #0f172a);
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.team-role {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted, #64748b);
+}
+
+.fluency-tags {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm, 4px);
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  color: #334155;
+}
+
+.team-scope {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #475569;
+  margin: 8px 0 16px;
+  flex-grow: 1;
+}
+
+.team-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.team-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm, 4px);
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  color: var(--ink, #0f172a);
+  text-decoration: none;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.team-contact-btn:hover {
+  border-color: var(--coral, #f43f24);
+  color: var(--coral, #f43f24);
+}
+
+/* Direct Consultation Callout */
+.intl-consult-section {
+  padding: 56px 0 20px;
+  border-top: 1px solid var(--line, #d5d5d5);
+}
+
+.consult-card {
+  background: #ffffff;
+  border: 1px solid var(--prog-border, #d5d5d5);
+  border-radius: var(--radius, 6px);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  transition: border-color 0.2s ease;
+}
+
+.consult-card:hover {
+  border-color: var(--coral, #f43f24);
+}
+
+.consult-content h2 {
+  font-size: var(--font-h2, clamp(2rem, 3.2vw, 3.2rem));
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  margin: 12px 0 12px;
+  font-weight: 600;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.consult-content p {
+  font-size: 16px;
+  color: var(--muted, #64748b);
+  margin-bottom: 20px;
+  max-width: 650px;
+}
+
+.consult-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--ink, #0f172a);
+}
+
+.text-coral {
+  color: var(--coral, #f43f24);
+}
+
+.consult-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.consult-actions .btn {
+  padding: 12px 24px;
+  border-radius: var(--radius-sm, 4px);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .intl-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .team-section {
+    grid-template-columns: 1fr;
+  }
+
+  .team-rail {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line, #d5d5d5);
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+
+  .team-list {
+    padding-left: 0;
+  }
+
+  .consult-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .consult-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .international-title {
+    display: block;
+  }
+
+  .international-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .back-home {
+    display: inline-block;
+    margin-top: 18px;
+  }
+
+  .intl-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .team-photo-wrapper {
+    width: 100%;
+    height: 220px;
+  }
+
+  .consult-card {
+    padding: 24px;
+  }
+
+  .consult-actions {
+    flex-direction: column;
+  }
+}

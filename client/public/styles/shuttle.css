@@ -1,0 +1,563 @@
+/**
+ * ==============================================================================
+ * CAU CAMPUS TRANSPORTATION & SHUTTLE SCHEDULES — STYLES
+ * Architecture: Swiss Editorial Design System (Token-Strict)
+ * Clean, lightweight, and responsive
+ * ==============================================================================
+ */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+body.shuttle-page {
+  background: var(--sys-bg-base) !important;
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-root);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shuttle-main {
+  padding-top: var(--space-3);
+  padding-bottom: var(--section-pad-showcase-desktop, 80px);
+}
+
+@media (max-width: 991.98px) {
+  .shuttle-main {
+    padding-bottom: var(--section-pad-showcase-tablet, 56px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   1. TITLE SECTION
+   -------------------------------------------------------------------------- */
+.shuttle-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6) 0 var(--space-4);
+  border-bottom: 1px solid var(--sys-line);
+}
+
+.shuttle-page-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-display);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  margin-bottom: var(--space-1);
+}
+
+.shuttle-title-section h1 {
+  font-family: var(--font-family-display);
+  font-size: var(--font-h1);
+  line-height: var(--font-h1-lh);
+  letter-spacing: var(--font-h1-ls);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 4px 0 12px;
+}
+
+.shuttle-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0;
+}
+
+.shuttle-title-actions {
+  flex-shrink: 0;
+  padding-top: var(--space-2);
+}
+
+.shuttle-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.shuttle-back-link:hover {
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   2. STATS STRIP
+   -------------------------------------------------------------------------- */
+.shuttle-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) var(--space-5);
+  background: #ffffff;
+  border: 1px solid var(--sys-line);
+  border-radius: var(--radius-card);
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.shuttle-stat-box {
+  text-align: center;
+}
+
+.shuttle-stat-num {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.shuttle-stat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.shuttle-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--sys-line);
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .shuttle-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. STANDALONE LIVE GPS TRACKER LAUNCH BANNER
+   -------------------------------------------------------------------------- */
+.shuttle-live-tracker-banner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-6);
+  align-items: center;
+  padding: 32px 36px;
+  background: linear-gradient(135deg, #001a4d 0%, #002469 60%, #083488 100%);
+  color: #ffffff;
+  border-radius: calc(var(--radius-card) * 1.5);
+  margin-bottom: var(--space-7);
+  box-shadow: 0 12px 32px rgba(0, 36, 105, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+
+.shuttle-live-tracker-banner::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(232, 89, 12, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tracker-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+  margin-bottom: 12px;
+}
+
+.tracker-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-ring 2s infinite ease-out;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+.shuttle-live-tracker-banner h2 {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.shuttle-live-tracker-banner p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 640px;
+  margin: 0 0 16px;
+}
+
+.tracker-banner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tracker-banner-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.tracker-banner-tags i {
+  color: var(--sys-accent);
+}
+
+.tracker-banner-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-launch-gps {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--sys-accent, #e8590c);
+  color: #ffffff !important;
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(232, 89, 12, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-launch-gps:hover {
+  background: #d9480f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(232, 89, 12, 0.55);
+}
+
+.tracker-host-note {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.tracker-host-note code {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 991.98px) {
+  .shuttle-live-tracker-banner {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .tracker-banner-actions {
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SCHEDULES & ROUTE FILTER
+   -------------------------------------------------------------------------- */
+.shuttle-schedules-section {
+  margin-bottom: var(--space-7);
+}
+
+.section-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.shuttle-section-kicker {
+  font-family: var(--font-family-display);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+}
+
+.shuttle-section-heading {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 4px 0 0;
+}
+
+.shuttle-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-pill {
+  border: 1px solid var(--sys-line);
+  background: #ffffff;
+  color: var(--muted);
+  font-family: var(--font-family-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-pill:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.filter-pill.is-active {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+}
+
+/* Route Cards Grid */
+.shuttle-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 991.98px) {
+  .shuttle-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shuttle-route-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--sys-line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.shuttle-route-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 36, 105, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 36, 105, 0.06);
+}
+
+.card-header-rail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.route-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.badge-weekday {
+  background: rgba(0, 36, 105, 0.08);
+  color: #002469;
+}
+
+.badge-daily {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.route-title {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.route-path {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.route-meta-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #f8fafc;
+  border: 1px solid var(--sys-line);
+  padding: 6px 12px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.route-meta-bubble strong {
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.route-meta-bubble span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.card-departures-box {
+  background: #fafbfc;
+  border: 1px dashed var(--sys-line);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.departures-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.time-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.time-chip {
+  font-family: var(--font-family-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--sys-line);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.time-chip.chip-highlight {
+  background: #fff8f0;
+  color: var(--sys-accent);
+  border-color: rgba(232, 89, 12, 0.3);
+}
+
+.card-footer-info {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+  border-top: 1px solid var(--sys-line);
+  padding-top: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. TRANSIT POLICIES & FAQ GRID
+   -------------------------------------------------------------------------- */
+.shuttle-policies-section {
+  margin-bottom: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--sys-line);
+}
+
+.policies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 991.98px) {
+  .policies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .policies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.policy-card {
+  background: #ffffff;
+  border: 1px solid var(--sys-line);
+  border-radius: var(--radius-card);
+  padding: 22px;
+}
+
+.policy-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 36, 105, 0.06);
+  color: var(--sys-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.policy-card h4 {
+  font-family: var(--font-family-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.policy-card p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}

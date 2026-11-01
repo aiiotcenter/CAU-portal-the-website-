@@ -1,0 +1,2122 @@
+/**
+ * ==============================================================================
+ * CAU AI EDUCATION SMART CONSOLE & PROGRAMME FINDER
+ * Architecture: Canonical Swiss Editorial Design System (Agency-Grade Standard)
+ * Cyprus Aydın University (CAU) • Kyrenia, TRNC
+ * Single Source of Truth • Strict Token Enforcement • Pure Hairlines • Zero Shadow
+ * ==============================================================================
+ */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+/* ==========================================================================
+   1. DISCOVERY MODE SWITCHER (Top of Catalogue)
+   ========================================================================== */
+.catalogue-mode-bar {
+  margin: var(--space-3) 0 var(--space-5);
+  padding: 8px 12px;
+  background: var(--sys-surface-1);
+  border: 1px solid var(--sys-line);
+  border-radius: var(--radius-md, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .catalogue-mode-bar {
+  background: #131418;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.catalogue-mode-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: var(--sys-surface-2, #f6f5f2);
+  border: 1px solid var(--sys-line);
+  border-radius: var(--radius-normal, 8px);
+  padding: 4px;
+  gap: 4px;
+}
+
+[data-theme="dark"] .catalogue-mode-switcher {
+  background: #1a1c22;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.mode-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 9px 18px;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--sys-text-muted);
+  font-family: var(--font-family-display);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1), color 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  box-shadow: none !important;
+  user-select: none;
+}
+
+.mode-tab:hover {
+  color: var(--sys-text-primary);
+  border-color: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .mode-tab:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mode-tab.is-active {
+  background: #ffffff !important;
+  border-color: var(--sys-line) !important;
+  color: var(--sys-text-primary) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="dark"] .mode-tab.is-active {
+  background: #131418 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #f5f6f8 !important;
+}
+
+.mode-tab-num {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--sys-accent);
+}
+
+.mode-tab-sparkle {
+  color: var(--coral, #e63b2e);
+  font-size: 12px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mode-tab:hover .mode-tab-sparkle {
+  transform: rotate(15deg) scale(1.15);
+}
+
+.mode-tab-count {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-surface-1);
+  border: 1px solid var(--sys-line);
+  color: var(--sys-text-primary);
+}
+
+[data-theme="dark"] .mode-tab-count {
+  background: #23262e;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f5f6f8;
+}
+
+.mode-tab-badge {
+  font-family: var(--font-family-display);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-accent-subtle);
+  border: 1px solid rgba(230, 59, 46, 0.18);
+  color: var(--sys-accent);
+  transition: all 0.15s ease;
+}
+
+.mode-tab.is-active .mode-tab-badge {
+  background: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+}
+
+.catalogue-mode-bar-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-bar-status {
+  font-family: var(--font-family-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--sys-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--sys-surface-2, #f6f5f2);
+  border: 1px solid var(--sys-line);
+}
+
+.mode-bar-status i {
+  color: #10b981;
+}
+
+[data-theme="dark"] .mode-bar-status {
+  background: #1a1c22;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #8e929b;
+}
+
+/* ==========================================================================
+   2. SIDEBAR AI ADVISOR CARD (Split-Rail Companion)
+   ========================================================================== */
+.sidebar-ai-advisor-card {
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: border-color var(--transition-fast);
+}
+
+.sidebar-ai-advisor-card:hover {
+  border-color: var(--sys-accent);
+}
+
+.advisor-card-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  margin-bottom: var(--space-1);
+}
+
+.advisor-card-title {
+  font-family: var(--font-family-display) !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  line-height: var(--font-h3-lh) !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 var(--space-1) !important;
+}
+
+.advisor-card-copy {
+  font-size: var(--font-body-sm) !important;
+  line-height: 1.45 !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 0 var(--space-3) !important;
+}
+
+.advisor-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  background: var(--sys-accent);
+  border: 1px solid var(--sys-accent);
+  border-radius: var(--radius-normal, 8px);
+  color: #ffffff !important;
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+.advisor-card-btn:hover {
+  background: var(--sys-accent-hover);
+  border-color: var(--sys-accent-hover);
+  transform: none;
+}
+
+.advisor-card-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   3. IN-PAGE SWISS AI CONSULTATION DECK (.cau-inpage-console)
+   ========================================================================== */
+.cau-inpage-console {
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+  box-shadow: none !important;
+  transition: opacity var(--dur-fast) var(--ease-snappy);
+}
+
+.cau-inpage-console[hidden] {
+  display: none !important;
+}
+
+/* Header Bar of the Deck */
+.console-deck-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background: var(--sys-surface-1);
+  border-bottom: var(--border-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.console-deck-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.console-deck-kicker {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.console-deck-title {
+  font-family: var(--font-family-display) !important;
+  font-size: clamp(20px, 2.2vw, 26px) !important;
+  font-weight: 700 !important;
+  letter-spacing: var(--font-h2-ls) !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 !important;
+}
+
+.console-deck-subtitle {
+  font-size: var(--font-body-sm) !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+/* Progress Step Tabs in Deck Header */
+.console-step-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.console-step-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm, 6px);
+  border: var(--border-hairline);
+  background: var(--sys-surface-1);
+  font-family: var(--font-family-display);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sys-text-muted);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.console-step-pill.is-active {
+  background: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+}
+
+.console-step-pill.is-completed {
+  border-color: var(--sys-accent);
+  color: var(--sys-accent);
+}
+
+.console-step-pill-num {
+  font-family: var(--font-family-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.console-return-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: var(--border-hairline);
+  background: transparent;
+  color: var(--sys-text-muted);
+  font-family: var(--font-family-display);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.console-return-btn:hover {
+  border-color: var(--sys-text-primary);
+  color: var(--sys-text-primary);
+}
+
+/* Deck Stage Body */
+.console-deck-body {
+  padding: var(--space-5);
+}
+
+.console-step-stage {
+  display: none;
+}
+
+.console-step-stage.is-visible {
+  display: block;
+  animation: cauFadeIn var(--dur-base) var(--ease-snappy);
+}
+
+@keyframes cauFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.console-stage-header {
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.console-stage-heading {
+  font-family: var(--font-family-display) !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  letter-spacing: var(--font-h3-ls) !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 4px !important;
+}
+
+.console-stage-lead {
+  font-size: var(--font-body-sm) !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+.console-counter-badge {
+  font-family: var(--font-family-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 6px);
+  border: var(--border-hairline);
+  background: var(--sys-surface-1);
+  color: var(--sys-text-primary);
+}
+
+/* ==========================================================================
+   4. STEP 1: PASSION CATEGORY CARDS & UNDECIDED GUIDANCE
+   ========================================================================== */
+.btn-undecided-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm, 6px);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.btn-undecided-toggle:hover {
+  border-color: var(--sys-accent);
+  color: var(--sys-accent);
+}
+
+.undecided-guidance-box {
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  animation: cauFadeIn var(--dur-base) var(--ease-snappy);
+}
+
+.undecided-guidance-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  font-size: var(--font-body-sm);
+  color: var(--sys-text-primary);
+}
+
+.undecided-guidance-header i {
+  font-size: 18px;
+  color: var(--sys-accent);
+}
+
+.undecided-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.undecided-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-3);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.undecided-action-card:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  transform: none;
+}
+
+.undecided-action-card:active {
+  transform: scale(0.98);
+}
+
+.undecided-action-icon {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.undecided-action-card strong {
+  font-family: var(--font-family-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.undecided-action-card span:last-child {
+  font-size: 11.5px;
+  color: var(--sys-text-muted);
+  line-height: 1.35;
+}
+
+.console-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.console-field-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-3) var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  position: relative;
+  text-align: left;
+  user-select: none;
+  box-shadow: none !important;
+}
+
+.console-field-card:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  transform: none;
+}
+
+.console-field-card:active {
+  transform: scale(0.98);
+}
+
+.console-field-card.is-selected {
+  border-color: var(--sys-accent) !important;
+  background: var(--sys-surface-1) !important;
+}
+
+.console-field-card.is-selected::after {
+  content: "✓";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sys-accent);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.field-card-icon {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--sys-accent);
+}
+
+.field-card-title {
+  font-family: var(--font-family-display) !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 4px !important;
+}
+
+.field-card-caption {
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   5. STEP 2: WORK PREFERENCES CARDS
+   ========================================================================== */
+.console-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.console-work-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  position: relative;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+.console-work-card:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  transform: none;
+}
+
+.console-work-card:active {
+  transform: scale(0.98);
+}
+
+.console-work-card.is-selected {
+  border-color: var(--sys-accent) !important;
+  background: var(--sys-surface-1) !important;
+}
+
+.console-work-card.is-selected::after {
+  content: "✓";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--sys-accent);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.work-card-icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.work-card-content h4 {
+  font-family: var(--font-family-display) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 4px !important;
+}
+
+.work-card-content p {
+  font-size: var(--font-body-sm) !important;
+  line-height: 1.4 !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   6. STEP 3: STUDY METHODOLOGY CARDS
+   ========================================================================== */
+.console-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.console-method-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  position: relative;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+.console-method-card:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  transform: none;
+}
+
+.console-method-card:active {
+  transform: scale(0.98);
+}
+
+.console-method-card.is-selected {
+  border-color: var(--sys-accent) !important;
+  background: var(--sys-surface-1) !important;
+}
+
+.console-method-card.is-selected::after {
+  content: "✓";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--sys-accent);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.method-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-normal, 8px);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: var(--sys-accent);
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.console-method-card:hover .method-icon-box {
+  border-color: var(--sys-accent);
+}
+
+.console-method-card.is-selected .method-icon-box {
+  background: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+}
+
+.method-content h4 {
+  font-family: var(--font-family-display) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 4px !important;
+}
+
+.method-content p {
+  font-size: var(--font-body-sm) !important;
+  line-height: 1.4 !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   7. STEP 4: BACKGROUND & GOALS MATRIX
+   ========================================================================== */
+.console-profile-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.matrix-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.matrix-label {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+}
+
+.matrix-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.matrix-chip {
+  padding: 9px 16px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.matrix-chip:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  color: var(--sys-accent);
+}
+
+.matrix-chip.is-selected {
+  background: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+}
+
+/* ==========================================================================
+   8. STEP 5: DEGREE & CRITERIA FORM
+   ========================================================================== */
+.console-criteria-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.criteria-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.criteria-label {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+}
+
+.criteria-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.criteria-chip {
+  padding: 8px 14px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.criteria-chip:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  color: var(--sys-accent);
+}
+
+.criteria-chip.is-selected {
+  background: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+}
+
+.criteria-banner {
+  grid-column: 1 / -1;
+  padding: var(--space-3) var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-body-sm);
+  color: var(--sys-text-primary);
+}
+
+.criteria-banner i {
+  color: var(--sys-accent);
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   9. STAGE ACTIONS FOOTER (Step Navigation)
+   ========================================================================== */
+.console-deck-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: var(--border-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.console-btn-back {
+  padding: 10px 20px;
+  border: var(--border-hairline);
+  background: transparent;
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.console-btn-back:hover {
+  border-color: var(--sys-accent);
+  background: transparent;
+  color: var(--sys-accent);
+}
+
+.console-btn-back:active {
+  transform: scale(0.98);
+}
+
+.console-btn-next {
+  padding: 10px 24px;
+  background: var(--sys-accent);
+  border: 1px solid var(--sys-accent);
+  color: #ffffff;
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: none !important;
+}
+
+.console-btn-next:hover {
+  background: var(--sys-accent-hover);
+  border-color: var(--sys-accent-hover);
+  transform: none;
+}
+
+.console-btn-next:active {
+  transform: scale(0.98);
+}
+
+.console-btn-next:disabled {
+}
+
+/* Canonical Button Utility Classes within Console */
+.cau-inpage-console .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 8px 16px;
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption, 12px);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none !important;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.cau-inpage-console .btn:active {
+  transform: scale(0.98);
+}
+
+.cau-inpage-console .btn-sm {
+  padding: 6px 12px;
+  font-size: 11px;
+}
+
+.cau-inpage-console .btn-coral {
+  background-color: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff !important;
+}
+
+.cau-inpage-console .btn-coral:hover {
+  background-color: var(--sys-accent-hover);
+  border-color: var(--sys-accent-hover);
+  color: #ffffff !important;
+  transform: none;
+}
+
+.cau-inpage-console .btn-outline,
+.cau-inpage-console .btn-outline-dark {
+  background-color: transparent;
+  border-color: var(--sys-line);
+  color: var(--sys-text-primary) !important;
+}
+
+.cau-inpage-console .btn-outline:hover,
+.cau-inpage-console .btn-outline-dark:hover {
+  border-color: var(--sys-accent);
+  background-color: transparent;
+  color: var(--sys-accent) !important;
+  transform: none;
+}
+
+.cau-inpage-console .btn-dark {
+  background-color: var(--sys-surface-inverted);
+  border-color: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted) !important;
+}
+
+.cau-inpage-console .btn-dark:hover {
+  background-color: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff !important;
+  transform: none;
+}
+
+/* ==========================================================================
+   10. STEP 6: CONSULTATION PROFILE & DOSSIER REPORT
+   ========================================================================== */
+.console-dossier-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Consultation Profile Card */
+.consultation-profile-card {
+  padding: var(--space-5);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card-header {
+  margin-bottom: var(--space-4);
+}
+
+.profile-card-kicker {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.profile-card-title {
+  font-family: var(--font-family-display) !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 !important;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-label {
+  font-family: var(--font-family-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sys-text-muted);
+}
+
+.profile-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  line-height: 1.3;
+}
+
+/* Consultant Lead Banner */
+.consultant-lead-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+}
+
+.badge-consultant-accent {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.consultant-lead-banner h4 {
+  font-family: var(--font-family-display) !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 !important;
+}
+
+/* Top 3 Match Cards Grid */
+.consultant-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.consultant-rank-card {
+  background: var(--sys-surface-1);
+  border: var(--border-hairline) !important;
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast);
+  position: relative;
+  box-shadow: none !important;
+}
+
+.consultant-rank-card:hover {
+  border-color: var(--sys-accent) !important;
+  transform: none !important;
+}
+
+.consultant-card-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: var(--sys-surface-1);
+  border-bottom: var(--border-hairline);
+}
+
+.alignment-badge {
+  font-family: var(--font-family-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--sys-accent);
+  color: #ffffff;
+}
+
+.alignment-badge.badge-recommended {
+  background: var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+}
+
+.alignment-badge.badge-alternative {
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  color: var(--sys-text-primary);
+}
+
+.consultant-card-medal {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sys-text-muted);
+}
+
+.consultant-card-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-3);
+}
+
+.consultant-faculty-kicker {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  margin: 0;
+}
+
+.consultant-prog-title {
+  font-family: var(--font-family-display) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: var(--lh-tight) !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 !important;
+}
+
+.consultant-prog-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.consultant-prog-title a:hover {
+  color: var(--sys-accent);
+}
+
+/* Why this appeared for you box */
+.why-appeared-box {
+  padding: var(--space-3);
+  background: var(--sys-surface-1);
+  border-radius: var(--radius-sm, 6px);
+  border: var(--border-hairline);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--sys-text-muted);
+}
+
+.why-appeared-header {
+  font-family: var(--font-family-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* What you may enjoy tags */
+.what-enjoy-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.what-enjoy-label {
+  font-family: var(--font-family-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+}
+
+.what-enjoy-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.enjoy-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-accent-subtle);
+  border: 1px solid rgba(230, 59, 46, 0.2);
+  color: var(--sys-accent);
+}
+
+/* Reality check / Things to consider */
+.reality-check-box {
+  padding: var(--space-3);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm, 6px);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--sys-text-muted);
+}
+
+.reality-check-header {
+  font-family: var(--font-family-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reality-check-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.reality-check-list li {
+  margin-bottom: 2px;
+}
+
+/* Tuition and guaranteed scholarship row */
+.consultant-tuition-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: var(--border-hairline);
+  margin-top: auto;
+}
+
+.consultant-tuition-val {
+  font-family: var(--font-family-mono);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--sys-accent);
+}
+
+.consultant-scholarship-tag {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-accent-subtle);
+  color: var(--sys-accent);
+}
+
+.consultant-card-footer {
+  padding: var(--space-3) var(--space-4);
+  background: var(--sys-surface-1);
+  border-top: var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.consultant-explore-btn {
+  font-family: var(--font-family-display);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.consultant-explore-btn:hover {
+  color: var(--sys-accent);
+}
+
+.consultant-apply-btn {
+  font-family: var(--font-family-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--sys-accent);
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.consultant-apply-btn:hover {
+  background: var(--sys-accent-hover);
+  transform: none;
+}
+
+.consultant-apply-btn:active {
+  transform: scale(0.98);
+}
+
+/* Sub-sections common layout */
+.consultant-sub-section {
+  padding-top: var(--space-5);
+  border-top: var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.section-sub-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.section-index {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sub-section-title {
+  font-family: var(--font-family-display) !important;
+  font-size: var(--font-h3) !important;
+  font-weight: 700 !important;
+  letter-spacing: var(--font-h3-ls) !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 4px !important;
+}
+
+.sub-section-lead {
+  font-size: var(--font-body-sm) !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   11. COMPARISON MATRIX & AI EXPLANATION BOX
+   ========================================================================== */
+.ai-diff-explanation-box {
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: 1px solid var(--sys-accent);
+  border-radius: var(--radius-normal, 8px);
+  animation: cauFadeIn var(--dur-base) var(--ease-snappy);
+}
+
+.ai-diff-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-display);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  margin-bottom: 6px;
+}
+
+.ai-diff-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--sys-text-primary);
+  margin: 0;
+}
+
+.comparison-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  background: var(--sys-surface-1);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 18px;
+  border-bottom: var(--border-hairline);
+  border-right: var(--border-hairline);
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+  border-right: none;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table thead th {
+  background: var(--sys-surface-1);
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--sys-text-primary);
+}
+
+.comparison-table tbody th {
+  font-family: var(--font-family-display);
+  font-weight: 600;
+  color: var(--sys-text-muted);
+  background: var(--sys-surface-1);
+  width: 22%;
+  min-width: 160px;
+}
+
+.comparison-table tbody td {
+  color: var(--sys-text-primary);
+}
+
+.table-tag-high {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-accent-subtle);
+  color: var(--sys-accent);
+  font-family: var(--font-family-mono);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.table-tag-med {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-mono);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.table-tag-low {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: transparent;
+  color: var(--sys-text-muted);
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   12. CAREER PATHWAYS TREE & CURRICULUM TIMELINE
+   ========================================================================== */
+.career-curriculum-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.career-tree-wrap,
+.curriculum-timeline-wrap {
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cc-card-title {
+  font-family: var(--font-family-display) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.career-tree-branch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.career-tree-node {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: var(--sys-surface-1);
+  border-radius: var(--radius-normal, 8px);
+  border: var(--border-hairline);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sys-text-primary);
+}
+
+.career-tree-node i {
+  color: var(--sys-accent);
+  font-size: 12px;
+}
+
+.skills-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm, 6px);
+  color: var(--sys-text-primary);
+}
+
+.curriculum-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.curriculum-stage-name {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-kicker);
+  font-weight: 700;
+  letter-spacing: var(--font-kicker-ls);
+  text-transform: uppercase;
+  color: var(--sys-accent);
+}
+
+.curriculum-courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.course-chip {
+  font-size: 11.5px;
+  padding: 4px 10px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm, 6px);
+  color: var(--sys-text-primary);
+}
+
+/* ==========================================================================
+   13. ASK A CONSULTANT GRID & QUERY CHIPS
+   ========================================================================== */
+.ask-consultant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.ask-category-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--space-3);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+}
+
+.ask-col-title {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sys-text-primary);
+}
+
+.ask-chips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.consultant-query-chip {
+  padding: 8px 12px;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  box-shadow: none !important;
+  line-height: 1.35;
+}
+
+.consultant-query-chip:hover {
+  border-color: var(--sys-accent);
+  color: var(--sys-accent);
+  background: var(--sys-surface-1);
+  transform: none;
+}
+
+.consultant-query-chip:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   14. ADMISSIONS ROADMAP & HUMAN ESCALATION BANNER
+   ========================================================================== */
+.admissions-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.admissions-step-item {
+  padding: var(--space-3);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-normal, 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admissions-step-item .step-num {
+  font-family: var(--font-family-mono);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--sys-accent);
+  line-height: 1;
+}
+
+.admissions-step-item strong {
+  font-family: var(--font-family-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sys-text-primary);
+  line-height: 1.3;
+}
+
+.admissions-step-item p {
+  font-size: 11.5px;
+  color: var(--sys-text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.human-escalation-banner {
+  padding: var(--space-4);
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.escalation-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sys-accent-subtle);
+  color: var(--sys-accent);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.escalation-content h4 {
+  font-family: var(--font-family-display) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--sys-text-primary) !important;
+  margin: 0 0 6px !important;
+}
+
+.escalation-content p {
+  font-size: var(--font-body-sm) !important;
+  color: var(--sys-text-muted) !important;
+  margin: 0 0 var(--space-3) !important;
+  line-height: 1.45 !important;
+}
+
+/* Dossier Finish Bar */
+.dossier-finish-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: var(--border-hairline);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.dossier-retake-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: var(--border-hairline);
+  background: transparent;
+  color: var(--sys-text-primary);
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.dossier-retake-btn:hover {
+  border-color: var(--sys-accent);
+  background: transparent;
+  color: var(--sys-accent);
+}
+
+.dossier-retake-btn:active {
+  transform: scale(0.98);
+}
+
+.dossier-filter-catalogue-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--sys-surface-inverted);
+  border: 1px solid var(--sys-surface-inverted);
+  color: var(--sys-text-inverted);
+  font-family: var(--font-family-display);
+  font-size: var(--font-caption);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-normal, 8px);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.dossier-filter-catalogue-btn:hover {
+  background: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+  transform: none;
+}
+
+.dossier-filter-catalogue-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   15. FALLBACK MODAL SUPPORT (For Homepage or Other Pages)
+   Pure Swiss Sheet Style — Zero Heavy Shadow
+   ========================================================================== */
+.cau-console-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 19, 22, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) ease;
+}
+
+.cau-console-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cau-console-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  width: 94vw;
+  max-width: 860px;
+  max-height: 90vh;
+  background: var(--sys-surface-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md, 12px);
+  box-shadow: none !important;
+  z-index: 2501;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform var(--dur-fast) var(--ease-snappy), opacity var(--dur-fast) var(--ease-snappy);
+}
+
+.cau-console-modal.is-open {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   16. RESPONSIVE BREAKPOINTS (Canonical Grid Hierarchy)
+   ========================================================================== */
+@media (max-width: 1199.98px) {
+  .profile-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .admissions-steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .ask-consultant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .undecided-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .console-fields-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .consultant-dossier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .career-curriculum-container {
+    grid-template-columns: 1fr;
+  }
+  .console-deck-body {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .console-fields-grid {
+    grid-template-columns: 1fr;
+  }
+  .console-work-grid {
+    grid-template-columns: 1fr;
+  }
+  .console-methods-grid {
+    grid-template-columns: 1fr;
+  }
+  .console-criteria-form {
+    grid-template-columns: 1fr;
+  }
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .consultant-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+  .ask-consultant-grid {
+    grid-template-columns: 1fr;
+  }
+  .admissions-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .undecided-actions-grid {
+    grid-template-columns: 1fr;
+  }
+  .console-deck-header {
+    padding: var(--space-3);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .console-step-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .console-deck-body {
+    padding: var(--space-3);
+  }
+  .human-escalation-banner {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+}
+
+/* ==========================================================================
+   17. HIGH-CONTRAST DARK THEME HARMONIZATION
+   ========================================================================== */
+[data-theme="dark"] .cau-inpage-console,
+[data-theme="dark"] .cau-console-modal {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .catalogue-mode-switcher {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .mode-tab.is-active {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+  color: var(--sys-text-primary);
+}
+
+[data-theme="dark"] .console-deck-header,
+[data-theme="dark"] .consultation-profile-card,
+[data-theme="dark"] .criteria-banner,
+[data-theme="dark"] .consultant-card-topbar,
+[data-theme="dark"] .why-appeared-box,
+[data-theme="dark"] .ai-diff-explanation-box,
+[data-theme="dark"] .comparison-table thead th,
+[data-theme="dark"] .comparison-table tbody th,
+[data-theme="dark"] .ask-category-col,
+[data-theme="dark"] .human-escalation-banner,
+[data-theme="dark"] .career-tree-node,
+[data-theme="dark"] .skill-chip,
+[data-theme="dark"] .course-chip,
+[data-theme="dark"] .console-counter-badge,
+[data-theme="dark"] .method-icon-box {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .consultant-lead-banner,
+[data-theme="dark"] .career-tree-wrap,
+[data-theme="dark"] .curriculum-timeline-wrap,
+[data-theme="dark"] .admissions-step-item,
+[data-theme="dark"] .comparison-table-wrapper,
+[data-theme="dark"] .comparison-table tbody td {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .console-field-card,
+[data-theme="dark"] .console-work-card,
+[data-theme="dark"] .console-method-card,
+[data-theme="dark"] .consultant-rank-card,
+[data-theme="dark"] .criteria-chip,
+[data-theme="dark"] .matrix-chip,
+[data-theme="dark"] .undecided-action-card,
+[data-theme="dark"] .consultant-query-chip {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .console-field-card:hover,
+[data-theme="dark"] .console-work-card:hover,
+[data-theme="dark"] .console-method-card:hover,
+[data-theme="dark"] .undecided-action-card:hover,
+[data-theme="dark"] .matrix-chip:hover,
+[data-theme="dark"] .criteria-chip:hover,
+[data-theme="dark"] .consultant-query-chip:hover {
+  border-color: var(--sys-accent);
+  background: var(--sys-surface-1);
+}
+
+[data-theme="dark"] .console-step-pill {
+  background: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .console-step-pill.is-active {
+  background: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .dossier-filter-catalogue-btn {
+  background: var(--sys-accent);
+  border-color: var(--sys-accent);
+  color: #ffffff;
+}

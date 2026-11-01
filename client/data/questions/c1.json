@@ -1,0 +1,40 @@
+[
+  {
+    "id": "c1-0001",
+    "module": "m4",
+    "type": "reading",
+    "skill": "reading",
+    "errorTag": null,
+    "prompt": "According to the passage, what distinguishes hedging from rhetorical evasion?",
+    "passage": "Academic hedging is not equivocation; rather, it is epistemic calibration. By qualifying claims with probabilistic markers ('suggests', 'tends to'), researchers accurately reflect the empirical boundaries of their datasets while preserving intellectual honesty.",
+    "options": [
+      "Hedging aligns assertion strength with empirical data boundaries.",
+      "Hedging hides the author's true experimental findings from peer reviewers.",
+      "Hedging is an outdated convention no longer required in modern science.",
+      "Hedging guarantees that hypotheses will never face academic falsification."
+    ],
+    "answer": 0,
+    "explanation": "The passage explicitly defines hedging as 'epistemic calibration' that accurately reflects 'empirical boundaries'.",
+    "timeLimit": 45,
+    "difficulty": 3
+  },
+  {
+    "id": "c1-0002",
+    "module": "m4",
+    "type": "error",
+    "skill": "grammar",
+    "errorTag": "calque",
+    "prompt": "Identify the awkward calque (direct translation from Turkish 'kendini savunmak'):",
+    "passage": null,
+    "options": [
+      "The doctoral candidate defended her dissertation persuasively before the committee.",
+      "During the oral exam, the student was defending himself against the professor's questions.",
+      "The author defends the thesis that renewable subsidies stimulate innovation.",
+      "No error"
+    ],
+    "answer": 1,
+    "explanation": "In academic English, candidates 'defend their thesis/research' or 'answer objections', not 'defend themselves'.",
+    "timeLimit": 45,
+    "difficulty": 3
+  }
+]

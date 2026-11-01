@@ -1,0 +1,379 @@
+/* Cyprus Aydın University — News & Press Release Article Detail Styling
+   Swiss Editorial University Design System • Clean typography • Coral accents */
+
+@import "./tokens.css";
+@import "./primitives.css";
+
+.article-main {
+  padding-bottom: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Article Navigation Bar */
+.article-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--line, #e5e3de);
+  margin-bottom: 40px;
+}
+
+.article-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted, #686868);
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.article-back-link:hover {
+  color: var(--coral, #f04432);
+  transform: translateX(-3px);
+}
+
+.article-category-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral, #f04432);
+  background: rgba(240, 68, 50, 0.08);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm, 3px);
+}
+
+/* Article Header Section */
+.article-header {
+  margin-bottom: 36px;
+}
+
+.article-headline {
+  font-family: "NB International", "Inter", sans-serif;
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  color: var(--ink, #111214);
+  margin: 0 0 24px;
+}
+
+.article-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line, #e5e3de);
+}
+
+.article-author-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.article-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--line, #e5e3de);
+  border: 1px solid var(--line, #d4d4d4);
+  display: grid;
+  place-items: center;
+  color: var(--coral, #f04432);
+  font-size: 18px;
+}
+
+.article-author-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink, #111214);
+  margin: 0;
+}
+
+.article-meta-details {
+  font-size: 13px;
+  color: var(--muted, #686868);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 0;
+}
+
+.article-meta-details .dot {
+  font-size: 10px;
+}
+
+/* Share Buttons */
+.article-share-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article-share-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted, #686868);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.article-share-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm, 3px);
+  border: 1px solid var(--line, #e5e3de);
+  background: #ffffff;
+  color: var(--ink, #111214);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.article-share-btn:hover {
+  background: var(--coral, #f04432);
+  border-color: var(--coral, #f04432);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Article Hero Visual */
+.article-hero-frame {
+  width: 100%;
+  border-radius: var(--radius, 4px);
+  overflow: hidden;
+  border: 1px solid var(--line, #e5e3de);
+  margin-bottom: 48px;
+  background: #f4f3f0;
+}
+
+.article-hero-img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-hero-caption {
+  padding: 12px 20px;
+  font-size: 12px;
+  color: var(--muted, #686868);
+  border-top: 1px solid var(--line, #e5e3de);
+  background: #faf9f6;
+  font-style: italic;
+}
+
+/* Article Layout Structure */
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Content Body */
+.article-body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #27272a;
+}
+
+.article-lead {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ink, #111214);
+  padding-left: 20px;
+  border-left: 3px solid var(--coral, #f04432);
+  margin-bottom: 32px;
+}
+
+.article-text p {
+  margin-bottom: 24px;
+}
+
+.article-callout-box {
+  background: #faf9f6;
+  border: 1px solid var(--line, #e5e3de);
+  border-radius: var(--radius, 4px);
+  padding: 24px 28px;
+  margin: 36px 0;
+}
+
+.article-callout-box h4 {
+  font-family: "NB International", "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--ink, #111214);
+}
+
+.article-callout-box p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted, #555);
+  margin: 0;
+}
+
+/* Sidebar Rail */
+.article-sidebar {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.article-sidebar-card {
+  background: #ffffff;
+  border: 1px solid var(--line, #e5e3de);
+  border-radius: var(--radius, 4px);
+  padding: 24px;
+}
+
+.article-sidebar-title {
+  font-family: "NB International", "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  color: var(--ink, #111214);
+  border-bottom: 1px solid var(--line, #e5e3de);
+  padding-bottom: 10px;
+}
+
+.related-story-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0eee9;
+  text-decoration: none;
+  transition: transform 0.18s ease;
+}
+
+.related-story-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.related-story-item:hover {
+  transform: translateX(3px);
+}
+
+.related-story-thumb {
+  width: 70px;
+  height: 56px;
+  border-radius: var(--radius-sm, 3px);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.related-story-info h5 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink, #111214);
+  margin: 0 0 4px;
+  transition: color 0.18s ease;
+}
+
+.related-story-item:hover .related-story-info h5 {
+  color: var(--coral, #f04432);
+}
+
+.related-story-date {
+  font-size: 11px;
+  color: var(--muted, #888);
+}
+
+.admissions-cta-box {
+  background: #111214;
+  color: #ffffff;
+  border-radius: var(--radius, 4px);
+  padding: 28px 24px;
+  text-align: left;
+}
+
+.admissions-cta-box h4 {
+  font-family: "NB International", "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.admissions-cta-box p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #a1a1aa;
+  margin: 0 0 20px;
+}
+
+.admissions-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--coral, #f04432);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: var(--radius-sm, 3px);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.admissions-cta-btn:hover {
+  background: #d63827;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .article-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .article-nav-bar {
+    padding: 20px 0 16px;
+    margin-bottom: 24px;
+  }
+  .article-headline {
+    font-size: 2.2rem;
+  }
+  .article-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .article-hero-img {
+    max-height: 320px;
+  }
+  .article-lead {
+    font-size: 1.15rem;
+    padding-left: 14px;
+  }
+  .article-body {
+    font-size: 16px;
+  }
+}

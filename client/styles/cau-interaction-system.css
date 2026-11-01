@@ -1,0 +1,484 @@
+/**
+ * ==============================================================================
+ * CYPRUS AYDIN UNIVERSITY (CAU) — MASTER INTERACTION STATE MACHINE
+ * Architecture: Declarative State Parity & Mechanical Motion Architecture
+ * Standard: Hover == Active == Selected Visual Parity • Fluid Tactile Feedback
+ * Specification: UNIFIED_INTERACTION_SYSTEM_PROMPT.md & Figma Design System
+ * ==============================================================================
+ */
+
+:root {
+  /* --------------------------------------------------------------------------
+     1. TIMING & MOTION PHYSICS (Mechanical Precision)
+     -------------------------------------------------------------------------- */
+  --cau-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --cau-duration: 260ms;
+  --cau-duration-fast: 160ms;
+  --cau-duration-press: 90ms;
+
+  /* Universal Label Typography Contract */
+  --cau-label-font: var(--font-family-display, "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  --cau-label-weight: 600;
+  --cau-label-tracking: 0.01em;
+  --cau-label-line-height: 1.25;
+
+  /* Exact Canonical Brand Colors from client/index.html & tokens.css */
+  --cau-brand-navy: #002469;
+  --cau-brand-primary: #002469;
+  --cau-brand-coral: #e63b2e;
+  --cau-brand-accent: #e63b2e;
+  --cau-brand-coral-hover: #cf2f23;
+  --cau-brand-navy-dark: #001a4d;
+  --cau-surface: #ffffff;
+
+  /* Default Surface Tokens */
+  --state-default-bg: var(--sys-surface-1, #ffffff);
+  --state-default-text: var(--sys-text-primary, #121316);
+  --state-default-border: var(--sys-line, #dcd8cf);
+
+  /* UNIFIED ENGAGED STATE (shared identically by :hover, :focus-visible, :active, and .is-active) */
+  --state-engaged-bg: var(--sys-secondary, #002469);
+  --state-engaged-accent: var(--sys-accent, #e63b2e);
+  --state-engaged-text: #ffffff;
+  --state-engaged-border: var(--sys-secondary, #002469);
+  --state-engaged-shadow: none !important; /* Flat design system standard, zero floaty blur */
+}
+
+/* Dark Mode Conformance */
+[data-theme="dark"] {
+  --state-default-bg: var(--sys-surface-1, #131418);
+  --state-default-text: var(--sys-text-primary, #f5f6f8);
+  --state-default-border: var(--sys-line, rgba(255, 255, 255, 0.12));
+
+  --state-engaged-bg: var(--sys-secondary, #002469);
+  --state-engaged-accent: var(--sys-accent, #e63b2e);
+  --state-engaged-text: #ffffff;
+  --state-engaged-border: var(--sys-accent, #e63b2e);
+}
+
+/* ==============================================================================
+   2. UNIVERSAL INTERACTIVE LABEL CONTRACT (.cau-label)
+   Prevents layout jitter by locking font-weight, line-height, and tracking.
+   ============================================================================== */
+.cau-btn,
+.cau-nav-link,
+.cau-tab,
+.cau-pill,
+.cau-action-link,
+.cau-option-btn,
+.btn-coral,
+.btn-navy,
+.apply-btn,
+.filter-btn,
+.program-filter-pill,
+.department-filter-pill,
+.clubs-filter-btn,
+.cau-filter-tab,
+.cau-hero-action-pill,
+.view-mode-btn,
+.degree-tab,
+.cat-pill,
+.cau-club-filter-pill,
+.edu-league-tab,
+.filter-option {
+  font-family: var(--cau-label-font);
+  font-weight: var(--cau-label-weight);
+  letter-spacing: var(--cau-label-tracking);
+  line-height: var(--cau-label-line-height);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none !important;
+  transition:
+    background-color var(--cau-duration-fast) var(--cau-ease),
+    color var(--cau-duration-fast) var(--cau-ease),
+    border-color var(--cau-duration-fast) var(--cau-ease),
+    transform var(--cau-duration-fast) var(--cau-ease);
+}
+
+/* ==============================================================================
+   3. ARCHETYPE A: PRIMARY & SECONDARY BUTTONS (.cau-btn)
+   Hover, Click (:active), Focus, and Selected (.is-active) share 100%
+   identical colors, border, and label text color.
+   ============================================================================== */
+/* Generic .cau-btn Base */
+.cau-btn {
+  background-color: var(--state-default-bg);
+  color: var(--state-default-text) !important;
+  border: 1px solid var(--state-default-border);
+}
+
+.cau-btn:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) {
+  background-color: var(--state-engaged-bg) !important;
+  color: var(--state-engaged-text) !important;
+  border-color: var(--state-engaged-border) !important;
+  box-shadow: var(--state-engaged-shadow);
+}
+
+/* Primary Coral Buttons */
+.cau-btn-primary,
+.btn-coral,
+.apply-btn,
+.cau-btn--primary,
+.cau-btn--coral {
+  background-color: var(--sys-accent, #e63b2e);
+  color: #ffffff !important;
+  border: 1px solid var(--sys-accent, #e63b2e);
+}
+
+.cau-btn-primary:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.btn-coral:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.apply-btn:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.cau-btn--primary:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.cau-btn--coral:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.site-header .header-actions .apply-btn:is(:hover, :focus-visible, :active, .active, .is-active) {
+  background-color: var(--sys-secondary, #002469) !important;
+  color: #ffffff !important;
+  border-color: var(--sys-secondary, #002469) !important;
+  box-shadow: none !important;
+}
+
+/* Secondary Navy Buttons */
+.cau-btn-secondary,
+.btn-navy,
+.cau-btn--secondary,
+.cau-btn--navy {
+  background-color: var(--sys-secondary, #002469);
+  color: #ffffff !important;
+  border: 1px solid var(--sys-secondary, #002469);
+}
+
+.cau-btn-secondary:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.btn-navy:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.cau-btn--secondary:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.cau-btn--navy:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) {
+  background-color: var(--sys-accent, #e63b2e) !important;
+  color: #ffffff !important;
+  border-color: var(--sys-accent, #e63b2e) !important;
+  box-shadow: none !important;
+}
+
+/* Outline Buttons */
+.cau-btn-outline,
+.btn-outline-cau,
+.btn-outline-dark,
+.cau-btn--outline {
+  background-color: transparent;
+  color: var(--sys-text-primary, #121316) !important;
+  border: 1px solid var(--sys-line, #dcd8cf);
+}
+
+.cau-btn-outline:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.btn-outline-cau:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.btn-outline-dark:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]),
+.cau-btn--outline:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) {
+  background-color: var(--sys-secondary, #002469) !important;
+  color: #ffffff !important;
+  border-color: var(--sys-secondary, #002469) !important;
+  box-shadow: none !important;
+}
+
+/* Tactile Physics for All Buttons */
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary, .cau-btn-outline, .btn-outline-cau, .btn-outline-dark):is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+}
+
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary, .cau-btn-outline, .btn-outline-cau, .btn-outline-dark):is(.active, .is-active, [aria-selected="true"]) {
+  transform: translateY(0);
+}
+
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary, .cau-btn-outline, .btn-outline-cau, .btn-outline-dark):active {
+  transform: translateY(0) scale(0.98) !important;
+  transition-duration: var(--cau-duration-press, 90ms) !important;
+}
+
+/* Synchronize child label elements and icons */
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary, .cau-btn-outline, .btn-outline-cau):is(:hover, :focus-visible, :active, .active, .is-active) > * {
+  color: inherit !important;
+}
+
+.cau-btn .system-arrow,
+.cau-btn .cau-icon,
+.cau-btn i,
+.btn-coral .system-arrow,
+.btn-coral i,
+.apply-btn .system-arrow,
+.apply-btn i {
+  transition: transform var(--cau-duration-fast) var(--cau-ease) !important;
+}
+
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary):is(:hover, :focus-visible, :active, .active, .is-active) .system-arrow,
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary):is(:hover, :focus-visible, :active, .active, .is-active) .cau-icon,
+:is(.cau-btn, .btn-coral, .btn-navy, .apply-btn, .cau-btn-primary, .cau-btn-secondary):is(:hover, :focus-visible, :active, .active, .is-active) i {
+  transform: translateX(4px) !important;
+}
+
+/* ==============================================================================
+   4. ARCHETYPE B: TABS, FILTER PILLS & SEGMENTED CONTROLS
+   Used in clubs.html, programs.html, departments.html, news.html, index.html
+   ============================================================================== */
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option) {
+  background-color: var(--sys-surface-1, #ffffff);
+  color: var(--sys-text-primary, #121316);
+  border: 1px solid var(--sys-line, #dcd8cf);
+  border-radius: var(--radius-pill, 9999px);
+  padding: 0.5rem 1.125rem;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none !important;
+}
+
+/* Hover, Focus, Active click, and Selected (.is-active) share 100% IDENTICAL visual skin */
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) {
+  background-color: var(--sys-secondary, #002469) !important;
+  color: #ffffff !important;
+  border-color: var(--sys-secondary, #002469) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] :is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option) {
+  background-color: var(--sys-surface-2, #1a1c22);
+  color: var(--sys-text-primary, #f5f6f8);
+  border-color: var(--sys-line, rgba(255, 255, 255, 0.12));
+}
+
+[data-theme="dark"] :is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) {
+  background-color: var(--sys-accent, #e63b2e) !important;
+  color: #ffffff !important;
+  border-color: var(--sys-accent, #e63b2e) !important;
+}
+
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):hover {
+  transform: translateY(-2px);
+}
+
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):is(.active, .is-active, [aria-selected="true"]) {
+  transform: translateY(0);
+}
+
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):active {
+  transform: translateY(0) scale(0.98) !important;
+  transition-duration: var(--cau-duration-press, 90ms) !important;
+}
+
+:is(.cau-tab, .cau-pill, .filter-btn, .program-filter-pill, .cau-filter-tab, .clubs-filter-btn, .tab-btn, .degree-tab, .cat-pill, .view-mode-btn, .cau-club-filter-pill, .edu-league-tab, .filter-option):is(:hover, :focus-visible, :active, .active, .is-active) > * {
+  color: inherit !important;
+}
+
+/* Badge parity for degree-tab and filter-option */
+.degree-tab:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) .degree-tab-badge,
+.filter-option:is(:hover, :focus-visible, :active, .active, .is-active, [aria-selected="true"]) .filter-option-count {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==============================================================================
+   5. ARCHETYPE C: NAVIGATION LINKS & INLINE ACTION LINKS
+   ============================================================================== */
+.cau-header-nav__link,
+.cau-nav-link,
+.cau-action-link,
+.nav-link,
+.cau-mega-menu__item,
+.cau-mega-panel__item {
+  position: relative;
+  transition: color var(--cau-duration-fast) var(--cau-ease), background-color var(--cau-duration-fast) var(--cau-ease);
+}
+
+/* Animated accent underline on hover/active */
+:is(.cau-nav-link, .cau-action-link, .cau-header-nav__link)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--state-engaged-accent, #e63b2e);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--cau-duration-fast) var(--cau-ease);
+}
+
+:is(.cau-nav-link, .cau-action-link, .cau-header-nav__link):is(:hover, :focus-visible, :active, .active, .is-active, [aria-current="page"])::after {
+  transform: scaleX(1);
+}
+
+.cau-header-nav__link:is(:hover, :focus-visible, :active, .active, .is-active, [aria-current="page"]),
+.cau-nav-link:is(:hover, :focus-visible, :active, .active, .is-active, [aria-current="page"]),
+.cau-action-link:is(:hover, :focus-visible, :active, .active, .is-active, [aria-current="page"]) {
+  color: var(--sys-accent, #e63b2e) !important;
+}
+
+.cau-mega-menu__item:is(:hover, :focus-visible, :active, .is-active, [aria-selected="true"]) {
+  background-color: rgba(0, 36, 105, 0.08) !important;
+  color: var(--sys-secondary, #002469) !important;
+}
+
+[data-theme="dark"] .cau-mega-menu__item:is(:hover, :focus-visible, :active, .is-active, [aria-selected="true"]) {
+  background-color: rgba(230, 59, 46, 0.16) !important;
+  color: #ffffff !important;
+}
+
+.cau-action-link {
+  font-family: var(--cau-label-font);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cau-action-link .system-arrow,
+.cau-action-link i,
+.cau-nav-link .system-arrow {
+  transition: transform var(--cau-duration-fast) var(--cau-ease) !important;
+}
+
+.cau-action-link:is(:hover, :focus-visible, :active, .active, .is-active) .system-arrow,
+.cau-action-link:is(:hover, :focus-visible, :active, .active, .is-active) i,
+.cau-nav-link:is(:hover, :focus-visible, :active, .active, .is-active) .system-arrow {
+  transform: translateX(4px) !important;
+}
+
+/* ==============================================================================
+   6. ARCHETYPE D: INTERACTIVE CARDS (.cau-card, .program-card, .student-life-card)
+   Used across Home, Programs, Departments, News, Clubs, and Teachers
+   ============================================================================== */
+.cau-card,
+.program-card,
+.student-life-card,
+.testimonial-story-card,
+.cau-club-card,
+.degree-card,
+.hub-teacher-card {
+  background-color: var(--sys-surface-1, #ffffff);
+  border: 1px solid var(--sys-line, #dcd8cf);
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  box-shadow: none !important;
+  transition:
+    border-color var(--cau-duration-fast) var(--cau-ease),
+    transform var(--cau-duration-fast) var(--cau-ease);
+}
+
+:is(.cau-card, .program-card, .student-life-card, .testimonial-story-card, .cau-club-card, .degree-card, .hub-teacher-card):is(:hover, :focus-within) {
+  border-color: var(--sys-secondary, #002469);
+  transform: translateY(-5px);
+  box-shadow: none !important;
+}
+
+:is(.cau-card, .program-card, .student-life-card, .testimonial-story-card, .cau-club-card, .degree-card, .hub-teacher-card):is(.active, .is-active, .is-active-spotlight) {
+  border-color: var(--sys-accent, #e63b2e) !important;
+  transform: translateY(0);
+  box-shadow: none !important;
+}
+
+:is(.cau-card, .program-card, .student-life-card, .testimonial-story-card, .cau-club-card, .degree-card, .hub-teacher-card):active {
+  transform: translateY(-2px) scale(0.99) !important;
+  transition-duration: var(--cau-duration-press, 90ms) !important;
+}
+
+/* Card title coupling */
+:is(.cau-card, .program-card, .student-life-card, .testimonial-story-card, .cau-club-card, .degree-card, .hub-teacher-card):is(:hover, :active, :focus-within, .is-active) :is(.cau-card-title, .program-card-title, .card-title, h3 a, h4 a, .program-explore-link) {
+  color: var(--sys-accent, #e63b2e) !important;
+}
+
+/* Card image scale coupling */
+.cau-card img,
+.program-card img,
+.cau-club-card img img,
+.degree-card img {
+  transition: transform var(--cau-duration) var(--cau-ease);
+}
+
+:is(.cau-card, .program-card, .cau-club-card, .degree-card):is(:hover, :focus-within, :active, .is-active) img {
+  transform: scale(1.05) !important;
+}
+
+:is(.cau-card, .program-card, .cau-club-card, .degree-card):is(:hover, :focus-within, :active, .is-active) .system-arrow {
+  transform: translateX(4px) !important;
+}
+
+/* ==============================================================================
+   7. ARCHETYPE E: OPTION BUTTONS & QUIZ CARDS (.cau-option-btn, .quiz-choice-btn)
+   Used in placement-test.html and english-quest.html
+   ============================================================================== */
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item) {
+  background-color: var(--sys-surface-1, #ffffff);
+  border: 1px solid var(--sys-line, #dcd8cf);
+  color: var(--sys-text-primary, #121316);
+  border-radius: var(--radius-md, 12px);
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none !important;
+  transition:
+    background-color var(--cau-duration-fast) var(--cau-ease),
+    border-color var(--cau-duration-fast) var(--cau-ease),
+    color var(--cau-duration-fast) var(--cau-ease),
+    transform var(--cau-duration-fast) var(--cau-ease);
+}
+
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):is(:hover, :focus-visible, :active, .is-selected, .is-active, [aria-checked="true"], [aria-selected="true"]) {
+  background-color: rgba(0, 36, 105, 0.08) !important;
+  border-color: var(--sys-secondary, #002469) !important;
+  color: var(--sys-secondary, #002469) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] :is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item) {
+  background-color: var(--sys-surface-1, #131418);
+  border-color: var(--sys-line, rgba(255, 255, 255, 0.12));
+  color: var(--sys-text-primary, #f5f6f8);
+}
+
+[data-theme="dark"] :is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):is(:hover, :focus-visible, :active, .is-selected, .is-active, [aria-checked="true"], [aria-selected="true"]) {
+  background-color: rgba(230, 59, 46, 0.16) !important;
+  border-color: var(--sys-accent, #e63b2e) !important;
+  color: #ffffff !important;
+}
+
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):hover {
+  transform: translateY(-2px);
+}
+
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):is(.is-selected, .is-active, [aria-checked="true"]) {
+  transform: translateY(0);
+}
+
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):active {
+  transform: translateY(0) scale(0.98) !important;
+  transition-duration: var(--cau-duration-press, 90ms) !important;
+}
+
+:is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):is(:hover, :focus-visible, :active, .is-selected, .is-active, [aria-checked="true"]) :is(.cau-option-key, .option-key, .cau-option-badge, .cau-arena-keybind) {
+  background-color: var(--sys-secondary, #002469) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] :is(.cau-option-btn, .quiz-choice-btn, .quest-choice-btn, .test-choice-card, .placement-option-btn, .eq-choice-btn, .edu-dialogue-opt, .cau-arena-option, .cbt-option-item):is(:hover, :focus-visible, :active, .is-selected, .is-active, [aria-checked="true"]) :is(.cau-option-key, .option-key, .cau-option-badge, .cau-arena-keybind) {
+  background-color: var(--sys-accent, #e63b2e) !important;
+  color: #ffffff !important;
+}
+
+/* ==============================================================================
+   8. REDUCED MOTION ACCESSIBILITY (WCAG AAA Compliance)
+   ============================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
+}

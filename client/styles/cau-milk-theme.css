@@ -1,0 +1,540 @@
+/**
+ * ==============================================================================
+ * CYPRUS AYDIN UNIVERSITY (CAU) — MILK NETWORK DESIGN SYSTEM
+ * Swiss Editorial Minimalism • Neo-Grotesque Typography • Precision Hairlines
+ * Custom Interactive Cursor • Kinetic Multi-Underlines
+ * Inspired by: milknetwork.com
+ * ==============================================================================
+ */
+
+:root {
+  --milk-bg: #ffffff;
+  --milk-ink: #111111;
+  --milk-ink-muted: #555555;
+  --milk-ink-subtle: rgba(0, 0, 0, 0.45);
+  --milk-pill-bg: #f2f2f2;
+  --milk-pill-hover: #eaeaea;
+  --milk-hairline: rgba(0, 0, 0, 0.08);
+  --milk-hairline-strong: rgba(0, 0, 0, 0.16);
+  --milk-coral: #e63b2e;
+  --milk-navy: #002469;
+  --milk-font: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+/* ==============================================================================
+   1. CUSTOM INTERACTIVE CURSOR (Desktop only - Single Solid Dot)
+   ============================================================================== */
+.cau-page-cursor {
+  display: none !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cau-page-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100000;
+    mix-blend-mode: difference;
+    transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+    will-change: transform, width, height;
+    opacity: 1;
+    box-shadow: none !important;
+    transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.15s ease;
+  }
+
+  .cau-page-cursor-dot.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Grows + keeps blend on hover over interactive elements */
+  .cau-page-cursor-dot.is-hovering {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+
+  .cau-page-cursor-dot.is-active-press {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .cau-page-cursor,
+  .cau-page-cursor-dot {
+    display: none !important;
+  }
+}
+
+/* ==============================================================================
+   2. SECTION HEADERS & INDEX COUNTERS (Milk Network Pattern)
+   ============================================================================== */
+.milk-section-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: clamp(16px, 3vw, 40px);
+  padding-bottom: clamp(24px, 3vw, 40px);
+  margin-bottom: clamp(36px, 4.5vw, 64px);
+  border-bottom: 1px solid var(--milk-hairline);
+}
+
+.milk-section-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--milk-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--milk-ink);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.milk-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--milk-ink);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.milk-dot--coral {
+  background-color: var(--milk-coral);
+}
+
+.milk-section-headline {
+  font-family: var(--milk-font);
+  font-size: clamp(24px, 2.8vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--milk-ink);
+  margin: 0;
+  padding-top: clamp(20px, 2.4vw, 36px);
+  max-width: 680px;
+}
+
+.milk-section-counter {
+  font-family: var(--milk-font);
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 600;
+  color: var(--milk-ink);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.milk-blink {
+  display: inline-block;
+  animation: milkBlinkAnim 1.2s infinite ease-in-out;
+  margin-right: 2px;
+}
+
+@keyframes milkBlinkAnim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .milk-section-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .milk-section-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+/* ==============================================================================
+   3. EDITORIAL CARDS & PORTFOLIO-STYLE DEGREE GRID
+   ============================================================================== */
+.milk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3.5vw, 48px) clamp(16px, 2vw, 32px);
+}
+
+@media (min-width: 1024px) {
+  .milk-grid--4col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .milk-grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .milk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.milk-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: var(--milk-ink) !important;
+  group: "";
+}
+
+.milk-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  margin-bottom: 16px;
+}
+
+.milk-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.milk-card:hover .milk-card__image {
+  transform: scale(1.05);
+}
+
+.milk-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--milk-ink-subtle);
+}
+
+.milk-card__year {
+  font-family: var(--milk-font);
+  font-weight: 500;
+  color: var(--milk-ink-subtle);
+}
+
+.milk-card__title {
+  font-family: var(--milk-font);
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--milk-ink);
+  margin: 0 0 6px 0;
+  transition: color 0.2s ease;
+}
+
+.milk-card:hover .milk-card__title {
+  color: var(--milk-coral);
+}
+
+.milk-card__desc {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--milk-ink-muted);
+  margin: 0;
+}
+
+/* ==============================================================================
+   4. KINETIC MULTI-UNDERLINE & INTERACTIVE ARROWS
+   ============================================================================== */
+.underline-multi {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 2px;
+}
+
+a:hover .underline-multi,
+.underline-multi:hover {
+  background-size: 100% 1.5px;
+}
+
+.btn-icon-movement--right {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.25s ease;
+}
+
+.btn-icon-movement--right:hover i,
+.btn-icon-movement--right:hover svg {
+  transform: translateX(4px);
+  transition: transform 0.25s ease;
+}
+
+/* ==============================================================================
+   5. MINIMALIST METRICS TICKER SECTION
+   ============================================================================== */
+.milk-metrics-section {
+  padding: clamp(48px, 6vw, 84px) 0;
+  border-top: 1px solid var(--milk-hairline);
+  border-bottom: 1px solid var(--milk-hairline);
+  margin: clamp(48px, 6vw, 84px) 0;
+}
+
+.milk-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 3vw, 48px);
+}
+
+@media (max-width: 991px) {
+  .milk-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .milk-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.milk-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.milk-metric-num {
+  font-family: var(--milk-font);
+  font-size: clamp(38px, 4.5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--milk-ink);
+  margin-bottom: 8px;
+}
+
+.milk-metric-label {
+  font-family: var(--milk-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--milk-ink-muted);
+  line-height: 1.35;
+}
+
+.milk-metric-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--milk-coral);
+  margin-top: 4px;
+}
+
+/* ==============================================================================
+   7. ENGLISH LANGUAGE & PLACEMENT SHOWCASE (.cau-quest-showcase)
+   ============================================================================== */
+.cau-quest-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4, 20px);
+  width: 100%;
+}
+
+.cau-quest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4, 20px);
+}
+
+@media (max-width: 900px) {
+  .cau-quest-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cau-quest-card {
+  background-color: var(--sys-surface-1, #ffffff);
+  border: var(--border-hairline, 1px solid #dcd8cf);
+  border-radius: var(--radius-md, 12px);
+  padding: clamp(24px, 2.5vw, 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-none) !important;
+  transition: border-color var(--transition-fast, 0.15s ease);
+  position: relative;
+}
+
+.cau-quest-card:hover {
+  border-color: var(--sys-secondary, #002469);
+}
+
+[data-theme="dark"] .cau-quest-card {
+  background-color: var(--sys-surface-1);
+  border-color: var(--sys-line);
+}
+
+[data-theme="dark"] .cau-quest-card:hover {
+  border-color: #a8c7fa;
+}
+
+.cau-quest-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-3, 14px);
+  flex-wrap: wrap;
+}
+
+.cau-quest-card h3 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-2, 8px);
+  color: var(--sys-text-primary, #121316);
+}
+
+.cau-quest-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--sys-text-muted, #5f6368);
+  margin-bottom: var(--space-4, 20px);
+}
+
+.cau-quest-card__spectrum {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--space-4, 22px);
+}
+
+.cau-quest-card__spectrum-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--sys-surface-2, #f6f5f2);
+  border: var(--border-hairline, 1px solid #dcd8cf);
+  border-radius: var(--radius-xs, 4px);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+}
+
+.cau-quest-card__spectrum-row strong {
+  font-weight: 700;
+  color: var(--sys-text-primary, #121316);
+  letter-spacing: 0.03em;
+}
+
+.cau-quest-card__spectrum-row span {
+  color: var(--sys-text-muted, #5f6368);
+  font-size: 11px;
+}
+
+.cau-quest-card__meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: var(--space-4, 22px);
+}
+
+.cau-quest-card__meta-item {
+  background-color: var(--sys-surface-2, #f6f5f2);
+  border: var(--border-hairline, 1px solid #dcd8cf);
+  border-radius: var(--radius-xs, 4px);
+  padding: 8px 12px;
+}
+
+.cau-quest-card__meta-item small {
+  display: block;
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sys-text-muted, #5f6368);
+}
+
+.cau-quest-card__meta-item strong {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sys-text-primary, #121316);
+}
+
+.cau-quest-card__footer {
+  margin-top: auto;
+}
+
+/* Bottom Prep School Exemption Banner */
+.cau-quest-banner {
+  background-color: var(--sys-surface-1, #ffffff);
+  border: var(--border-hairline, 1px solid #dcd8cf);
+  border-radius: var(--radius-md, 12px);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-none) !important;
+}
+
+.cau-quest-banner__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 620px;
+}
+
+.cau-quest-banner__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-xs, 4px);
+  background-color: var(--sys-secondary-subtle, rgba(0, 36, 105, 0.08));
+  border: 1px solid rgba(0, 36, 105, 0.15);
+  color: var(--sys-secondary, #002469);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .cau-quest-banner__icon {
+  background-color: rgba(26, 59, 130, 0.25);
+  border-color: rgba(168, 199, 250, 0.25);
+  color: #a8c7fa;
+}
+
+.cau-quest-banner__text h4 {
+  font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: var(--sys-text-primary, #121316);
+}
+
+.cau-quest-banner__text p {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--sys-text-muted, #5f6368);
+  margin: 0;
+}
+
+
+

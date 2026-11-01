@@ -1,0 +1,25 @@
+/* 
+ * CAU Global Stylesheet 
+ * Consolidates all core design system tokens, primitives, and base styles.
+ */
+
+@import './tokens.css';
+@import './primitives.css';
+@import './base.css';
+@import './style.css';
+@import './cau-design-system.css';
+@import './cau-responsive.css';
+@import './components-patch.css';
+
+/* Core Components */
+@import './navigation.css';
+@import './cau-navigation-theme.css';
+@import './cau-awwwards-dock.css';
+@import './footer.css';
+
+/* Homepage & Hero Elements */
+@import './cau-awwwards-hero.css';
+@import './cau-editorial-redesign.css';
+@import './cau-homepage-premium.css';
+@import './cau-milk-theme.css';
+@import './smart-console.css';

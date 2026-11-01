@@ -1,0 +1,15 @@
+{
+  "tab.arena": "Modül Arenası",
+  "tab.sim": "Senaryo Simülatörü",
+  "tab.speak": "Konuşma Merkezi",
+  "stats.xp": "XP",
+  "stats.streak": "Günlük seri",
+  "stats.energy": "Enerji",
+  "arena.hint": "Gramer Hattı (−1 enerji)",
+  "arena.timeout": "Süre doldu!",
+  "lb.claim": "Yerini al",
+  "lb.nameLabel": "Ad veya takma ad",
+  "teacher.title": "Öğretmen Masası (Eğitmen Konsolu)",
+  "teacher.unlock": "Konsolu Aç",
+  "teacher.pin": "4 Haneli Öğretmen PIN Kodunu Girin"
+}

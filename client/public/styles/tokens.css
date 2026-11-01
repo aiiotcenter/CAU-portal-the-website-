@@ -1,0 +1,288 @@
+/**
+ * ==============================================================================
+ * CYPRUS AYDIN UNIVERSITY (CAU) — CANONICAL DESIGN TOKENS
+ * Architecture: Bespoke Swiss Editorial Design System (Agency-Grade Standard)
+ * Single Source of Truth • Zero Rogue Values • Strict Token Enforcement
+ * ==============================================================================
+ */
+
+@import url('/assets/vendor/fonts/nb-international.css');
+
+:root {
+  font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* --------------------------------------------------------------------------
+     1. FOUNDATIONAL SURFACES & CHARACTER PALETTE (Tactile, Non-Homogeneous)
+     -------------------------------------------------------------------------- */
+  /* Foundational Base & Surfaces (Light Theme: Warm Tactile Paper) */
+  --sys-bg-base: #ffffff;
+  --sys-surface-1: #ffffff;
+  --sys-surface-2: #f6f5f2;
+  --sys-surface-inverted: #121316;
+
+  /* High-Contrast Typography Layers */
+  --sys-text-primary: #121316;
+  --sys-text-muted: #5f6368;
+  --sys-text-inverted: #ffffff;
+
+  /* Singular Sharp Signature Accent (Original Vibrant Swiss Coral #e63b2e) */
+  --sys-accent: #e63b2e;
+  --sys-accent-hover: #cf2f23;
+  --sys-accent-active: #b5251b;
+  --sys-accent-subtle: rgba(230, 59, 46, 0.08);
+
+  /* Deep Institutional Academic Navy (#002469) — for selective titles and hovers, not accent */
+  --sys-secondary: #002469;
+  --sys-secondary-dark: #001a4d;
+  --sys-secondary-subtle: rgba(0, 36, 105, 0.08);
+  --cau-navy-brand: #002469;
+
+  /* Hairline Rules (Deliberate Tactile Contrast, Never Diffuse) */
+  --sys-line: #dcd8cf;
+  --sys-line-dark: #121316;
+  --border-hairline: 1px solid var(--sys-line);
+  --border-accent: 1px solid var(--sys-accent);
+  --border-secondary: 1px solid var(--sys-secondary);
+  --border-dark: 1px solid var(--sys-line-dark);
+
+  /* Absolute Prohibition of Soft Floaty Drop-Shadows */
+  --shadow-none: none !important;
+  --shadow-rest: none !important;
+  --shadow-elevation: none !important;
+  --shadow-dropdown: none !important;
+
+  /* Backward-Compatible Global & CAU Aliases */
+  --cau-coral: var(--sys-accent);
+  --cau-coral-hover: var(--sys-accent-hover);
+  --cau-coral-active: var(--sys-accent-active);
+  --cau-coral-subtle: var(--sys-accent-subtle);
+  --cau-navy: var(--sys-secondary);
+  --cau-navy-dark: var(--sys-secondary-dark);
+  --cau-navy-subtle: var(--sys-secondary-subtle);
+  --cau-ink: var(--sys-text-primary);
+  --cau-muted: var(--sys-text-muted);
+  --cau-line: var(--sys-line);
+  --cau-paper: var(--sys-surface-1);
+  --cau-soft: var(--sys-surface-2);
+
+  --coral: var(--sys-accent);
+  --coral-hover: var(--sys-accent-hover);
+  --navy: var(--sys-secondary);
+  --ink: var(--sys-text-primary);
+  --muted: var(--sys-text-muted);
+  --line: var(--sys-line);
+  --paper: var(--sys-surface-1);
+  --soft: var(--sys-surface-2);
+
+  --prog-border: var(--sys-line);
+  --prog-text: var(--sys-text-primary);
+  --prog-muted: var(--sys-text-muted);
+  --prog-bg: var(--sys-surface-1);
+  --prog-card-bg: var(--sys-surface-1);
+  --prog-badge-bg: var(--sys-surface-2);
+
+  /* --------------------------------------------------------------------------
+     2. EDITORIAL TYPOGRAPHIC SCALE HIERARCHY (NB International / Milk Network)
+     -------------------------------------------------------------------------- */
+  --font-family-root: "Inter", sans-serif;
+  --font-family-display: "Inter", sans-serif;
+  --font-family--display: "Inter", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-mono: "NB International Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-primary: "Inter", sans-serif;
+  --font-base: "Inter", sans-serif;
+
+  /* Title Case standard for headlines (no forced uppercase) */
+  --text-transform-headings: none;
+
+  /* Display / Hero: Bold, Intentional, Tight Optical Tracking */
+  /* Display / Hero: Bold, Intentional, Tight Optical Tracking */
+  --font-display: clamp(2.75rem, 5vw, 4.0rem);
+  --font-display-lh: 1.08;
+  --font-display-ls: -0.035em;
+
+  /* H1: Primary Page Headings */
+  --font-h1: 2.25rem;
+  --font-h1-lh: 1.22;
+  --font-h1-ls: -0.025em;
+
+  /* H2: Section Titles (Split Rails) */
+  --font-h2: 1.5rem;
+  --font-h2-lh: 1.33;
+  --font-h2-ls: -0.020em;
+
+  /* H3: Subsection Titles & Card Headings */
+  --font-h3: 1.125rem;
+  --font-h3-lh: 1.33;
+  --font-h3-ls: -0.010em;
+
+  /* H4: Secondary Headers & Module Subtitles */
+  --font-h4: 0.875rem;
+  --font-h4-lh: 1.43;
+  --font-h4-ls: 0;
+
+  /* Body Large */
+  --font-body-lg: 1.125rem;
+  --font-body-lg-lh: 1.55;
+  --font-body-lg-ls: -0.010em;
+
+  /* Body: Standard Reading Text */
+  --font-body: 1.0rem;
+  --font-body-lh: 1.50;
+  --font-body-ls: -0.005em;
+
+  /* Body Small */
+  --font-body-sm: 0.875rem;
+  --font-body-sm-lh: 1.43;
+  --font-body-sm-ls: 0;
+
+  /* Caption: Secondary Text, Card Meta, Form Labels */
+  --font-caption: 0.75rem;
+  --font-caption-lh: 1.33;
+  --font-caption-ls: 0.010em;
+
+  /* Kicker: Architectural Micro-Labels & Technical Small Caps */
+  --font-kicker: 0.75rem;
+  --font-kicker-lh: 1.33;
+  --font-kicker-ls: 0.080em;
+
+  /* --------------------------------------------------------------------------
+     3. STRICT 8PT SPATIAL SCALE & LAYOUT BOUNDARIES
+     -------------------------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+
+  /* Legacy & Transitional Space Aliases */
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Layout Boundaries */
+  --container-max: 1440px;
+  --container-reading: 1200px;
+  --container-narrow: 840px;
+  --gutter-desktop: 48px;
+  --gutter-tablet: 24px;
+  --gutter-mobile: 16px;
+
+  /* Component Dimensions */
+  --header-height-desktop: 72px;
+  --header-height-mobile: 64px;
+  --header-height: 72px;
+  --header-h: 72px;
+
+  /* Section Padding Profiles */
+  --section-pad-showcase-desktop: 96px;
+  --section-pad-showcase-tablet: 64px;
+  --section-pad-showcase-mobile: 48px;
+
+  --section-pad-dense-desktop: 64px;
+  --section-pad-dense-tablet: 48px;
+  --section-pad-dense-mobile: 32px;
+
+  /* Card Padding Scale */
+  --card-pad-desktop: 32px;
+  --card-pad-tablet: 24px;
+  --card-pad-mobile: 16px;
+
+  /* --------------------------------------------------------------------------
+     4. ARCHITECTURAL RADII & GEOMETRY
+     -------------------------------------------------------------------------- */
+  --radius-xs: 4px;     /* Micro elements, subtle tags, inner checkboxes */
+  --radius-sm: 6px;     /* Small tooltips, mini badges, secondary chips */
+  --radius-normal: 8px; /* DEFAULT STANDARD: buttons, form inputs, list items */
+  --radius-md: 12px;    /* Cards, dropdown menus, banners, popup dialogs */
+  --radius-lg: 16px;    /* Large hero cards, modals, interactive viewports */
+  --radius-pill: 9999px;/* Fully rounded pills, status tags, avatars */
+
+  /* Standard Aliases & Fallbacks */
+  --radius-none: 0px;
+  --radius: var(--radius-normal, 8px);
+  --radius-full: var(--radius-pill, 9999px);
+  --rounded-small: var(--radius-xs, 4px);
+  --rounded-normal: var(--radius-normal, 8px);
+  --rounded-large: var(--radius-lg, 16px);
+
+  /* --------------------------------------------------------------------------
+     5. Z-INDEX SCALE
+     -------------------------------------------------------------------------- */
+  --z-base: 1;
+  --z-sticky: 10;
+  --z-header: 80;
+  --z-drawer: 100;
+  --z-modal: 110;
+  --z-toast: 120;
+
+  /* --------------------------------------------------------------------------
+     6. MECHANICAL MOTION & SNAPPY MICRO-INTERACTIONS (120ms–180ms Ease-Out)
+     -------------------------------------------------------------------------- */
+  --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-instant: 120ms;
+  --dur-fast: 160ms;
+  --dur-base: 220ms;
+  --dur-slow: 340ms;
+
+  --transition-instant: var(--dur-instant) var(--ease-snappy);
+  --transition-fast: var(--dur-fast) var(--ease-snappy);
+  --transition-base: var(--dur-base) var(--ease-snappy);
+
+  --ease: var(--ease-snappy);
+
+  /* --------------------------------------------------------------------------
+     7. SVG ASSET TOKENS
+     -------------------------------------------------------------------------- */
+  --arrow-white: url('/assets/whitearrow_8e576cad.svg');
+  --arrow-darkgray: url('/assets/darkgrayarrow_c00092a7.svg');
+  --arrow-black: url('/assets/blackarrow_13e10b28.svg');
+}
+
+/* --------------------------------------------------------------------------
+   8. BESPOKE HIGH-CONTRAST DARK THEME OVERRIDES
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Foundational Deep Base & Solid Tactile Surfaces */
+  --sys-bg-base: #0c0d10;
+  --sys-surface-1: #131418;
+  --sys-surface-2: #1a1c22;
+  --sys-surface-inverted: #f5f6f8;
+
+  /* High-Contrast Light Text Hierarchy */
+  --sys-text-primary: #f5f6f8;
+  --sys-text-muted: #8e929b;
+  --sys-text-inverted: #0c0d10;
+
+  /* High-Visibility Hairlines */
+  --sys-line: rgba(255, 255, 255, 0.12);
+  --sys-line-dark: rgba(255, 255, 255, 0.24);
+
+  /* Aliases in Dark Mode */
+  --cau-ink: var(--sys-text-primary);
+  --cau-muted: var(--sys-text-muted);
+  --cau-line: var(--sys-line);
+  --cau-paper: var(--sys-surface-1);
+  --cau-soft: var(--sys-surface-2);
+
+  --ink: var(--sys-text-primary);
+  --muted: var(--sys-text-muted);
+  --line: var(--sys-line);
+  --paper: var(--sys-surface-1);
+  --soft: var(--sys-surface-2);
+
+  --prog-border: var(--sys-line);
+  --prog-text: var(--sys-text-primary);
+  --prog-muted: var(--sys-text-muted);
+  --prog-bg: var(--sys-bg-base);
+  --prog-card-bg: var(--sys-surface-1);
+  --prog-badge-bg: var(--sys-surface-2);
+}

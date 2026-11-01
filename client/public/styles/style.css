@@ -1,0 +1,1209 @@
+/* ==========================================================================
+   CYPRUS AYDIN UNIVERSITY — CORE DESIGN SYSTEM & HOMEPAGE COMPONENTS
+   Swiss Editorial layout, CAU coral accents, high-contrast typography
+   ========================================================================== */
+
+:root {
+    /* Brand palette */
+    --cau-navy: #082d70;
+    --cau-navy-deep: #051d4a;
+    --cau-coral: #f04432;
+    --cau-coral-deep: #d93627;
+    --cau-white: #ffffff;
+    --cau-ink: #121316;
+    --cau-muted: #6c6d70;
+    --cau-soft: #f7f7f5;
+    --cau-line: #dcd8cf;
+
+    /* Legacy aliases */
+    --paper: #ffffff;
+    --ink: #121316;
+    --muted: #6c6d70;
+    --line: #dcd8cf;
+    --coral: #f04432;
+    --navy: #082d70;
+    --soft: #f7f7f5;
+
+    /* Geometry */
+    --radius-sm: 4px;
+    --radius: 8px;
+    --radius-lg: 12px;
+    --header-h: var(--header-height, 72px);
+    --cau-action-radius: 8px;
+    --focus-ring: none;
+
+    /* Motion */
+    --ease: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --dur-fast: 220ms;
+    --dur-base: 360ms;
+    --dur-slow: 560ms;
+
+    /* Arrow assets */
+    --arrow-white: url('/assets/whitearrow_8e576cad.svg');
+    --arrow-darkgray: url('/assets/darkgrayarrow_c00092a7.svg');
+    --arrow-black: url('/assets/blackarrow_13e10b28.svg');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "NB International", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* Canonical CAU System Swiss Arrow (.system-arrow) */
+.system-arrow {
+  font-family: initial !important;
+  font-style: normal !important;
+  font-size: 0 !important;
+  display: inline-block !important;
+  width: 28px !important;
+  height: 9px !important;
+  flex: 0 0 28px !important;
+  background: var(--arrow-black, url('/assets/blackarrow_13e10b28.svg')) center/28px 9px no-repeat !important;
+  vertical-align: middle !important;
+  transition: transform var(--transition-fast, 0.2s ease) !important;
+  line-height: 0 !important;
+  speak: never;
+}
+
+/* Fluid hover advance across all buttons, cards, links */
+a:hover .system-arrow,
+button:hover .system-arrow,
+.btn:hover .system-arrow,
+.apply-btn:hover .system-arrow,
+.cau-btn:hover .system-arrow,
+.advisor-card-btn:hover .system-arrow,
+.consultant-apply-btn:hover .system-arrow,
+.console-btn-next:hover .system-arrow,
+.program-card:hover .system-arrow,
+.cau-card:hover .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.calc-apply-btn:hover .system-arrow,
+.sidebar-cta-btn:hover .system-arrow,
+.sidebar-whatsapp-btn:hover .system-arrow,
+.show-all:hover .system-arrow,
+.show-more:hover .system-arrow,
+.empty-smart-console-btn:hover .system-arrow,
+.empty-reset-btn:hover .system-arrow,
+.dossier-filter-catalogue-btn:hover .system-arrow,
+.footer-apply-now:hover .system-arrow,
+.footer-nl-btn:hover .system-arrow,
+.program-explore-link:hover .system-arrow,
+.roadmap-link:hover .system-arrow,
+.view-faculties-btn:hover .system-arrow,
+.department-explore-btn:hover .system-arrow,
+.btn-story-nav:hover .system-arrow {
+  transform: translateX(4px) !important;
+}
+
+/* White arrow variant for dark, coral, and inverted button/card surfaces */
+.btn-coral .system-arrow,
+.apply-btn .system-arrow,
+.cau-btn--primary .system-arrow,
+.cau-btn--secondary .system-arrow,
+.advisor-card-btn .system-arrow,
+.consultant-apply-btn .system-arrow,
+.btn-dark .system-arrow,
+.btn-primary .system-arrow,
+.console-btn-next .system-arrow,
+.btn-story-nav .system-arrow,
+.show-more .system-arrow,
+.calc-apply-btn .system-arrow,
+.sidebar-cta-btn .system-arrow,
+.sidebar-whatsapp-btn .system-arrow,
+.empty-smart-console-btn .system-arrow,
+.btn-outline-dark:hover .system-arrow,
+.btn-outline:hover .system-arrow,
+.btn-outline-light:hover .system-arrow,
+.scholarship-apply-btn:hover .system-arrow,
+.dossier-filter-catalogue-btn:hover .system-arrow,
+[data-theme="dark"] .system-arrow {
+  background-image: var(--arrow-white, url('/assets/whitearrow_8e576cad.svg')) !important;
+}
+
+.system-arrow.ms-1 {
+  margin-left: 0.35rem !important;
+}
+.system-arrow.ms-2 {
+  margin-left: 0.5rem !important;
+}
+.system-arrow.me-1 {
+  margin-right: 0.35rem !important;
+}
+.system-arrow.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+/* RTL Harmonization */
+html[dir="rtl"] .system-arrow,
+body.is-rtl .system-arrow {
+  transform: scaleX(-1) !important;
+}
+
+html[dir="rtl"] a:hover .system-arrow,
+html[dir="rtl"] button:hover .system-arrow,
+html[dir="rtl"] .btn:hover .system-arrow,
+body.is-rtl a:hover .system-arrow,
+body.is-rtl button:hover .system-arrow,
+body.is-rtl .btn:hover .system-arrow {
+  transform: scaleX(-1) translateX(4px) !important;
+}
+
+/* Global Cursor Specification: Suppress outer stroke circle, retain precision dot */
+.cau-page-cursor {
+  display: none !important;
+}
+
+.container-xxl {
+    max-width: var(--container-max, 1440px);
+    padding-left: var(--gutter-desktop, 48px);
+    padding-right: var(--gutter-desktop, 48px);
+}
+
+/* Base interactive buttons */
+.btn-coral {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--coral);
+    color: #ffffff !important;
+    border: 1px solid var(--coral);
+    border-radius: var(--radius-sm);
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    cursor: pointer;
+    transition: all 180ms var(--ease);
+}
+
+.btn-coral:hover {
+    background: var(--cau-coral-deep);
+    border-color: var(--cau-coral-deep);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+.btn-coral:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   CUSTOM DROPDOWN SYSTEM (CAU_ENHANCE_SELECT)
+   ========================================================================== */
+.cau-dd-native {
+    display: none !important;
+}
+
+.cau-dd {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.cau-dd-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+    padding: 6px 2px;
+    font: inherit;
+    color: var(--ink);
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.cau-dd-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cau-dd-chevron {
+    font-size: 11px;
+    color: var(--muted);
+    transition: transform 180ms var(--ease);
+}
+
+.cau-dd.open .cau-dd-chevron {
+    transform: rotate(180deg);
+}
+
+.cau-dd-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 90;
+    width: max-content;
+    min-width: 160px;
+    max-width: 320px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 34px rgba(17, 18, 20, 0.12);
+    padding: 6px;
+    display: none;
+}
+
+.cau-dd-right .cau-dd-panel {
+    left: auto;
+    right: 0;
+}
+
+.cau-dd.open .cau-dd-panel {
+    display: block;
+    animation: cau-dd-in 160ms var(--ease);
+}
+
+.cau-dd-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 9px 12px;
+    font: inherit;
+    font-size: 14px;
+    text-align: left;
+    color: var(--ink);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    transition: background 140ms var(--ease), color 140ms var(--ease);
+}
+
+.cau-dd-option:hover,
+.cau-dd-option:focus-visible {
+    background: var(--soft);
+}
+
+.cau-dd-option[aria-selected="true"] {
+    color: var(--coral);
+    font-weight: 600;
+}
+
+.cau-dd-check {
+    color: var(--coral);
+    font-size: 12px;
+    opacity: 0;
+}
+
+.cau-dd-option[aria-selected="true"] .cau-dd-check {
+    opacity: 1;
+}
+
+.language-picker .cau-dd-toggle {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding: 4px 2px;
+}
+
+@keyframes cau-dd-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ==========================================================================
+   SHARED SPLIT SECTION SYSTEM
+   ========================================================================== */
+.section-rule-top {
+    border-top: 1px solid var(--line);
+}
+
+.milk-section-header--fullgrid {
+    grid-column: 1 / -1;
+}
+
+.split-section > .container-xxl,
+.split-section__fullgrid {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-compact-uppercase {
+    font-size: var(--font-body-sm, 0.875rem) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+}
+
+.split-section {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    column-gap: var(--space-6, 48px);
+    min-height: 430px;
+    padding: 0;
+}
+
+.split-rail {
+    padding: var(--space-6, 48px) var(--space-4, 24px) var(--space-6, 48px) 0;
+    border-right: 1px solid var(--line);
+}
+
+.split-content {
+    padding: var(--space-6, 48px) 0 var(--space-6, 48px) 0;
+}
+
+.split-rail h2 {
+    font-size: clamp(2rem, 4vw, 3.55rem);
+    line-height: .95;
+    letter-spacing: -.055em;
+    text-transform: none;
+    margin: 0 0 var(--space-4, 24px);
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.rail-copy {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.45;
+    margin: 0 0 var(--space-4, 24px);
+}
+
+.lead-copy {
+    font-size: clamp(1.2rem, 2.05vw, 2rem);
+    line-height: 1.15;
+    max-width: 830px;
+    margin: 0 0 var(--space-6, 48px);
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.lead-copy .bullet {
+    color: var(--coral);
+    margin-right: 8px;
+}
+
+.micro-copy {
+    border-top: 1px solid var(--line);
+    padding-top: var(--space-5, 32px);
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: var(--space-5, 32px);
+}
+
+.micro-copy span {
+    color: var(--coral);
+    padding: 0 8px;
+}
+
+/* ==========================================================================
+   WHY CYPRUS AYDIN UNIVERSITY SECTION
+   ========================================================================== */
+.homepage .why-section {
+    min-height: 480px;
+}
+
+.homepage .why-rail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.homepage .why-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.homepage .why-metrics {
+    margin-top: var(--space-4, 24px);
+    padding-top: var(--space-5, 32px);
+    border-top: 1px solid var(--line);
+    width: 100%;
+}
+
+.homepage .why-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 16px;
+}
+
+.homepage .why-metrics-grid>div {
+    display: grid;
+    gap: 4px;
+}
+
+.homepage .why-metrics-grid strong {
+    color: var(--coral);
+    font-size: clamp(2.2rem, 3.4vw, 3.4rem);
+    letter-spacing: -.06em;
+    line-height: .9;
+    font-weight: 700;
+}
+
+.homepage .why-metrics-grid span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   FIND YOUR PROGRAM / DEGREE CARDS SECTION
+   ========================================================================== */
+.homepage .program-directory {
+    padding: 0;
+}
+
+.homepage .program-directory-rail {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--space-6, 48px) var(--space-4, 24px) var(--space-6, 48px) 0;
+}
+
+.homepage .program-directory-rail .rail-copy {
+    max-width: 330px;
+    margin-top: 16px;
+}
+
+.homepage .program-directory-content {
+    padding: var(--space-6, 48px) 0 var(--space-6, 48px) 0;
+}
+
+.homepage .program-directory-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-bottom: 20px;
+    padding: 4px 5px 4px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    min-height: 48px;
+}
+
+.homepage .program-directory-controls label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: auto;
+}
+
+.homepage .program-directory-controls .cau-dd {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+}
+
+.homepage .program-directory-controls .cau-dd-toggle {
+    width: 100%;
+    min-width: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 160ms var(--ease);
+}
+
+.homepage .program-directory-controls .cau-dd-value {
+    min-width: 0;
+    color: var(--ink);
+}
+
+.homepage .program-directory-controls .cau-dd-chevron {
+    color: var(--muted);
+    transition: transform 180ms var(--ease), color 160ms var(--ease);
+}
+
+.homepage .program-directory-controls .cau-dd-toggle:hover,
+.homepage .program-directory-controls .cau-dd.open .cau-dd-toggle {
+    border-color: var(--coral);
+}
+
+.homepage .program-directory-controls .cau-dd.open .cau-dd-toggle {
+    box-shadow: none;
+}
+
+.homepage .program-directory-controls .cau-dd.open .cau-dd-chevron {
+    color: var(--coral);
+    transform: rotate(180deg);
+}
+
+.homepage .program-directory-controls .cau-dd-panel {
+    z-index: 90;
+    min-width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 14px 34px rgba(17, 18, 20, 0.12);
+    padding: 6px;
+}
+
+.homepage .program-directory-controls .cau-dd-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--ink) !important;
+    border-radius: var(--radius-sm);
+    background: transparent !important;
+    white-space: normal;
+    transition: background 140ms var(--ease), color 140ms var(--ease);
+}
+
+.homepage .program-directory-controls .cau-dd-option:hover,
+.homepage .program-directory-controls .cau-dd-option:focus-visible {
+    background: var(--soft) !important;
+    color: var(--ink) !important;
+}
+
+.homepage .program-directory-controls .cau-dd-option[aria-selected="true"] {
+    color: var(--coral) !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+}
+
+.homepage .program-directory-controls .cau-dd-check {
+    color: var(--coral);
+    font-size: 12px;
+    opacity: 0;
+}
+
+.homepage .program-directory-controls .cau-dd-option[aria-selected="true"] .cau-dd-check {
+    opacity: 1;
+}
+
+.program-directory-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--ink);
+    color: #ffffff;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 180ms var(--ease);
+}
+
+.program-directory-submit:hover {
+    background: var(--coral);
+    border-color: var(--coral);
+    color: #ffffff;
+}
+
+.program-directory-status {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+/* Degree cards / Programme cards grid */
+.program-directory-grid,
+.degree-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.program-directory-card,
+.degree-card {
+    border: 1px solid var(--sys-line, #dcd8cf);
+    border-radius: var(--radius-md, 12px);
+    padding: 32px 28px;
+    min-height: 280px;
+    background-color: var(--sys-surface-1, #ffffff);
+    color: var(--sys-text-primary, #121316);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    box-shadow: none !important;
+    transition: border-color var(--transition-fast, 0.2s ease);
+}
+
+.degree-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: none !important;
+    border-color: var(--coral);
+}
+
+.program-directory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: none !important;
+    border-color: var(--coral);
+}
+
+.program-directory-level {
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: var(--coral);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.program-directory-card h3,
+.degree-card h3 {
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin: 0 0 16px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.program-directory-card p,
+.degree-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+}
+
+.program-directory-card .btn,
+.degree-card .btn,
+.program-directory-card a.program-directory-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    background: var(--coral);
+    color: #ffffff;
+    border: 1px solid var(--coral);
+    transition: all 180ms var(--ease);
+}
+
+.program-directory-card a.program-directory-link:hover,
+.degree-card .btn:hover {
+    background: var(--cau-coral-deep);
+    border-color: var(--cau-coral-deep);
+    color: #ffffff;
+}
+
+.program-directory-card.is-hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   TESTIMONIAL CAROUSEL SLIDE MANAGEMENT
+   ========================================================================== */
+.testimonial-stage .testimonial {
+    display: none;
+}
+
+.testimonial-stage .testimonial.is-active {
+    display: block;
+}
+
+.testimonial-nav-pill {
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   NEWS AND EVENTS SECTION
+   ========================================================================== */
+.news-section {
+    padding: 0;
+    padding-bottom: 0 !important;
+}
+
+.news-section .split-rail,
+.news-section .split-content {
+    padding-bottom: 0 !important;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.filter-btn {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 180ms var(--ease);
+}
+
+.filter-btn:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--soft);
+}
+
+.filter-btn.active {
+    color: #ffffff;
+    background: var(--coral);
+    border-color: var(--coral);
+}
+
+.news-filter-status {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+/* ==========================================================================
+   Homepage News Section - Swiss Editorial Ultra-Minimal
+   ========================================================================== */
+/* ==========================================================================
+   Homepage News Section - Swiss Editorial Elevated Cards
+   Inspired by contemporary university journalism, elevated with Swiss precision
+   ========================================================================== */
+/* ==========================================================================
+   Homepage News Section - Swiss Editorial Clean Cards
+   Static hover affordances (color/border only), zero motion, zero image margin
+   ========================================================================== */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5, 28px);
+    align-content: start;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sys-surface-1, #ffffff);
+    border: 1px solid var(--sys-line, #dcd8cf);
+    border-radius: var(--radius-md, 12px);
+    overflow: hidden !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    transition: border-color var(--transition-fast, 0.2s ease) !important;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transform: none !important;
+}
+
+.news-card:hover,
+.news-card:focus,
+.news-card:focus-within,
+.news-card:active,
+.news-card.is-active {
+    border-color: var(--sys-accent, #e63b2e) !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.news-card.is-hidden {
+    display: none !important;
+}
+
+/* Image Frame - 0 margin, 0 padding, full content width, 16:9, flush edge-to-edge */
+.news-image-wrap {
+    position: relative;
+    display: block;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    aspect-ratio: 16 / 9;
+    background-color: var(--sys-surface-2, #f6f5f2);
+    border-bottom: 1px solid var(--sys-line, #dcd8cf);
+    text-decoration: none;
+    transform: none !important;
+}
+
+.news-image-wrap img,
+.news-card img {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover !important;
+    display: block !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.news-card:hover .news-image-wrap img,
+.news-card:hover img,
+.news-card:focus-within img,
+.news-card:active img {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Hide any floating pointer follower or indicator completely */
+.news-hover-indicator {
+    display: none !important;
+}
+
+/* Card Body - Clean editorial rhythm, no eyebrow */
+.news-card__body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--sys-surface-1, #ffffff);
+}
+
+/* Headline / Title - Strong Swiss NB International */
+.news-card__title {
+    font-family: var(--font-family-display, "NB International", "Inter", sans-serif);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-card__title a {
+    color: var(--sys-text-primary, #121316);
+    text-decoration: none;
+    transition: color var(--transition-fast, 0.18s ease);
+}
+
+.news-card:hover .news-card__title a {
+    color: var(--sys-accent, #e63b2e);
+}
+
+/* Date Timestamp - Muted, below title */
+.news-card__date {
+    color: var(--sys-text-muted, #5f6368);
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Summary / Excerpt - Clean 2-line clamp */
+.news-card__summary {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--sys-text-muted, #5f6368);
+    margin: 0 0 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Action Link - Pure static color hover, no motion */
+.news-card__action {
+    margin-top: auto;
+    padding-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--sys-secondary, #002469);
+    text-decoration: none;
+    transition: color var(--transition-fast, 0.18s ease);
+    transform: none !important;
+}
+
+.news-card:hover .news-card__action {
+    color: var(--sys-accent, #e63b2e);
+}
+
+.news-card__action .system-arrow,
+.news-card:hover .news-card__action .system-arrow,
+.news-card .system-arrow,
+.news-card:hover .system-arrow {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Show All Link */
+.show-all {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--sys-accent, #e63b2e);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px 0;
+    border-top: 1px solid var(--sys-line, #dcd8cf);
+    margin-top: 8px;
+    text-decoration: none;
+    transition: color var(--transition-fast, 0.18s ease);
+}
+
+.show-all:hover {
+    color: var(--sys-accent-hover, #cf2f23);
+}
+
+/* Dark Mode Theme Support */
+[data-theme="dark"] .news-card {
+    background-color: var(--sys-surface-1, #18181b);
+    border-color: var(--sys-line, #27272a);
+}
+
+[data-theme="dark"] .news-card:hover {
+    border-color: var(--sys-accent, #e63b2e);
+}
+
+[data-theme="dark"] .news-card__body {
+    background-color: var(--sys-surface-1, #18181b);
+}
+
+[data-theme="dark"] .news-image-wrap {
+    background-color: #121214;
+    border-bottom-color: var(--sys-line, #27272a);
+}
+
+[data-theme="dark"] .news-card__title a {
+    color: var(--sys-text-inverted, #ffffff);
+}
+
+[data-theme="dark"] .news-card:hover .news-card__title a {
+    color: var(--sys-accent, #e63b2e);
+}
+
+[data-theme="dark"] .news-card__date,
+[data-theme="dark"] .news-card__summary {
+    color: #a1a1aa;
+}
+
+[data-theme="dark"] .news-card__action {
+    color: #e4e4e7;
+}
+
+[data-theme="dark"] .news-card:hover .news-card__action {
+    color: var(--sys-accent, #e63b2e);
+}
+
+[data-theme="dark"] .show-all {
+    border-top-color: var(--sys-line, #27272a);
+}
+
+
+
+
+/* ==========================================================================
+   ACCREDITATION PARTNERS LOGO MARQUEE
+   ========================================================================== */
+.logo-marquee {
+    overflow: hidden;
+    padding: 40px 0;
+    width: 100%;
+    background: var(--paper);
+}
+
+.logo-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: cau-logo-scroll 32s linear infinite;
+}
+
+.logo-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-marquee-set {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-right: 48px;
+    flex-shrink: 0;
+}
+
+.logo-marquee-set img {
+    height: 52px;
+    max-width: 140px;
+    object-fit: contain;
+    opacity: 0.75;
+    filter: grayscale(100%);
+    transition: all 220ms ease;
+}
+
+.logo-marquee-set img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@keyframes cau-logo-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+        animation: none;
+    }
+
+    .logo-marquee-set[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT RULES
+   ========================================================================== */
+@media (max-width: 1023.98px) {
+    .container-xxl {
+        padding-left: var(--gutter-tablet, 24px);
+        padding-right: var(--gutter-tablet, 24px);
+    }
+
+    .split-section {
+        grid-template-columns: 1fr;
+        row-gap: var(--space-5, 32px);
+        min-height: auto;
+    }
+
+    .split-rail {
+        padding: 0 0 var(--space-4, 24px) 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .split-content {
+        padding: 0;
+    }
+
+    .homepage .why-metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-4, 24px);
+    }
+
+    .homepage .program-directory-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .program-directory-grid,
+    .degree-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-xxl {
+        padding-left: var(--gutter-mobile, 16px);
+        padding-right: var(--gutter-mobile, 16px);
+    }
+
+    .homepage .why-metrics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3, 16px);
+    }
+}
+/* Dark Mode: Program Directory Cards */
+[data-theme="dark"] .program-directory-card,
+[data-theme="dark"] .degree-card {
+    background-color: var(--sys-surface-1, #18181b);
+    border-color: var(--sys-line, #27272a);
+    color: var(--sys-text-inverted, #ffffff);
+}
+
+[data-theme="dark"] .program-directory-card:hover,
+[data-theme="dark"] .degree-card:hover {
+    border-color: var(--sys-accent, #e63b2e);
+}
+
+[data-theme="dark"] .program-directory-card h3,
+[data-theme="dark"] .degree-card h3 {
+    color: var(--sys-text-inverted, #ffffff);
+}
+
+[data-theme="dark"] .program-directory-card p,
+[data-theme="dark"] .degree-card p {
+    color: #a1a1aa;
+}
+
+[data-theme="dark"] .program-directory-status {
+    color: #a1a1aa;
+}
+
+/* Prevent duplicate description in directory cards */
+.program-directory-levels {
+    display: none !important;
+}
+.program-directory-meta {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 44px;
+}
